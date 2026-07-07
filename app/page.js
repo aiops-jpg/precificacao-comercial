@@ -15,12 +15,12 @@ const DISCOVERY_INITIAL = {
 }
 
 const INITIAL = {
-  cpfs: 57600, faturas: 75000,
-  sms_texto: 46615, sms_whats: 63027, sms_landing: 0, sms_imagem: 30000,
-  whats_ativo: 63732, whats_receptivo: 0,
-  voicebot: 0, voz_humana: 0, rcs: 17626, email: 45216,
-  email_fatura: 77148, imagem_fatura: 77148,
-  chatbot: 0, enriquecimento: 57600,
+  cpfs: 0, faturas: 0,
+  sms_texto: 0, sms_whats: 0, sms_landing: 0, sms_imagem: 0,
+  whats_ativo: 0, whats_receptivo: 0,
+  voicebot: 0, voz_humana: 0, rcs: 0, email: 0,
+  email_fatura: 0, imagem_fatura: 0,
+  chatbot: 0, enriquecimento: 0,
   google_meta_ads: 0, cartas_fisico: 0,
 }
 
@@ -192,7 +192,7 @@ export default function Page() {
         ))}
 
         <div className="card card-full actions">
-          <button className="btn" onClick={reset}>Carregar Exemplo</button>
+          <button className="btn btn-secondary" onClick={reset}>Zerar Campos</button>
         </div>
       </div>
 
