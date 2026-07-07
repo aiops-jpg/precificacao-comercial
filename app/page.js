@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useRef } from 'react'
 import { calcular, formatMoney, formatPct } from '@/lib/precificacao'
+import { buildSummaryHTML, generatePDF } from '@/lib/pdf'
 import DiscoveryForm from '@/components/DiscoveryForm'
 
 const DISCOVERY_INITIAL = {
@@ -74,11 +75,44 @@ export default function Page() {
   const [step, setStep] = useState('discovery')
   const [discovery, setDiscovery] = useState(DISCOVERY_INITIAL)
   const [form, setForm] = useState(INITIAL)
+  const [emailTo, setEmailTo] = useState('')
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
 
   const result = useMemo(() => calcular(form), [form])
 
   const update = (key, val) => setForm(p => ({ ...p, [key]: val }))
   const reset = () => setForm(INITIAL)
+
+  const handleDownloadPDF = async () => {
+    const html = buildSummaryHTML(discovery, result, form, formatMoney, formatPct)
+    const pdf = await generatePDF(html)
+    pdf.save('proposta-pgmais.pdf')
+  }
+
+  const handleSendEmail = async () => {
+    if (!emailTo) return
+    setSending(true)
+    setSent(false)
+    try {
+      const html = buildSummaryHTML(discovery, result, form, formatMoney, formatPct)
+      const pdf = await generatePDF(html)
+      const pdfBase64 = pdf.output('datauristring').split(',')[1]
+
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ to: emailTo, pdfBase64, pdfName: 'proposta-pgmais.pdf' }),
+      })
+
+      const data = await res.json()
+      if (data.success) setSent(true)
+      else alert('Erro ao enviar: ' + (data.error || 'desconhecido'))
+    } catch (err) {
+      alert('Erro ao enviar: ' + err.message)
+    }
+    setSending(false)
+  }
 
   const handleDiscoverySubmit = () => {
     setStep('calculator')
@@ -168,6 +202,22 @@ export default function Page() {
         </div>
       </div>
       <StepIndicator />
+
+      <div className="card card-full send-card">
+        <div className="card-title">📤 Enviar Proposta</div>
+        <div className="send-row">
+          <div className="field-group" style={{ flex: 1, margin: 0 }}>
+            <label>E-mail do cliente</label>
+            <input type="email" value={emailTo} onChange={e => setEmailTo(e.target.value)} placeholder="cliente@email.com" />
+          </div>
+          <button className="btn btn-sm" onClick={handleDownloadPDF} title="Baixar PDF" style={{ marginTop: 22 }}>
+            ⬇ Gerar PDF
+          </button>
+          <button className="btn btn-sm" onClick={handleSendEmail} disabled={sending || !emailTo} style={{ marginTop: 22 }}>
+            {sending ? 'Enviando...' : sent ? '✓ Enviado' : '➤ Enviar'}
+          </button>
+        </div>
+      </div>
 
       <button className="btn btn-secondary btn-sm" onClick={() => setStep('discovery')} style={{ marginBottom: 16 }}>
         ← Voltar ao Discovery
