@@ -328,11 +328,3 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 /* ───── Button small ───── */
 
 .btn-sm { padding: 8px 16px; font-size: 13px; }
-
-/* ───── Send Card ───── */
-
-.send-card { grid-column: 1 / -1; }
-
-.send-row {
-  display: flex; gap: 12px; align-items: center;
-}

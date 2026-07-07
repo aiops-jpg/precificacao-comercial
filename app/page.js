@@ -1,8 +1,7 @@
 'use client'
 
-import { useState, useMemo, useRef } from 'react'
+import { useState, useMemo } from 'react'
 import { calcular, formatMoney, formatPct } from '@/lib/precificacao'
-import { buildSummaryHTML, generatePDF } from '@/lib/pdf'
 import DiscoveryForm from '@/components/DiscoveryForm'
 
 const DISCOVERY_INITIAL = {
@@ -79,12 +78,6 @@ export default function Page() {
 
   const update = (key, val) => setForm(p => ({ ...p, [key]: val }))
   const reset = () => setForm(INITIAL)
-
-  const handleDownloadPDF = async () => {
-    const html = buildSummaryHTML(discovery, result, form, formatMoney, formatPct)
-    const pdf = await generatePDF(html)
-    pdf.save('proposta-pgmais.pdf')
-  }
 
   const handleDiscoverySubmit = () => {
     setStep('calculator')
@@ -174,15 +167,6 @@ export default function Page() {
         </div>
       </div>
       <StepIndicator />
-
-      <div className="card card-full send-card">
-        <div className="card-title">📥 Baixar Proposta</div>
-        <div className="send-row">
-          <button className="btn" onClick={handleDownloadPDF}>
-            ⬇ Baixar PDF
-          </button>
-        </div>
-      </div>
 
       <button className="btn btn-secondary btn-sm" onClick={() => setStep('discovery')} style={{ marginBottom: 16 }}>
         ← Voltar ao Discovery
