@@ -97,6 +97,32 @@ export default function DiscoveryForm({ data, onChange, onSubmit }) {
           </div>
         </div>
 
+        {/* CANAIS */}
+        <div className="card card-full">
+          <div className="card-title">📡 Canais da Estratégia</div>
+          <div className="tooltip-banner">
+            <span className="tooltip-icon">ⓘ</span>
+            <span>Selecione quais canais serão usados. Apenas os marcados aparecerão na calculadora.</span>
+          </div>
+          <div className="checkbox-grid">
+            {['SMS', 'WhatsApp', 'Canais Digitais', 'ONE', 'Outros Canais'].map(canal => (
+              <label key={canal} className="checkbox-item">
+                <input
+                  type="checkbox"
+                  checked={data.canais_ativos.includes(canal)}
+                  onChange={() => {
+                    const next = data.canais_ativos.includes(canal)
+                      ? data.canais_ativos.filter(v => v !== canal)
+                      : [...data.canais_ativos, canal]
+                    onChange({ ...data, canais_ativos: next })
+                  }}
+                />
+                <span>{canal}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
         {/* JORNADA & AUTOMAÇÃO */}
         <div className="card card-full">
           <div className="card-title">⚙️ Jornada &amp; Automação</div>

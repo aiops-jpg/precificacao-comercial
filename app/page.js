@@ -10,7 +10,7 @@ const DISCOVERY_INITIAL = {
   tx_recup_30: '', tx_recup_60: '', tx_recup_90: '',
   tipo_cliente: '', objetivo: '',
   tem_automacao: '', sistema_dividas: '', direcionamento: '',
-  canais_falha: [], qualidade_dados: '',
+  canais_falha: [], canais_ativos: [], qualidade_dados: '',
   api_carga: false, api_consulta: false, api_boleto: false,
   sla_cargas: '', broker: '',
 }
@@ -189,7 +189,7 @@ export default function Page() {
       </button>
 
       <div className="grid">
-        {FIELDS.map(g => (
+        {FIELDS.filter(g => g.section === 'Base' || discovery.canais_ativos.includes(g.section)).map(g => (
           <div key={g.section} className={`card ${g.full ? 'card-full' : ''}`}>
             <div className="card-title">{g.section}</div>
             <div className={g.cols === 2 ? 'field-row' : ''}>
