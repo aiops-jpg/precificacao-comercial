@@ -28,7 +28,7 @@ const INITIAL = {
   email_registrado: 0, email_smtp: 0, email_pdf: 0,
   chatbot: 0, enriquecimento: 0, valida_mais: 0, enriquecimento_premium: 0,
   google_meta_ads: 0, cartas_fisico: 0,
-  omni_plano: '', omni_conversas: 0, telegrama: 0, carne: 0, cartorio_documento: 0,
+  omni_plano: '', omni_conversas: 0, telegrama: 0, carne: 0, cartorio_documento: 0, documento_digital: 0,
   landing_page_link: 0, portal_negociacao: 0,
 }
 
@@ -87,6 +87,7 @@ const FIELDS = [
     { key: 'telegrama', label: 'Telegrama' },
     { key: 'carne', label: 'Carnê' },
     { key: 'cartorio_documento', label: 'Cartório' },
+    { key: 'documento_digital', label: 'Documentos Digital/Files/Link' },
     { key: 'landing_page_link', label: 'Landing Page (links enviados)' },
     { key: 'portal_negociacao', label: 'Portal de Negociação (licenças)' },
   ]},
@@ -105,7 +106,7 @@ const CANAL_LABEL = {
   chatbot: 'Chatbot', voicebot: 'Voicebot',
   google_meta_ads: 'Google / Meta Ads', cartas_fisico: 'Cartas / Físico',
   omni: 'Plataforma OMNI', telegrama: 'Telegrama', carne: 'Carnê',
-  cartorio_documento: 'Cartório',
+  cartorio_documento: 'Cartório', documento_digital: 'Documentos Digital/Files/Link',
   landing_page_link: 'Landing Page', portal_negociacao: 'Portal de Negociação',
   email_registrado: 'E-mail Registrado (AR Digital)', email_smtp: 'E-mail SMTP',
   email_pdf: 'E-mail em PDF',
@@ -194,6 +195,7 @@ export default function Page() {
     ativo('telegrama') && { prod: 'TELEGRAMA', unit: result.precos.telegrama, qtd: result.volumes.telegrama, tot: result.orcamentos.telegrama },
     ativo('carne') && { prod: 'CARNÊ', unit: result.precos.carne, qtd: result.volumes.carne, tot: result.orcamentos.carne },
     ativo('cartorio_documento') && { prod: 'CARTÓRIO', unit: result.precos.cartorio_documento, qtd: result.volumes.cartorio_documento, tot: result.orcamentos.cartorio_documento },
+    ativo('documento_digital') && { prod: 'DOCUMENTOS DIGITAL/FILES/LINK', unit: result.precos.documento_digital, qtd: result.volumes.documento_digital, tot: result.orcamentos.documento_digital },
   ].filter(Boolean).filter(item => item.tot > 0), [result, discovery.canais_ativos])
 
   const setups = useMemo(() => getSetups(discovery.canais_ativos, result.plano_one, config), [result, discovery.canais_ativos, config])

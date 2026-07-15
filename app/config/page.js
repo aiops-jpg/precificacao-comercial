@@ -358,6 +358,7 @@ export default function ConfigPage() {
             <NumberField label="Telegrama" value={draft.precos.telegrama} onChange={(v) => set(['precos', 'telegrama'], v)} />
             <NumberField label="Carnê" value={draft.precos.carne} onChange={(v) => set(['precos', 'carne'], v)} />
             <NumberField label="Cartório" value={draft.precos.cartorio_documento} onChange={(v) => set(['precos', 'cartorio_documento'], v)} />
+            <NumberField label="Documentos Digital/Files/Link" value={draft.precos.documento_digital} onChange={(v) => set(['precos', 'documento_digital'], v)} />
             <NumberField label="WhatsApp Ativo — por envio" value={draft.precos.whats_ativo_envio} onChange={(v) => set(['precos', 'whats_ativo_envio'], v)} />
             <NumberField label="WhatsApp Receptivo — por conversa" value={draft.precos.whats_receptivo_conversa} onChange={(v) => set(['precos', 'whats_receptivo_conversa'], v)} />
             <NumberField label="SMS FAST/OTP" value={draft.precos.sms_fast_otp} onChange={(v) => set(['precos', 'sms_fast_otp'], v)} />
