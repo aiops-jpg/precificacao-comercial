@@ -20,11 +20,11 @@ const DISCOVERY_INITIAL = {
 
 const INITIAL = {
   cpfs: 0, faturas: 0,
-  sms_texto: 0, sms_whats: 0, sms_landing: 0, sms_imagem: 0,
+  sms_texto: 0,
   sms_fast_otp: 0, sms_rota_exclusiva: 0, sms_sender_id: 0, sms_flash: 0,
   whats_ativo: 0, whats_receptivo: 0,
-  voicebot: 0, rcs: 0, email: 0,
-  email_fatura: 0, imagem_fatura: 0,
+  voicebot: 0, rcs: 0, rcs_basico: 0, rcs_simples: 0, email: 0,
+  email_transacional: 0,
   email_registrado: 0, email_smtp: 0, email_pdf: 0,
   chatbot: 0, enriquecimento: 0, valida_mais: 0, enriquecimento_premium: 0,
   google_meta_ads: 0, cartas_fisico: 0,
@@ -52,10 +52,7 @@ const FIELDS = [
     { key: 'faturas', label: 'Volume total de faturas/cartões mensais' },
   ]},
   { section: 'SMS', cols: 2, fields: [
-    { key: 'sms_texto', label: 'Texto Padrão' },
-    { key: 'sms_whats', label: 'Com link para WhatsApp' },
-    { key: 'sms_landing', label: 'Com link para portal de negociação' },
-    { key: 'sms_imagem', label: 'Com imagem da fatura' },
+    { key: 'sms_texto', label: 'Texto Padrão (Simples)' },
     { key: 'sms_fast_otp', label: 'FAST/OTP (transacional)' },
     { key: 'sms_rota_exclusiva', label: 'Rota Exclusiva' },
     { key: 'sms_sender_id', label: 'Sender ID' },
@@ -68,15 +65,16 @@ const FIELDS = [
     { key: 'chatbot', label: 'Chatbot de negociação (atendimentos)' },
   ]},
   { section: 'Email', fields: [
-    { key: 'email', label: 'E-mail Transacional' },
-    { key: 'email_fatura', label: 'E-mail com Fatura (volume)' },
-    { key: 'imagem_fatura', label: 'Imagem da Fatura (volume)' },
+    { key: 'email', label: 'E-mail Simples' },
+    { key: 'email_transacional', label: 'E-mail Transacional (volume do pacote mensal)' },
     { key: 'email_registrado', label: 'E-mail Registrado (AR Digital)' },
     { key: 'email_smtp', label: 'E-mail SMTP (volume do pacote)' },
     { key: 'email_pdf', label: 'E-mail em PDF (qtd. gerada)' },
   ]},
   { section: 'Canais Digitais', fields: [
-    { key: 'rcs', label: 'RCS Conversacional' },
+    { key: 'rcs', label: 'RCS Conversacional/Sessão' },
+    { key: 'rcs_basico', label: 'RCS Básico' },
+    { key: 'rcs_simples', label: 'RCS Simples' },
     { key: 'enriquecimento', label: 'Enriquecimento de Base' },
     { key: 'valida_mais', label: 'Valida+ (consultas)' },
     { key: 'enriquecimento_premium', label: 'Enriquecimento Premium (consultas)' },
@@ -88,26 +86,26 @@ const FIELDS = [
     { key: 'cartas_fisico', label: 'Cartas / Físico' },
     { key: 'telegrama', label: 'Telegrama' },
     { key: 'carne', label: 'Carnê' },
-    { key: 'cartorio_documento', label: 'Cartório & Documento Digital' },
+    { key: 'cartorio_documento', label: 'Cartório' },
     { key: 'landing_page_link', label: 'Landing Page (links enviados)' },
     { key: 'portal_negociacao', label: 'Portal de Negociação (licenças)' },
   ]},
 ]
 
 const CANAL_LABEL = {
-  one_platform: 'ONE Platform', email: 'E-mail Transacional',
-  email_fatura: 'E-mail Fatura', imagem_fatura: 'Imagem Fatura',
-  sms_texto: 'SMS Texto', sms_whats: 'SMS WhatsApp',
-  sms_landing: 'SMS Landing', sms_imagem: 'SMS Imagem',
+  one_platform: 'ONE Platform', email: 'E-mail Simples',
+  email_transacional: 'E-mail Transacional',
+  sms_texto: 'SMS Texto',
   sms_fast_otp: 'SMS FAST/OTP', sms_rota_exclusiva: 'SMS Rota Exclusiva',
   sms_sender_id: 'SMS Sender ID', sms_flash: 'SMS Flash',
   whats_ativo: 'WhatsApp Ativo', whats_receptivo: 'WhatsApp Receptivo',
-  rcs: 'RCS', enriquecimento: 'Enriquecimento',
+  rcs: 'RCS Conversacional/Sessão', rcs_basico: 'RCS Básico', rcs_simples: 'RCS Simples',
+  enriquecimento: 'Enriquecimento',
   valida_mais: 'Valida+', enriquecimento_premium: 'Enriquecimento Premium',
   chatbot: 'Chatbot', voicebot: 'Voicebot',
   google_meta_ads: 'Google / Meta Ads', cartas_fisico: 'Cartas / Físico',
   omni: 'Plataforma OMNI', telegrama: 'Telegrama', carne: 'Carnê',
-  cartorio_documento: 'Cartório & Documento Digital',
+  cartorio_documento: 'Cartório',
   landing_page_link: 'Landing Page', portal_negociacao: 'Portal de Negociação',
   email_registrado: 'E-mail Registrado (AR Digital)', email_smtp: 'E-mail SMTP',
   email_pdf: 'E-mail em PDF',
@@ -149,7 +147,7 @@ export default function Page() {
     const o = result.orcamentos
     const c = result.categorias
     const e = result.entrada
-    const vlrOneEmail = o.one_platform + o.email_fatura
+    const vlrOneEmail = o.one_platform + o.email_transacional
     return {
       vlrOneEmail,
       porFatura: e.faturas > 0 ? vlrOneEmail / e.faturas : 0,
@@ -164,8 +162,7 @@ export default function Page() {
   const rowsSuperior = useMemo(() => [
     ativo('one_platform') && { prod: 'ONE (CPFs)', unit: result.entrada.cpfs > 0 ? result.plano_one.total_mensal / result.entrada.cpfs : 0, qtd: result.entrada.cpfs, tot: result.plano_one.total_mensal },
     { prod: 'QTD FATURAS', unit: null, qtd: result.entrada.faturas, tot: null },
-    ativo('email_fatura') && { prod: 'EMAIL FATURA', unit: result.precos.email_fatura, qtd: result.volumes.email_fatura, tot: result.orcamentos.email_fatura },
-    ativo('imagem_fatura') && { prod: 'IMAGEM FATURA', unit: result.precos.imagem_fatura, qtd: result.volumes.imagem_fatura, tot: result.orcamentos.imagem_fatura },
+    ativo('email_transacional') && { prod: 'EMAIL TRANSACIONAL', unit: result.precos.email_transacional, qtd: result.volumes.email_transacional, tot: result.orcamentos.email_transacional },
     ativo('omni_conversas') && { prod: `PLATAFORMA OMNI${result.plano_omni.nome ? ` (${result.plano_omni.nome})` : ''}`, unit: result.volumes.omni_conversas > 0 ? result.plano_omni.total_mensal / result.volumes.omni_conversas : 0, qtd: result.volumes.omni_conversas, tot: result.plano_omni.total_mensal },
     ativo('telecobranca_voice_ai') && { prod: `TELECOBRANÇA VOICE AI (${result.plano_telecobranca.pa} PA)`, unit: result.entrada.cpfs > 0 ? result.plano_telecobranca.voice_ai / result.entrada.cpfs : 0, qtd: result.entrada.cpfs, tot: result.plano_telecobranca.voice_ai },
     ativo('telecobranca_cross_channel') && { prod: `TELECOBRANÇA CROSS CHANNEL AI (${result.plano_telecobranca.pa} PA)`, unit: result.entrada.cpfs > 0 ? result.plano_telecobranca.cross_channel / result.entrada.cpfs : 0, qtd: result.entrada.cpfs, tot: result.plano_telecobranca.cross_channel },
@@ -173,12 +170,14 @@ export default function Page() {
   ].filter(Boolean).filter(item => item.tot === null || item.tot > 0), [result, discovery.canais_ativos])
 
   const rowsPreventiva = useMemo(() => [
-    (ativo('sms_texto') || ativo('sms_whats') || ativo('sms_landing') || ativo('sms_imagem')) && { prod: 'SMS', unit: result.precos.sms, qtd: result.smsTotal, tot: result.orcamentos.sms_texto + result.orcamentos.sms_whats + result.orcamentos.sms_landing + result.orcamentos.sms_imagem },
+    ativo('sms_texto') && { prod: 'SMS', unit: result.precos.sms, qtd: result.smsTotal, tot: result.orcamentos.sms_texto },
     ativo('sms_fast_otp') && { prod: 'SMS FAST/OTP', unit: result.precos.sms_fast_otp, qtd: result.volumes.sms_fast_otp, tot: result.orcamentos.sms_fast_otp },
     ativo('sms_rota_exclusiva') && { prod: 'SMS ROTA EXCLUSIVA', unit: result.precos.sms_rota_exclusiva, qtd: result.volumes.sms_rota_exclusiva, tot: result.orcamentos.sms_rota_exclusiva },
     ativo('sms_sender_id') && { prod: 'SMS SENDER ID', unit: result.precos.sms_sender_id, qtd: result.volumes.sms_sender_id, tot: result.orcamentos.sms_sender_id },
     ativo('sms_flash') && { prod: 'SMS FLASH', unit: result.precos.sms_flash, qtd: result.volumes.sms_flash, tot: result.orcamentos.sms_flash },
-    ativo('rcs') && { prod: 'RCS Conversacional', unit: result.precos.rcs, qtd: result.volumes.rcs, tot: result.orcamentos.rcs },
+    ativo('rcs') && { prod: 'RCS Conversacional/Sessão', unit: result.precos.rcs, qtd: result.volumes.rcs, tot: result.orcamentos.rcs },
+    ativo('rcs_basico') && { prod: 'RCS BÁSICO', unit: result.precos.rcs_basico, qtd: result.volumes.rcs_basico, tot: result.orcamentos.rcs_basico },
+    ativo('rcs_simples') && { prod: 'RCS SIMPLES', unit: result.precos.rcs_simples, qtd: result.volumes.rcs_simples, tot: result.orcamentos.rcs_simples },
     ativo('whats_ativo') && { prod: 'WHATS ATIVO', unit: result.precos.whats_ativo, qtd: result.volumes.whats_ativo, tot: result.orcamentos.whats_ativo },
     ativo('whats_receptivo') && { prod: 'WHATS RECEPTIVO', unit: result.precos.whats_receptivo, qtd: result.volumes.whats_receptivo, tot: result.orcamentos.whats_receptivo },
     ativo('enriquecimento') && { prod: 'ENRIQUECIMENTO', unit: result.precos.enriquecimento, qtd: result.volumes.enriquecimento, tot: result.orcamentos.enriquecimento },
@@ -186,7 +185,6 @@ export default function Page() {
     ativo('enriquecimento_premium') && { prod: 'ENRIQUECIMENTO PREMIUM', unit: result.precos.enriquecimento_premium, qtd: result.volumes.enriquecimento_premium, tot: result.orcamentos.enriquecimento_premium },
     ativo('chatbot') && { prod: 'CHATBOT', unit: result.precos.chatbot, qtd: result.volumes.chatbot, tot: result.orcamentos.chatbot },
     ativo('voicebot') && { prod: 'VOICEBOT', unit: result.precos.voicebot, qtd: result.volumes.voicebot, tot: result.orcamentos.voicebot },
-    ativo('sms_landing') && { prod: 'SMS LANDING PAGE', unit: result.precos.sms, qtd: result.volumes.sms_landing, tot: result.orcamentos.sms_landing },
     ativo('email_registrado') && { prod: 'EMAIL REGISTRADO (AR DIGITAL)', unit: result.precos.email_registrado, qtd: result.volumes.email_registrado, tot: result.orcamentos.email_registrado },
     ativo('email_smtp') && { prod: 'EMAIL SMTP', unit: result.precos.email_smtp, qtd: result.volumes.email_smtp, tot: result.orcamentos.email_smtp },
     ativo('email_pdf') && { prod: 'EMAIL PDF', unit: result.precos.email_pdf, qtd: result.volumes.email_pdf, tot: result.orcamentos.email_pdf },
@@ -195,7 +193,7 @@ export default function Page() {
     ativo('portal_negociacao') && { prod: 'PORTAL DE NEGOCIAÇÃO', unit: result.precos.portal_negociacao, qtd: result.volumes.portal_negociacao, tot: result.orcamentos.portal_negociacao },
     ativo('telegrama') && { prod: 'TELEGRAMA', unit: result.precos.telegrama, qtd: result.volumes.telegrama, tot: result.orcamentos.telegrama },
     ativo('carne') && { prod: 'CARNÊ', unit: result.precos.carne, qtd: result.volumes.carne, tot: result.orcamentos.carne },
-    ativo('cartorio_documento') && { prod: 'CARTÓRIO & DOC. DIGITAL', unit: result.precos.cartorio_documento, qtd: result.volumes.cartorio_documento, tot: result.orcamentos.cartorio_documento },
+    ativo('cartorio_documento') && { prod: 'CARTÓRIO', unit: result.precos.cartorio_documento, qtd: result.volumes.cartorio_documento, tot: result.orcamentos.cartorio_documento },
   ].filter(Boolean).filter(item => item.tot > 0), [result, discovery.canais_ativos])
 
   const setups = useMemo(() => getSetups(discovery.canais_ativos, result.plano_one, config), [result, discovery.canais_ativos, config])
@@ -460,7 +458,7 @@ export default function Page() {
 
         <div className="kpi-grid" style={{ marginTop: 20 }}>
           <div className="kpi-card dark">
-            <div className="kpi-label">ONE + E-MAIL FATURA</div>
+            <div className="kpi-label">ONE + E-MAIL TRANSACIONAL</div>
             <div className="kpi-value">{formatMoney(t.vlrOneEmail)}</div>
             <div className="kpi-sub">por fatura: {formatMoney(t.porFatura)}</div>
           </div>

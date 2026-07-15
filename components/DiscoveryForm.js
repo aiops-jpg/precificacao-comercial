@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useRef, useLayoutEffect } from 'react'
-import { getCanaisGruposAtivos } from '@/lib/canais'
+import { useState, useRef, useLayoutEffect, Fragment } from 'react'
+import { getCanaisBlocosAtivos } from '@/lib/canais'
 import { blocoVisivel } from '@/lib/discoveryBlocos'
 import { useConfig } from '@/lib/ConfigContext'
 
@@ -14,7 +14,7 @@ const SUBSTEPS = [
 export default function DiscoveryForm({ data, onChange, onSubmit }) {
   const [subStep, setSubStep] = useState(1)
   const { config } = useConfig()
-  const canaisGrupos = getCanaisGruposAtivos(config)
+  const canaisBlocos = getCanaisBlocosAtivos(config)
   const bloco = (key) => blocoVisivel(config, key)
 
   // Todos os blocos do substep 1 devem ter a mesma altura da Régua de Recuperação
@@ -214,36 +214,41 @@ export default function DiscoveryForm({ data, onChange, onSubmit }) {
               <span>Selecione quais produtos serão usados. Apenas os marcados aparecerão na calculadora.</span>
             </div>
             <div className="canais-columns">
-              {canaisGrupos.map(({ grupo, itens }) => {
-                const todosMarcados = itens.every(i => data.canais_ativos.includes(i.key))
-                return (
-                <div key={grupo} className="canal-grupo">
-                  <div className="canal-grupo-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <span>{grupo}</span>
-                    <button type="button" className="btn-link" onClick={() => toggleGrupoCanais(itens)}>
-                      {todosMarcados ? 'Nenhum' : 'Todos'}
-                    </button>
-                  </div>
-                  <div className="checkbox-grid">
-                    {itens.map(({ key, label }) => (
-                      <label key={key} className="checkbox-item">
-                        <input
-                          type="checkbox"
-                          checked={data.canais_ativos.includes(key)}
-                          onChange={() => {
-                            const next = data.canais_ativos.includes(key)
-                              ? data.canais_ativos.filter(v => v !== key)
-                              : [...data.canais_ativos, key]
-                            onChange({ ...data, canais_ativos: next })
-                          }}
-                        />
-                        <span>{label}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-                )
-              })}
+              {canaisBlocos.map(({ bloco: nomeBloco, grupos }) => (
+                <Fragment key={nomeBloco}>
+                  <div className="canal-bloco-label">{nomeBloco}</div>
+                  {grupos.map(({ grupo, itens }) => {
+                    const todosMarcados = itens.every(i => data.canais_ativos.includes(i.key))
+                    return (
+                    <div key={grupo} className="canal-grupo">
+                      <div className="canal-grupo-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <span>{grupo}</span>
+                        <button type="button" className="btn-link" onClick={() => toggleGrupoCanais(itens)}>
+                          {todosMarcados ? 'Nenhum' : 'Todos'}
+                        </button>
+                      </div>
+                      <div className="checkbox-grid">
+                        {itens.map(({ key, label }) => (
+                          <label key={key} className="checkbox-item">
+                            <input
+                              type="checkbox"
+                              checked={data.canais_ativos.includes(key)}
+                              onChange={() => {
+                                const next = data.canais_ativos.includes(key)
+                                  ? data.canais_ativos.filter(v => v !== key)
+                                  : [...data.canais_ativos, key]
+                                onChange({ ...data, canais_ativos: next })
+                              }}
+                            />
+                            <span>{label}</span>
+                          </label>
+                        ))}
+                      </div>
+                    </div>
+                    )
+                  })}
+                </Fragment>
+              ))}
             </div>
           </div>
           )}

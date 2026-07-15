@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState, Fragment } from 'react'
 import { useRouter } from 'next/navigation'
 import { useConfig } from '@/lib/ConfigContext'
-import { CANAIS_GRUPOS } from '@/lib/canais'
+import { CANAIS_BLOCOS } from '@/lib/canais'
 import { DISCOVERY_BLOCOS } from '@/lib/discoveryBlocos'
 
 const SUBSTEP_LABEL = { 1: 'Perfil', 2: 'Canais', 3: 'Infraestrutura' }
@@ -92,13 +92,15 @@ function validarFaixas(tiers, mode = 'lookup') {
 }
 
 // Editor genérico de faixas [{min, max, preco}] — max vazio = sem teto (Infinity).
-function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup' }) {
+// excedenteLabel: quando informado, mostra uma coluna extra "preco por unidade excedente"
+// (usado no pacote mensal do E-mail Transacional, cobrado além do teto da última faixa).
+function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup', excedenteLabel }) {
   const update = (i, field, val) => {
     const next = tiers.map((t, idx) => (idx === i ? { ...t, [field]: val } : t))
     onChange(next)
   }
   const remove = (i) => onChange(tiers.filter((_, idx) => idx !== i))
-  const add = () => onChange([...tiers, { min: 0, max: null, preco: 0 }])
+  const add = () => onChange([...tiers, excedenteLabel ? { min: 0, max: null, preco: 0, excedente: 0 } : { min: 0, max: null, preco: 0 }])
   const avisos = validarFaixas(tiers, mode)
 
   return (
@@ -108,7 +110,7 @@ function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup' }) {
         <div key={i} className="warning-banner">⚠ {msg}</div>
       ))}
       {tiers.map((t, i) => (
-        <div key={i} className="tier-row">
+        <div key={i} className={excedenteLabel ? 'tier-row tier-row-5col' : 'tier-row'}>
           <div className="field-group">
             <label>De</label>
             <input type="number" value={t.min} onChange={(e) => update(i, 'min', parseFloat(e.target.value) || 0)} />
@@ -126,6 +128,12 @@ function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup' }) {
             <label>{precoLabel}</label>
             <input type="number" step="any" value={t.preco} onChange={(e) => update(i, 'preco', parseFloat(e.target.value) || 0)} />
           </div>
+          {excedenteLabel && (
+            <div className="field-group">
+              <label>{excedenteLabel}</label>
+              <input type="number" step="any" value={t.excedente || 0} onChange={(e) => update(i, 'excedente', parseFloat(e.target.value) || 0)} />
+            </div>
+          )}
           <button type="button" className="btn btn-danger btn-sm btn-icon" onClick={() => remove(i)} aria-label="Remover" title="Remover">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="3 6 5 6 21 6" />
@@ -301,11 +309,27 @@ export default function ConfigPage() {
         </div>
 
         {/* FAIXAS TARIFÁRIAS */}
-        <TierEditor label="Faixas — SMS (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.sms} onChange={(v) => set(['faixas', 'sms'], v)} />
-        <TierEditor label="Faixas — E-mail (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email} onChange={(v) => set(['faixas', 'email'], v)} />
+        <TierEditor label="Faixas — SMS Texto/Simples (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.sms} onChange={(v) => set(['faixas', 'sms'], v)} />
+        <TierEditor label="Faixas — E-mail Simples (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email} onChange={(v) => set(['faixas', 'email'], v)} />
         <TierEditor label="Faixas — Enriquecimento (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.enriquecimento} onChange={(v) => set(['faixas', 'enriquecimento'], v)} />
         <TierEditor label="Faixas — E-mail Registrado / AR Digital (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email_registrado} onChange={(v) => set(['faixas', 'email_registrado'], v)} />
         <TierEditor label="Faixas — E-mail SMTP (pacote mensal fechado, R$)" precoLabel="R$/pacote" tiers={draft.faixas.email_smtp} onChange={(v) => set(['faixas', 'email_smtp'], v)} />
+        <TierEditor
+          label="Faixas — E-mail Transacional (pacote mensal fechado, R$)"
+          precoLabel="R$/pacote"
+          excedenteLabel="R$/un excedente"
+          tiers={draft.faixas.email_transacional}
+          onChange={(v) => set(['faixas', 'email_transacional'], v)}
+        />
+        <div className="card card-full">
+          <div style={{ maxWidth: 260 }}>
+            <NumberField
+              label="E-mail Transacional — Franquia mínima mensal (R$)"
+              value={draft.precos.email_transacional_franquia_minima}
+              onChange={(v) => set(['precos', 'email_transacional_franquia_minima'], v)}
+            />
+          </div>
+        </div>
 
         {/* SETUPS */}
         <div className="card card-full">
@@ -324,15 +348,16 @@ export default function ConfigPage() {
         <div className="card card-full">
           <div className="card-title">Preços Unitários — Demais Canais</div>
           <div className="field-row cols-3">
-            <NumberField label="RCS Conversacional" value={draft.precos.rcs_basico} onChange={(v) => set(['precos', 'rcs_basico'], v)} />
-            <NumberField label="Imagem da Fatura" value={draft.precos.imagem_fatura} onChange={(v) => set(['precos', 'imagem_fatura'], v)} />
+            <NumberField label="RCS Conversacional/Sessão" value={draft.precos.rcs_conversacional} onChange={(v) => set(['precos', 'rcs_conversacional'], v)} />
+            <NumberField label="RCS Básico" value={draft.precos.rcs_basico} onChange={(v) => set(['precos', 'rcs_basico'], v)} />
+            <NumberField label="RCS Simples" value={draft.precos.rcs_simples} onChange={(v) => set(['precos', 'rcs_simples'], v)} />
             <NumberField label="Chatbot — por atendimento" value={draft.precos.chatbot_unit} onChange={(v) => set(['precos', 'chatbot_unit'], v)} />
             <NumberField label="Chatbot — franquia mínima" value={draft.precos.chatbot_franquia} onChange={(v) => set(['precos', 'chatbot_franquia'], v)} />
             <NumberField label="Voicebot — por robô" value={draft.precos.voicebot_unit} onChange={(v) => set(['precos', 'voicebot_unit'], v)} />
             <NumberField label="Voicebot — mínimo de robôs" value={draft.precos.voicebot_min_robos} onChange={(v) => set(['precos', 'voicebot_min_robos'], v)} />
             <NumberField label="Telegrama" value={draft.precos.telegrama} onChange={(v) => set(['precos', 'telegrama'], v)} />
             <NumberField label="Carnê" value={draft.precos.carne} onChange={(v) => set(['precos', 'carne'], v)} />
-            <NumberField label="Cartório & Documento Digital" value={draft.precos.cartorio_documento} onChange={(v) => set(['precos', 'cartorio_documento'], v)} />
+            <NumberField label="Cartório" value={draft.precos.cartorio_documento} onChange={(v) => set(['precos', 'cartorio_documento'], v)} />
             <NumberField label="WhatsApp Ativo — por envio" value={draft.precos.whats_ativo_envio} onChange={(v) => set(['precos', 'whats_ativo_envio'], v)} />
             <NumberField label="WhatsApp Receptivo — por conversa" value={draft.precos.whats_receptivo_conversa} onChange={(v) => set(['precos', 'whats_receptivo_conversa'], v)} />
             <NumberField label="SMS FAST/OTP" value={draft.precos.sms_fast_otp} onChange={(v) => set(['precos', 'sms_fast_otp'], v)} />
@@ -386,33 +411,38 @@ export default function ConfigPage() {
             Desmarque um canal para escondê-lo do checklist de Discovery nesta sessão.
           </p>
           <div className="canais-columns">
-            {CANAIS_GRUPOS.map(({ grupo, itens }) => {
-              const todosVisiveis = itens.every((i) => !desabilitados.has(i.key))
-              return (
-              <div key={grupo} className="canal-grupo">
-                <div className="canal-grupo-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <span>{grupo}</span>
-                  <button
-                    type="button"
-                    className="btn-link btn-link-icon"
-                    onClick={() => toggleGrupoCanais(itens)}
-                    aria-label={todosVisiveis ? 'Ocultar' : 'Exibir'}
-                    title={todosVisiveis ? 'Ocultar' : 'Exibir'}
-                  >
-                    <EyeIcon open={todosVisiveis} />
-                  </button>
-                </div>
-                <div className="checkbox-grid">
-                  {itens.map(({ key, label }) => (
-                    <label key={key} className="checkbox-item">
-                      <input type="checkbox" checked={!desabilitados.has(key)} onChange={() => toggleCanal(key)} />
-                      <span>{label}</span>
-                    </label>
-                  ))}
-                </div>
-              </div>
-              )
-            })}
+            {CANAIS_BLOCOS.map(({ bloco: nomeBloco, grupos }) => (
+              <Fragment key={nomeBloco}>
+                <div className="canal-bloco-label">{nomeBloco}</div>
+                {grupos.map(({ grupo, itens }) => {
+                  const todosVisiveis = itens.every((i) => !desabilitados.has(i.key))
+                  return (
+                  <div key={grupo} className="canal-grupo">
+                    <div className="canal-grupo-label" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span>{grupo}</span>
+                      <button
+                        type="button"
+                        className="btn-link btn-link-icon"
+                        onClick={() => toggleGrupoCanais(itens)}
+                        aria-label={todosVisiveis ? 'Ocultar' : 'Exibir'}
+                        title={todosVisiveis ? 'Ocultar' : 'Exibir'}
+                      >
+                        <EyeIcon open={todosVisiveis} />
+                      </button>
+                    </div>
+                    <div className="checkbox-grid">
+                      {itens.map(({ key, label }) => (
+                        <label key={key} className="checkbox-item">
+                          <input type="checkbox" checked={!desabilitados.has(key)} onChange={() => toggleCanal(key)} />
+                          <span>{label}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                  )
+                })}
+              </Fragment>
+            ))}
           </div>
         </div>
 

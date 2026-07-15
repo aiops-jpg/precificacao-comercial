@@ -346,6 +346,16 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 .canal-grupo { margin-bottom: 4px; }
 .canal-grupo:last-child { margin-bottom: 0; }
 
+/* Cabeçalho do bloco (Canais de Mensageria / Sistemas-Plataformas / Services) — column-span:all
+   quebra o fluxo de colunas do .canais-columns pra virar uma faixa cheia acima dos grupos dele. */
+.canal-bloco-label {
+  column-span: all;
+  font-size: 13px; font-weight: 900; color: var(--color-navy);
+  border-bottom: 2px solid rgba(23,44,102,0.1);
+  padding-bottom: 4px; margin: 12px 0 8px;
+}
+.canais-columns > .canal-bloco-label:first-child { margin-top: 0; }
+
 .canal-grupo-label {
   font-size: 10px; font-weight: 700; color: #888;
   text-transform: uppercase; letter-spacing: 0.5px;
@@ -444,6 +454,8 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
   gap: 8px; align-items: end; margin-bottom: 8px;
 }
 
+.tier-row-5col { grid-template-columns: 1fr 1fr 1fr 1fr auto; }
+
 /* O botão "Remover" (ícone de lixeira) não tem label acima como os inputs de faixa —
    fixa a mesma altura do input (padding 6px + borda 2px) pra alinhar as bordas mesmo
    com align-items:end, e centraliza o ícone dentro da caixa quadrada. */
@@ -482,6 +494,6 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 
   .substep-nav { flex-wrap: wrap; }
 
-  .tier-row { grid-template-columns: 1fr 1fr; }
+  .tier-row, .tier-row-5col { grid-template-columns: 1fr 1fr; }
   .tier-row .btn-danger { grid-column: 1 / -1; justify-self: end; }
 }
