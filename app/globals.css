@@ -17,8 +17,8 @@ body {
   font-family: 'Segoe UI', 'Lato', system-ui, -apple-system, sans-serif;
   background: var(--color-gray-light);
   color: #333;
-  line-height: 1.5;
-  padding: 24px;
+  line-height: 1.4;
+  padding: 10px;
   min-height: 100vh;
 }
 
@@ -27,28 +27,40 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 .container { max-width: 1100px; margin: 0 auto; }
 
 .header {
-  display: flex; align-items: center; gap: 14px;
-  margin-bottom: 24px;
+  display: flex; align-items: center; flex-wrap: wrap;
+  justify-content: space-between; gap: 10px;
+  margin-bottom: 8px;
+}
+
+/* Agrupa ícone+título como uma unidade que quebra linha inteira (não espreme o texto
+   numa coluna estreita) quando falta espaço pro botão de ação à direita. */
+.header-main {
+  display: flex; align-items: center; gap: 10px;
+  min-width: 0; flex: 1 1 220px;
 }
 
 .header-icon {
-  width: 44px; height: 44px;
+  width: 34px; height: 34px;
   background: var(--color-navy);
-  border-radius: 14px;
+  border-radius: 10px;
   display: flex; align-items: center; justify-content: center;
-  color: #fff; font-size: 22px; font-weight: 900;
+  color: #fff; font-size: 17px; font-weight: 900;
   flex-shrink: 0;
 }
 
-.header h1 { font-size: 22px; margin: 0; }
-.header .sub { font-size: 13px; color: #888; font-weight: 400; }
+.header h1 { font-size: 18px; margin: 0; }
+.header .sub { font-size: 12px; color: #888; font-weight: 400; }
 
-.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.header > .btn { flex-shrink: 0; }
+
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; align-items: start; }
+
+.grid-equal-height { align-items: stretch; }
 
 .card {
   background: var(--color-white);
   border-radius: var(--radius);
-  padding: 18px 20px;
+  padding: 8px 10px;
   box-shadow: var(--shadow);
   border: 2px solid rgba(23,44,102,0.08);
 }
@@ -56,36 +68,41 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 .card-full { grid-column: 1 / -1; }
 
 .card-title {
-  font-size: 14px; font-weight: 900;
+  font-size: 12px; font-weight: 900;
   color: var(--color-navy);
-  margin-bottom: 14px;
-  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 6px;
+  display: flex; align-items: center; gap: 6px;
 }
 
-.field-group { margin-bottom: 12px; }
+.field-group { margin-bottom: 6px; }
 
 .field-group label {
-  display: block; font-size: 12px; font-weight: 700;
-  color: #555; margin-bottom: 4px;
+  display: block; font-size: 11px; font-weight: 700;
+  color: #555; margin-bottom: 3px;
 }
 
+/* Reserva a altura de 2 linhas de label — sem isso, quando uma coluna do field-row
+   tem label de 1 linha e a vizinha de 2, os inputs da linha ficam desalinhados
+   (ex: Q1/Q2 com label longa vs. Q2-adimplentes com label curta). */
+.field-row .field-group label { min-height: 30px; }
+
 .field-group input {
-  width: 100%; padding: 8px 12px;
+  width: 100%; padding: 6px 10px;
   border: 2px solid #e1e1e3;
   border-radius: var(--radius-sm);
-  font-size: 14px; font-family: inherit;
+  font-size: 13px; font-family: inherit;
   transition: border-color 0.2s;
   outline: none;
 }
 
 .field-group input:focus { border-color: var(--color-navy); }
 
-.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
 .btn {
   background: var(--color-navy); color: #fff;
   border: none; border-radius: var(--radius-sm);
-  padding: 12px 32px; font-size: 15px; font-weight: 700;
+  padding: 9px 26px; font-size: 14px; font-weight: 700;
   cursor: pointer; transition: background 0.2s;
   display: inline-flex; align-items: center; gap: 8px;
 }
@@ -99,7 +116,39 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 
 .btn-secondary:hover { border-color: var(--color-navy); }
 
-.actions { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+.btn-config, .btn-hover-gray { transition: background-color 0.15s ease, border-color 0.15s ease; }
+.btn-config:hover, .btn-hover-gray:hover { background: var(--color-gray-light); border-color: var(--color-navy); }
+.btn-config-icon { transition: color 0.15s ease; }
+.btn-config:hover .btn-config-icon { color: var(--color-navy); }
+
+/* Ações destrutivas/irreversíveis (remover linha, restaurar padrão) — vermelho
+   pra sinalizar perigo antes do clique, separado das ações neutras (.btn-secondary). */
+.btn-danger {
+  background: transparent; color: #c0392b;
+  border: 2px solid rgba(192,57,43,0.3);
+}
+
+.btn-danger:hover { background: #c0392b; color: #fff; border-color: #c0392b; }
+
+.btn-link {
+  background: none; border: none; padding: 0;
+  color: var(--color-navy); font-size: 11px; font-weight: 700;
+  text-decoration: underline; cursor: pointer;
+}
+
+.btn-link:hover { color: #0120eb; }
+
+.btn-link-icon { display: inline-flex; align-items: center; gap: 4px; }
+
+.warning-banner {
+  display: flex; align-items: flex-start; gap: 6px;
+  padding: 6px 10px; margin-bottom: 8px;
+  background: #fff4e5; border-radius: var(--radius-sm);
+  border: 1px solid rgba(230,126,34,0.35);
+  font-size: 11px; color: #8a5a1c; line-height: 1.4;
+}
+
+.actions { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
 
 .results-section { margin-top: 24px; }
 
@@ -186,21 +235,11 @@ table .num { text-align: right; font-variant-numeric: tabular-nums; }
   background: rgba(23,44,102,0.05);
 }
 
-@media (max-width: 768px) {
-  .grid { grid-template-columns: 1fr; }
-  .field-row { grid-template-columns: 1fr; }
-  .kpi-grid { grid-template-columns: 1fr 1fr; }
-  body { padding: 12px; }
-  .step-indicator { gap: 8px; }
-  .cols-2, .cols-3 { grid-template-columns: 1fr; }
-  .checkbox-grid.cols-3 { grid-template-columns: 1fr; }
-}
-
 /* ───── Step Indicator ───── */
 
 .step-indicator {
   display: flex; align-items: center; gap: 16px;
-  margin-bottom: 24px; padding: 16px 20px;
+  margin-bottom: 8px; padding: 7px 16px;
   background: var(--color-white); border-radius: var(--radius);
   box-shadow: var(--shadow); border: 2px solid rgba(23,44,102,0.08);
 }
@@ -211,7 +250,7 @@ table .num { text-align: right; font-variant-numeric: tabular-nums; }
 }
 
 .step-number {
-  width: 32px; height: 32px; border-radius: 50%;
+  width: 26px; height: 26px; border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   font-size: 14px; font-weight: 900;
   background: #e1e1e3; color: #999;
@@ -238,12 +277,42 @@ table .num { text-align: right; font-variant-numeric: tabular-nums; }
   flex: 1; height: 2px; background: #e1e1e3; border-radius: 2px;
 }
 
+/* ───── Discovery Substep Nav ───── */
+
+.substep-nav {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 8px; padding: 2px;
+}
+
+.substep-item {
+  display: flex; align-items: center; gap: 8px;
+  cursor: pointer; user-select: none;
+  padding: 6px 14px 6px 6px; border-radius: 999px;
+  background: var(--color-white); border: 2px solid rgba(23,44,102,0.08);
+  font-size: 12px; font-weight: 700; color: #999;
+  text-transform: uppercase; letter-spacing: 0.3px;
+  transition: 0.2s;
+}
+
+.substep-number {
+  width: 22px; height: 22px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 900;
+  background: #e1e1e3; color: #999;
+}
+
+.substep-item.active { border-color: var(--color-navy); color: var(--color-navy); }
+.substep-item.active .substep-number { background: var(--color-navy); color: #fff; }
+
+.substep-item.done { color: #1a3a1c; }
+.substep-item.done .substep-number { background: var(--color-green); color: #1a3a1c; }
+
 /* ───── Select & Textarea ───── */
 
 select, textarea {
-  width: 100%; padding: 8px 12px;
+  width: 100%; padding: 6px 10px;
   border: 2px solid #e1e1e3; border-radius: var(--radius-sm);
-  font-size: 14px; font-family: inherit;
+  font-size: 13px; font-family: inherit;
   transition: border-color 0.2s; outline: none;
   background: var(--color-white); color: #333;
 }
@@ -254,15 +323,39 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 
 .checkbox-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 8px;
+  gap: 5px;
 }
 
 .checkbox-grid.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
 
+/* Layout em colunas tipo jornal — cada grupo flui pra próxima coluna quando enche,
+   em vez de empilhar tudo numa lista só. break-inside evita partir um grupo ao meio. */
+.canais-columns {
+  columns: 3; column-gap: 16px;
+}
+
+.canais-columns .canal-grupo {
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+}
+
+.canais-columns .checkbox-grid {
+  grid-template-columns: 1fr 1fr;
+}
+
+.canal-grupo { margin-bottom: 4px; }
+.canal-grupo:last-child { margin-bottom: 0; }
+
+.canal-grupo-label {
+  font-size: 10px; font-weight: 700; color: #888;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
 .checkbox-item, .radio-inline {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 6px 12px; border-radius: 8px;
-  cursor: pointer; font-size: 13px; font-weight: 500;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 2px 6px; border-radius: 8px;
+  cursor: pointer; font-size: 12px; font-weight: 500;
   background: #f5f5f7; transition: background 0.2s;
   border: 2px solid transparent;
 }
@@ -270,7 +363,7 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 .checkbox-item:hover, .radio-inline:hover { background: #eeeef0; }
 
 .checkbox-item input, .radio-inline input {
-  width: 16px; height: 16px; accent-color: var(--color-navy);
+  width: 14px; height: 14px; accent-color: var(--color-navy);
   cursor: pointer; margin: 0;
 }
 
@@ -281,7 +374,7 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 /* ───── Input with Suffix ───── */
 
 .input-suffix {
-  display: flex; align-items: center; gap: 0;
+  display: flex; align-items: stretch; gap: 0;
 }
 
 .input-suffix input {
@@ -290,20 +383,28 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 }
 
 .suffix {
-  display: flex; align-items: center; padding: 8px 12px;
+  display: flex; align-items: center; padding: 6px 12px;
   background: #f5f5f7; border: 2px solid #e1e1e3;
   border-left: none; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: 14px; font-weight: 700; color: #888;
+  font-size: 13px; font-weight: 700; color: #888;
+}
+
+/* Unidades mais longas (R$/CPF, R$/conversa) — a .suffix base foi pensada pro "%"
+   de 1 caractere; em texto maior, o mesmo font-size/peso vira um bloco desproporcional
+   perto do texto do input. Mais compacto e alinhado ao peso visual dos labels ao redor. */
+.suffix-unit {
+  font-size: 11px; font-weight: 700; padding: 6px 10px;
+  white-space: nowrap;
 }
 
 /* ───── Tooltip / Banner ───── */
 
 .tooltip-banner {
-  display: flex; align-items: flex-start; gap: 8px;
-  padding: 10px 14px; margin-bottom: 14px;
+  display: flex; align-items: flex-start; gap: 6px;
+  padding: 5px 9px; margin-bottom: 6px;
   background: #f0f4ff; border-radius: var(--radius-sm);
   border: 1px solid rgba(1,32,235,0.1);
-  font-size: 13px; color: #555; line-height: 1.5;
+  font-size: 11px; color: #555; line-height: 1.35;
 }
 
 .tooltip-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
@@ -328,3 +429,59 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 /* ───── Button small ───── */
 
 .btn-sm { padding: 8px 16px; font-size: 13px; }
+
+.btn-plus {
+  font-size: 20px; font-weight: 700; line-height: 1; width: 34px; height: 34px;
+  padding: 0; display: inline-flex; align-items: center; justify-content: center;
+}
+
+.btn-plus:hover { background: #e6f7ec; border-color: #a8ddbb; color: #1e8a4c; }
+
+/* ───── Tier row (editor de faixas em /config) ───── */
+
+.tier-row {
+  display: grid; grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 8px; align-items: end; margin-bottom: 8px;
+}
+
+/* O botão "Remover" (ícone de lixeira) não tem label acima como os inputs de faixa —
+   fixa a mesma altura do input (padding 6px + borda 2px) pra alinhar as bordas mesmo
+   com align-items:end, e centraliza o ícone dentro da caixa quadrada. */
+.tier-row .btn.btn-icon {
+  padding: 6px; width: 34px; height: 34px;
+  display: inline-flex; align-items: center; justify-content: center;
+}
+
+/* align-items:end alinha a CAIXA DE MARGEM do item, não a borda visível — o
+   margin-bottom:8px herdado de .field-group empurrava o input pra cima da linha real
+   da grade, enquanto o botão (sem margem) ficava flush embaixo. Zera a margem aqui,
+   já que o espaçamento entre faixas já vem do margin-bottom do .tier-row. */
+.tier-row .field-group { margin-bottom: 0; }
+
+/* ───── Mobile (≤640px) ─────
+   Único breakpoint da app — consolidado aqui de propósito. Regras de mobile espalhadas
+   pelo arquivo, antes de classes com a mesma especificidade declaradas depois delas
+   (ex: .cols-3 em "Column variations"), perdem a cascata mesmo com o media query
+   batendo — por isso tudo de responsivo mora só aqui, sempre por último no arquivo. */
+@media (max-width: 640px) {
+  body { padding: 10px; }
+  .grid { grid-template-columns: 1fr; }
+  .field-row,
+  .field-row.cols-2,
+  .field-row.cols-3 { grid-template-columns: 1fr; }
+  .cols-2, .cols-3 { grid-template-columns: 1fr; }
+  .checkbox-grid.cols-3 { grid-template-columns: 1fr; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+
+  .canais-columns { columns: 1; }
+  .canais-columns .checkbox-grid { grid-template-columns: 1fr; }
+
+  .step-indicator { gap: 6px; padding: 8px 10px; }
+  .step-number { width: 26px; height: 26px; font-size: 12px; }
+  .step-label { font-size: 10px; letter-spacing: 0.2px; }
+
+  .substep-nav { flex-wrap: wrap; }
+
+  .tier-row { grid-template-columns: 1fr 1fr; }
+  .tier-row .btn-danger { grid-column: 1 / -1; justify-self: end; }
+}

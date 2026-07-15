@@ -1,4 +1,5 @@
 import './globals.css'
+import { ConfigProvider } from '../lib/ConfigContext'
 
 export const metadata = {
   title: 'Precificação Comercial — PGMais',
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <ConfigProvider>{children}</ConfigProvider>
+      </body>
     </html>
   )
 }
