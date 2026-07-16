@@ -2,7 +2,7 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
-import { calcular, formatMoney, formatPct, getSetups } from '@/lib/precificacao'
+import { calcular, formatMoney, formatMoneyPreciso, formatPct, getSetups } from '@/lib/precificacao'
 import { CANAIS } from '@/lib/canais'
 import { useConfig } from '@/lib/ConfigContext'
 import DiscoveryForm from '@/components/DiscoveryForm'
@@ -407,7 +407,7 @@ export default function Page() {
               {rowsSuperior.map(item => (
                 <tr key={item.prod}>
                   <td>{item.prod}</td>
-                  <td className="num">{item.unit !== null ? formatMoney(item.unit) : '-'}</td>
+                  <td className="num">{item.unit !== null ? formatMoneyPreciso(item.unit) : '-'}</td>
                   <td className="num">{item.qtd.toLocaleString('pt-BR')}</td>
                   <td className="num">{item.tot !== null ? formatMoney(item.tot) : '-'}</td>
                   <td className="num">{item.tot ? formatPct(item.tot / total * 100) : '-'}</td>
@@ -425,7 +425,7 @@ export default function Page() {
               {rowsPreventiva.map(item => (
                 <tr key={item.prod}>
                   <td>{item.prod}</td>
-                  <td className="num">{formatMoney(item.unit)}</td>
+                  <td className="num">{formatMoneyPreciso(item.unit)}</td>
                   <td className="num">{item.qtd.toLocaleString('pt-BR')}</td>
                   <td className="num">{formatMoney(item.tot)}</td>
                   <td className="num">{formatPct(item.tot / total * 100)}</td>
