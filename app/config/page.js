@@ -174,6 +174,11 @@ export default function ConfigPage() {
 
   const handleSalvar = () => {
     updateConfig(draft)
+    fetch('/api/activity-log', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ tipo: 'preco_sessao', detalhes: draft }),
+    }).catch(() => { /* log é best-effort — não trava o salvar */ })
     router.push('/')
   }
 

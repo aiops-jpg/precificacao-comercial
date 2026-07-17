@@ -1,5 +1,7 @@
 import path from 'path'
 import Automizer from 'pptx-automizer'
+import { auth } from '@/auth'
+import { getPool } from '@/lib/db'
 import { calcular } from '@/lib/precificacao'
 import { getSlidesDaProposta, getEdicoesPorSlide } from '@/lib/proposta'
 
@@ -40,6 +42,26 @@ export async function POST(req) {
     const result = calcular(form, discovery.canais_ativos, config)
     const slides = getSlidesDaProposta(discovery.canais_ativos)
     const edicoes = getEdicoesPorSlide(result, discovery, config)
+
+    // Log da geração — guarda o cálculo completo (não só metadados), útil pra auditoria de
+    // quanto foi cobrado numa proposta específica. Não deve derrubar a geração se falhar.
+    try {
+      const session = await auth()
+      const pool = getPool()
+      await pool.query(
+        'INSERT INTO activity_log (tipo, usuario, detalhes) VALUES ($1, $2, $3)',
+        ['proposta_gerada', session?.user?.email || null, JSON.stringify({
+          nomeCliente: discovery.nomeCliente,
+          numeroProposta: discovery.numeroProposta,
+          canais_ativos: discovery.canais_ativos,
+          form,
+          discovery,
+          result,
+        })]
+      )
+    } catch (logErr) {
+      console.error('Falha ao registrar log de proposta:', logErr)
+    }
 
     const automizer = new Automizer({
       templateDir: path.join(process.cwd(), 'templates'),

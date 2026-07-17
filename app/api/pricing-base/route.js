@@ -27,5 +27,9 @@ export async function PUT(req) {
     'INSERT INTO pricing_base (data, updated_by) VALUES ($1, $2)',
     [JSON.stringify(body), session.user.email]
   )
+  await pool.query(
+    'INSERT INTO activity_log (tipo, usuario, detalhes) VALUES ($1, $2, $3)',
+    ['preco_global', session.user.email, JSON.stringify(body)]
+  )
   return Response.json({ ok: true, updated_by: session.user.email })
 }
