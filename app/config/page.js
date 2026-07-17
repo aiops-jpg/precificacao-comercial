@@ -2,6 +2,7 @@
 
 import { useEffect, useState, Fragment } from 'react'
 import { useRouter } from 'next/navigation'
+import { useSession, signOut } from 'next-auth/react'
 import { useConfig } from '@/lib/ConfigContext'
 import { CANAIS_BLOCOS } from '@/lib/canais'
 import { DISCOVERY_BLOCOS } from '@/lib/discoveryBlocos'
@@ -152,8 +153,11 @@ function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup', exced
 
 export default function ConfigPage() {
   const router = useRouter()
-  const { config, updateConfig, resetToDefault, undoLast, canUndo, isCustom, hydrated } = useConfig()
+  const { data: session } = useSession()
+  const { config, updateConfig, resetToDefault, undoLast, canUndo, isCustom, hydrated, publicarBaseGeral } = useConfig()
   const [draft, setDraft] = useState(config)
+  const [publicando, setPublicando] = useState(false)
+  const [erroPublicar, setErroPublicar] = useState('')
 
   useEffect(() => {
     setDraft(config)
@@ -175,6 +179,23 @@ export default function ConfigPage() {
   const handleRestaurar = () => {
     if (confirm('Restaurar todos os preços para o padrão de fábrica? Isso descarta todas as edições desta sessão (dá pra desfazer depois em "Desfazer Última Alteração").')) {
       resetToDefault()
+    }
+  }
+
+  const handlePublicarBaseGeral = async () => {
+    if (!session?.user) {
+      router.push('/login?callbackUrl=/config')
+      return
+    }
+    if (!confirm('Publicar esta base de preços pra TODO MUNDO que usar o site? Isso substitui a base geral atual.')) return
+    setErroPublicar('')
+    setPublicando(true)
+    try {
+      await publicarBaseGeral(draft)
+    } catch (e) {
+      setErroPublicar(`Não foi possível publicar: ${e.message || e}`)
+    } finally {
+      setPublicando(false)
     }
   }
 
@@ -225,7 +246,16 @@ export default function ConfigPage() {
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleCancelar}>Cancelar</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
         <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
+          {session?.user ? (publicando ? 'Publicando...' : '🌐 Mudar Base de Preços Geral') : '🔒 Mudar Base de Preços Geral'}
+        </button>
         {isCustom && <span style={{ color: '#c0392b', fontWeight: 700 }}>● Preços diferentes do padrão de fábrica</span>}
+        {session?.user && (
+          <span style={{ fontSize: 12, color: '#555' }}>
+            Logado como {session.user.email} · <button type="button" className="btn-link" onClick={() => signOut({ callbackUrl: '/config' })}>Sair</button>
+          </span>
+        )}
+        {erroPublicar && <span style={{ color: '#c0392b', fontSize: 13 }}>{erroPublicar}</span>}
       </div>
 
       <div className="grid">
@@ -452,6 +482,9 @@ export default function ConfigPage() {
           <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleCancelar}>Cancelar</button>
           <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
           <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
+          <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
+            {session?.user ? (publicando ? 'Publicando...' : '🌐 Mudar Base de Preços Geral') : '🔒 Mudar Base de Preços Geral'}
+          </button>
         </div>
       </div>
     </div>
