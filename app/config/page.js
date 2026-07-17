@@ -9,6 +9,13 @@ import { DISCOVERY_BLOCOS } from '@/lib/discoveryBlocos'
 
 const SUBSTEP_LABEL = { 1: 'Perfil', 2: 'Canais', 3: 'Infraestrutura' }
 
+const CONFIG_TABS = [
+  { key: 'mensageria', label: 'Canais de Mensageria' },
+  { key: 'sistemas', label: 'Sistemas/Plataformas' },
+  { key: 'services', label: 'Services' },
+  { key: 'discovery', label: 'Formulário de Discovery' },
+]
+
 function EyeIcon({ open }) {
   return open ? (
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -163,6 +170,7 @@ export default function ConfigPage() {
   const [loginSenha, setLoginSenha] = useState('')
   const [erroLogin, setErroLogin] = useState('')
   const [entrando, setEntrando] = useState(false)
+  const [tab, setTab] = useState('mensageria')
 
   useEffect(() => {
     setDraft(config)
@@ -311,6 +319,121 @@ export default function ConfigPage() {
         </div>
       )}
 
+      <div className="config-tabs">
+        {CONFIG_TABS.map((t) => (
+          <div
+            key={t.key}
+            className={`config-tab ${tab === t.key ? 'active' : ''}`}
+            onClick={() => setTab(t.key)}
+          >
+            {t.label}
+          </div>
+        ))}
+      </div>
+
+      {tab === 'mensageria' && (
+      <div className="grid">
+        {/* SMS */}
+        <TierEditor label="Faixas — SMS Texto/Simples (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.sms} onChange={(v) => set(['faixas', 'sms'], v)} />
+        <div className="card card-full">
+          <div className="card-title">SMS — Demais Preços</div>
+          <div className="field-row cols-3">
+            <NumberField label="SMS FAST/OTP" value={draft.precos.sms_fast_otp} onChange={(v) => set(['precos', 'sms_fast_otp'], v)} />
+            <NumberField label="SMS Rota Exclusiva" value={draft.precos.sms_rota_exclusiva} onChange={(v) => set(['precos', 'sms_rota_exclusiva'], v)} />
+            <NumberField label="SMS Sender ID" value={draft.precos.sms_sender_id} onChange={(v) => set(['precos', 'sms_sender_id'], v)} />
+            <NumberField label="SMS Flash" value={draft.precos.sms_flash} onChange={(v) => set(['precos', 'sms_flash'], v)} />
+          </div>
+        </div>
+
+        {/* E-MAIL */}
+        <TierEditor label="Faixas — E-mail Simples (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email} onChange={(v) => set(['faixas', 'email'], v)} />
+        <TierEditor label="Faixas — E-mail Registrado / AR Digital (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email_registrado} onChange={(v) => set(['faixas', 'email_registrado'], v)} />
+        <TierEditor label="Faixas — E-mail SMTP (pacote mensal fechado, R$)" precoLabel="R$/pacote" tiers={draft.faixas.email_smtp} onChange={(v) => set(['faixas', 'email_smtp'], v)} />
+        <TierEditor
+          label="Faixas — E-mail Transacional (pacote mensal fechado, R$)"
+          precoLabel="R$/pacote"
+          excedenteLabel="R$/un excedente"
+          tiers={draft.faixas.email_transacional}
+          onChange={(v) => set(['faixas', 'email_transacional'], v)}
+        />
+        <div className="card card-full">
+          <div className="card-title">E-mail — Demais Preços</div>
+          <div className="field-row cols-3">
+            <NumberField
+              label="E-mail Transacional — Franquia mínima mensal (R$)"
+              value={draft.precos.email_transacional_franquia_minima}
+              onChange={(v) => set(['precos', 'email_transacional_franquia_minima'], v)}
+            />
+            <NumberField label="E-mail PDF — manutenção mensal" value={draft.precos.email_pdf_manutencao} onChange={(v) => set(['precos', 'email_pdf_manutencao'], v)} />
+            <NumberField label="E-mail PDF — por geração" value={draft.precos.email_pdf_geracao} onChange={(v) => set(['precos', 'email_pdf_geracao'], v)} />
+          </div>
+        </div>
+
+        {/* RCS */}
+        <div className="card card-full">
+          <div className="card-title">RCS</div>
+          <div className="field-row cols-3">
+            <NumberField label="RCS Conversacional/Sessão" value={draft.precos.rcs_conversacional} onChange={(v) => set(['precos', 'rcs_conversacional'], v)} />
+            <NumberField label="RCS Básico" value={draft.precos.rcs_basico} onChange={(v) => set(['precos', 'rcs_basico'], v)} />
+            <NumberField label="RCS Simples" value={draft.precos.rcs_simples} onChange={(v) => set(['precos', 'rcs_simples'], v)} />
+            <NumberField label="Setup (conta)" value={draft.setup.rcs} onChange={(v) => set(['setup', 'rcs'], v)} />
+          </div>
+        </div>
+
+        {/* WHATSAPP */}
+        <div className="card card-full">
+          <div className="card-title">WhatsApp</div>
+          <div className="field-row cols-3">
+            <NumberField label="Ativo — por envio" value={draft.precos.whats_ativo_envio} onChange={(v) => set(['precos', 'whats_ativo_envio'], v)} />
+            <NumberField label="Receptivo — por conversa" value={draft.precos.whats_receptivo_conversa} onChange={(v) => set(['precos', 'whats_receptivo_conversa'], v)} />
+            <NumberField label="Setup (conta)" value={draft.setup.whatsapp} onChange={(v) => set(['setup', 'whatsapp'], v)} />
+          </div>
+        </div>
+
+        {/* ENRIQUECIMENTO */}
+        <TierEditor label="Faixas — Enriquecimento (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.enriquecimento} onChange={(v) => set(['faixas', 'enriquecimento'], v)} />
+        <div className="card card-full">
+          <div className="card-title">Enriquecimento Premium</div>
+          <div className="field-row cols-3">
+            <NumberField label="Por consulta" value={draft.precos.enriquecimento_premium} onChange={(v) => set(['precos', 'enriquecimento_premium'], v)} />
+          </div>
+        </div>
+
+        {/* LANDING PAGE */}
+        <div className="card card-full">
+          <div className="card-title">Landing Page</div>
+          <div className="field-row cols-3">
+            <NumberField label="Por link enviado" value={draft.precos.landing_page_link} onChange={(v) => set(['precos', 'landing_page_link'], v)} />
+            <NumberField label="Setup" value={draft.setup.landing_page_link} onChange={(v) => set(['setup', 'landing_page_link'], v)} />
+          </div>
+        </div>
+
+        {/* VALIDA+ */}
+        <div className="card card-full">
+          <div className="card-title">Valida+</div>
+          <div className="field-row cols-3">
+            <NumberField label="Por consulta" value={draft.precos.valida_mais} onChange={(v) => set(['precos', 'valida_mais'], v)} />
+          </div>
+        </div>
+
+        {/* OUTROS CANAIS */}
+        <div className="card card-full">
+          <div className="card-title">Outros Canais</div>
+          <div className="field-row cols-3">
+            <NumberField label="Telegrama" value={draft.precos.telegrama} onChange={(v) => set(['precos', 'telegrama'], v)} />
+            <NumberField label="Carnê" value={draft.precos.carne} onChange={(v) => set(['precos', 'carne'], v)} />
+            <NumberField label="Cartório" value={draft.precos.cartorio_documento} onChange={(v) => set(['precos', 'cartorio_documento'], v)} />
+            <NumberField label="Documentos Digital/Files/Link" value={draft.precos.documento_digital} onChange={(v) => set(['precos', 'documento_digital'], v)} />
+            <NumberField label="Ads — por campanha (CPF/Email)" value={draft.precos.ads_campanha} onChange={(v) => set(['precos', 'ads_campanha'], v)} />
+            <NumberField label="Ads — franquia mínima" value={draft.precos.ads_franquia} onChange={(v) => set(['precos', 'ads_franquia'], v)} />
+            <NumberField label="Google/Meta Ads (criativos)" value={draft.precos.google_meta_ads} onChange={(v) => set(['precos', 'google_meta_ads'], v)} />
+            <NumberField label="Carta Física" value={draft.precos.carta_fisica} onChange={(v) => set(['precos', 'carta_fisica'], v)} />
+          </div>
+        </div>
+      </div>
+      )}
+
+      {tab === 'sistemas' && (
       <div className="grid">
         {/* ONE PLATFORM */}
         <div className="card card-full">
@@ -350,7 +473,7 @@ export default function ConfigPage() {
 
         {/* OMNI */}
         <div className="card card-full">
-          <div className="card-title">Plataforma OMNI — Planos</div>
+          <div className="card-title">Agentes Digitais — Plataforma OMNI</div>
           {draft.omni.planos.map((p, i) => (
             <div key={p.nome} style={{ marginBottom: 10 }}>
               <div className="canal-grupo-label">{p.nome}</div>
@@ -380,6 +503,39 @@ export default function ConfigPage() {
           ))}
         </div>
 
+        {/* CHATBOT */}
+        <div className="card card-full">
+          <div className="card-title">Agentes Digitais — Chatbot</div>
+          <div className="field-row cols-3">
+            <NumberField label="Por atendimento" value={draft.precos.chatbot_unit} onChange={(v) => set(['precos', 'chatbot_unit'], v)} />
+            <NumberField label="Franquia mínima" value={draft.precos.chatbot_franquia} onChange={(v) => set(['precos', 'chatbot_franquia'], v)} />
+            <NumberField label="Setup" value={draft.setup.chatbot} onChange={(v) => set(['setup', 'chatbot'], v)} />
+          </div>
+        </div>
+
+        {/* VOICEBOT */}
+        <div className="card card-full">
+          <div className="card-title">Agentes Digitais — Voicebot</div>
+          <div className="field-row cols-3">
+            <NumberField label="Por robô" value={draft.precos.voicebot_unit} onChange={(v) => set(['precos', 'voicebot_unit'], v)} />
+            <NumberField label="Mínimo de robôs" value={draft.precos.voicebot_min_robos} onChange={(v) => set(['precos', 'voicebot_min_robos'], v)} />
+            <NumberField label="Setup" value={draft.setup.voicebot} onChange={(v) => set(['setup', 'voicebot'], v)} />
+          </div>
+        </div>
+
+        {/* PORTAL */}
+        <div className="card card-full">
+          <div className="card-title">Portal de Negociação</div>
+          <div className="field-row cols-3">
+            <NumberField label="Mensal" value={draft.precos.portal_negociacao} onChange={(v) => set(['precos', 'portal_negociacao'], v)} />
+            <NumberField label="Setup" value={draft.setup.portal_negociacao} onChange={(v) => set(['setup', 'portal_negociacao'], v)} />
+          </div>
+        </div>
+      </div>
+      )}
+
+      {tab === 'services' && (
+      <div className="grid">
         {/* TELECOBRANÇA */}
         <div className="card card-full">
           <div className="card-title">Telecobrança (CICLO) — Dimensionamento por PA</div>
@@ -390,77 +546,11 @@ export default function ConfigPage() {
             <NumberField label="Cross Channel — R$/PA" value={draft.telecobranca.cross_channel_por_pa} onChange={(v) => set(['telecobranca', 'cross_channel_por_pa'], v)} />
           </div>
         </div>
+      </div>
+      )}
 
-        {/* FAIXAS TARIFÁRIAS */}
-        <TierEditor label="Faixas — SMS Texto/Simples (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.sms} onChange={(v) => set(['faixas', 'sms'], v)} />
-        <TierEditor label="Faixas — E-mail Simples (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email} onChange={(v) => set(['faixas', 'email'], v)} />
-        <TierEditor label="Faixas — Enriquecimento (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.enriquecimento} onChange={(v) => set(['faixas', 'enriquecimento'], v)} />
-        <TierEditor label="Faixas — E-mail Registrado / AR Digital (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.email_registrado} onChange={(v) => set(['faixas', 'email_registrado'], v)} />
-        <TierEditor label="Faixas — E-mail SMTP (pacote mensal fechado, R$)" precoLabel="R$/pacote" tiers={draft.faixas.email_smtp} onChange={(v) => set(['faixas', 'email_smtp'], v)} />
-        <TierEditor
-          label="Faixas — E-mail Transacional (pacote mensal fechado, R$)"
-          precoLabel="R$/pacote"
-          excedenteLabel="R$/un excedente"
-          tiers={draft.faixas.email_transacional}
-          onChange={(v) => set(['faixas', 'email_transacional'], v)}
-        />
-        <div className="card card-full">
-          <div style={{ maxWidth: 260 }}>
-            <NumberField
-              label="E-mail Transacional — Franquia mínima mensal (R$)"
-              value={draft.precos.email_transacional_franquia_minima}
-              onChange={(v) => set(['precos', 'email_transacional_franquia_minima'], v)}
-            />
-          </div>
-        </div>
-
-        {/* SETUPS */}
-        <div className="card card-full">
-          <div className="card-title">Custos de Setup (implantação — únicos)</div>
-          <div className="field-row cols-3">
-            <NumberField label="Chatbot" value={draft.setup.chatbot} onChange={(v) => set(['setup', 'chatbot'], v)} />
-            <NumberField label="Voicebot" value={draft.setup.voicebot} onChange={(v) => set(['setup', 'voicebot'], v)} />
-            <NumberField label="Portal de Negociação" value={draft.setup.portal_negociacao} onChange={(v) => set(['setup', 'portal_negociacao'], v)} />
-            <NumberField label="Landing Page" value={draft.setup.landing_page_link} onChange={(v) => set(['setup', 'landing_page_link'], v)} />
-            <NumberField label="RCS" value={draft.setup.rcs} onChange={(v) => set(['setup', 'rcs'], v)} />
-            <NumberField label="WhatsApp (conta)" value={draft.setup.whatsapp} onChange={(v) => set(['setup', 'whatsapp'], v)} />
-          </div>
-        </div>
-
-        {/* PREÇOS FLAT */}
-        <div className="card card-full">
-          <div className="card-title">Preços Unitários — Demais Canais</div>
-          <div className="field-row cols-3">
-            <NumberField label="RCS Conversacional/Sessão" value={draft.precos.rcs_conversacional} onChange={(v) => set(['precos', 'rcs_conversacional'], v)} />
-            <NumberField label="RCS Básico" value={draft.precos.rcs_basico} onChange={(v) => set(['precos', 'rcs_basico'], v)} />
-            <NumberField label="RCS Simples" value={draft.precos.rcs_simples} onChange={(v) => set(['precos', 'rcs_simples'], v)} />
-            <NumberField label="Chatbot — por atendimento" value={draft.precos.chatbot_unit} onChange={(v) => set(['precos', 'chatbot_unit'], v)} />
-            <NumberField label="Chatbot — franquia mínima" value={draft.precos.chatbot_franquia} onChange={(v) => set(['precos', 'chatbot_franquia'], v)} />
-            <NumberField label="Voicebot — por robô" value={draft.precos.voicebot_unit} onChange={(v) => set(['precos', 'voicebot_unit'], v)} />
-            <NumberField label="Voicebot — mínimo de robôs" value={draft.precos.voicebot_min_robos} onChange={(v) => set(['precos', 'voicebot_min_robos'], v)} />
-            <NumberField label="Telegrama" value={draft.precos.telegrama} onChange={(v) => set(['precos', 'telegrama'], v)} />
-            <NumberField label="Carnê" value={draft.precos.carne} onChange={(v) => set(['precos', 'carne'], v)} />
-            <NumberField label="Cartório" value={draft.precos.cartorio_documento} onChange={(v) => set(['precos', 'cartorio_documento'], v)} />
-            <NumberField label="Documentos Digital/Files/Link" value={draft.precos.documento_digital} onChange={(v) => set(['precos', 'documento_digital'], v)} />
-            <NumberField label="WhatsApp Ativo — por envio" value={draft.precos.whats_ativo_envio} onChange={(v) => set(['precos', 'whats_ativo_envio'], v)} />
-            <NumberField label="WhatsApp Receptivo — por conversa" value={draft.precos.whats_receptivo_conversa} onChange={(v) => set(['precos', 'whats_receptivo_conversa'], v)} />
-            <NumberField label="SMS FAST/OTP" value={draft.precos.sms_fast_otp} onChange={(v) => set(['precos', 'sms_fast_otp'], v)} />
-            <NumberField label="SMS Rota Exclusiva" value={draft.precos.sms_rota_exclusiva} onChange={(v) => set(['precos', 'sms_rota_exclusiva'], v)} />
-            <NumberField label="SMS Sender ID" value={draft.precos.sms_sender_id} onChange={(v) => set(['precos', 'sms_sender_id'], v)} />
-            <NumberField label="SMS Flash" value={draft.precos.sms_flash} onChange={(v) => set(['precos', 'sms_flash'], v)} />
-            <NumberField label="Valida+" value={draft.precos.valida_mais} onChange={(v) => set(['precos', 'valida_mais'], v)} />
-            <NumberField label="Enriquecimento Premium" value={draft.precos.enriquecimento_premium} onChange={(v) => set(['precos', 'enriquecimento_premium'], v)} />
-            <NumberField label="Landing Page — por link" value={draft.precos.landing_page_link} onChange={(v) => set(['precos', 'landing_page_link'], v)} />
-            <NumberField label="Portal de Negociação — mensal" value={draft.precos.portal_negociacao} onChange={(v) => set(['precos', 'portal_negociacao'], v)} />
-            <NumberField label="E-mail PDF — manutenção mensal" value={draft.precos.email_pdf_manutencao} onChange={(v) => set(['precos', 'email_pdf_manutencao'], v)} />
-            <NumberField label="E-mail PDF — por geração" value={draft.precos.email_pdf_geracao} onChange={(v) => set(['precos', 'email_pdf_geracao'], v)} />
-            <NumberField label="Ads — por campanha (CPF/Email)" value={draft.precos.ads_campanha} onChange={(v) => set(['precos', 'ads_campanha'], v)} />
-            <NumberField label="Ads — franquia mínima" value={draft.precos.ads_franquia} onChange={(v) => set(['precos', 'ads_franquia'], v)} />
-            <NumberField label="Google/Meta Ads (criativos)" value={draft.precos.google_meta_ads} onChange={(v) => set(['precos', 'google_meta_ads'], v)} />
-            <NumberField label="Carta Física" value={draft.precos.carta_fisica} onChange={(v) => set(['precos', 'carta_fisica'], v)} />
-          </div>
-        </div>
-
+      {tab === 'discovery' && (
+      <div className="grid">
         {/* LIGA/DESLIGA BLOCOS DO DISCOVERY */}
         <div className="card card-full">
           <div className="card-title" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -529,16 +619,17 @@ export default function ConfigPage() {
             ))}
           </div>
         </div>
+      </div>
+      )}
 
-        <div className="card card-full actions">
-          <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
-          <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleCancelar}>Cancelar</button>
-          <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
-          <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
-          <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
-            {session?.user ? (publicando ? 'Publicando...' : '🌐 Mudar Base de Preços Geral') : '🔒 Mudar Base de Preços Geral'}
-          </button>
-        </div>
+      <div className="card card-full actions">
+        <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleCancelar}>Cancelar</button>
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
+        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
+          {session?.user ? (publicando ? 'Publicando...' : '🌐 Mudar Base de Preços Geral') : '🔒 Mudar Base de Preços Geral'}
+        </button>
       </div>
     </div>
   )

@@ -319,6 +319,25 @@ table .num { text-align: right; font-variant-numeric: tabular-nums; }
 .substep-item.done { color: #1a3a1c; }
 .substep-item.done .substep-number { background: var(--color-green); color: #1a3a1c; }
 
+/* ───── Config Tabs (/config) ───── */
+
+.config-tabs {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 12px; padding: 2px;
+}
+
+.config-tab {
+  cursor: pointer; user-select: none;
+  padding: 8px 16px; border-radius: 999px;
+  background: var(--color-white); border: 2px solid rgba(23,44,102,0.08);
+  font-size: 12px; font-weight: 700; color: #999;
+  text-transform: uppercase; letter-spacing: 0.3px;
+  transition: 0.2s;
+}
+
+.config-tab:hover { border-color: rgba(23,44,102,0.3); }
+.config-tab.active { border-color: var(--color-navy); color: var(--color-navy); }
+
 /* ───── Select & Textarea ───── */
 
 select, textarea {
