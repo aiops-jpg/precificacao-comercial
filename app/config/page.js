@@ -2,7 +2,7 @@
 
 import { useEffect, useState, Fragment } from 'react'
 import { useRouter } from 'next/navigation'
-import { useSession, signOut } from 'next-auth/react'
+import { useSession, signIn, signOut } from 'next-auth/react'
 import { useConfig } from '@/lib/ConfigContext'
 import { CANAIS_BLOCOS } from '@/lib/canais'
 import { DISCOVERY_BLOCOS } from '@/lib/discoveryBlocos'
@@ -158,6 +158,11 @@ export default function ConfigPage() {
   const [draft, setDraft] = useState(config)
   const [publicando, setPublicando] = useState(false)
   const [erroPublicar, setErroPublicar] = useState('')
+  const [mostrarLogin, setMostrarLogin] = useState(false)
+  const [loginEmail, setLoginEmail] = useState('')
+  const [loginSenha, setLoginSenha] = useState('')
+  const [erroLogin, setErroLogin] = useState('')
+  const [entrando, setEntrando] = useState(false)
 
   useEffect(() => {
     setDraft(config)
@@ -182,11 +187,7 @@ export default function ConfigPage() {
     }
   }
 
-  const handlePublicarBaseGeral = async () => {
-    if (!session?.user) {
-      router.push('/login?callbackUrl=/config')
-      return
-    }
+  const confirmarEPublicar = async () => {
     if (!confirm('Publicar esta base de preços pra TODO MUNDO que usar o site? Isso substitui a base geral atual.')) return
     setErroPublicar('')
     setPublicando(true)
@@ -197,6 +198,30 @@ export default function ConfigPage() {
     } finally {
       setPublicando(false)
     }
+  }
+
+  const handlePublicarBaseGeral = () => {
+    if (!session?.user) {
+      setErroLogin('')
+      setMostrarLogin(true)
+      return
+    }
+    confirmarEPublicar()
+  }
+
+  const handleLoginSubmit = async (e) => {
+    e.preventDefault()
+    setErroLogin('')
+    setEntrando(true)
+    const res = await signIn('credentials', { email: loginEmail, password: loginSenha, redirect: false })
+    setEntrando(false)
+    if (res?.error) {
+      setErroLogin('E-mail ou senha incorretos.')
+      return
+    }
+    setMostrarLogin(false)
+    setLoginSenha('')
+    confirmarEPublicar()
   }
 
   const desabilitados = new Set(draft.canaisDesabilitados || [])
@@ -257,6 +282,29 @@ export default function ConfigPage() {
         )}
         {erroPublicar && <span style={{ color: '#c0392b', fontSize: 13 }}>{erroPublicar}</span>}
       </div>
+
+      {mostrarLogin && (
+        <div className="card card-full" style={{ maxWidth: 360 }}>
+          <div className="card-title">Login — Mudar Base de Preços Geral</div>
+          <form onSubmit={handleLoginSubmit}>
+            <div className="field-row cols-2">
+              <div className="field-group">
+                <label>E-mail</label>
+                <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="voce@pgmais.com.br" required autoFocus />
+              </div>
+              <div className="field-group">
+                <label>Senha</label>
+                <input type="password" value={loginSenha} onChange={(e) => setLoginSenha(e.target.value)} required />
+              </div>
+            </div>
+            {erroLogin && <p style={{ color: '#c0392b', fontSize: 13, marginBottom: 8 }}>{erroLogin}</p>}
+            <div className="actions">
+              <button type="submit" className="btn" disabled={entrando}>{entrando ? 'Entrando...' : 'Entrar e Publicar'}</button>
+              <button type="button" className="btn btn-secondary btn-hover-gray" onClick={() => setMostrarLogin(false)}>Cancelar</button>
+            </div>
+          </form>
+        </div>
+      )}
 
       <div className="grid">
         {/* ONE PLATFORM */}
