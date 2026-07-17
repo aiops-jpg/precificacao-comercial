@@ -531,6 +531,15 @@ export default function ConfigPage() {
             <NumberField label="Setup" value={draft.setup.portal_negociacao} onChange={(v) => set(['setup', 'portal_negociacao'], v)} />
           </div>
         </div>
+
+        {/* DESENVOLVIMENTO EXTRA */}
+        <div className="card card-full">
+          <div className="card-title">Desenvolvimento Extra (ONE, Agentes Digitais, WhatsApp, RCS)</div>
+          <div className="field-row cols-3">
+            <NumberField label="Horas incluídas no setup padrão" value={draft.setup.horas_incluidas} onChange={(v) => set(['setup', 'horas_incluidas'], v)} />
+            <NumberField label="Hora extra de desenvolvimento/customização" value={draft.precos.hora_desenvolvimento} onChange={(v) => set(['precos', 'hora_desenvolvimento'], v)} />
+          </div>
+        </div>
       </div>
       )}
 
