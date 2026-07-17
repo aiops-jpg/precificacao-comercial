@@ -289,10 +289,10 @@ export default function ConfigPage() {
       </div>
 
       {mostrarLogin && (
-        <div className="card card-full" style={{ maxWidth: 360 }}>
-          <div className="card-title">Login — Mudar Base de Preços Geral</div>
-          <form onSubmit={handleLoginSubmit}>
-            <div className="field-row cols-2">
+        <div className="modal-overlay" onClick={() => setMostrarLogin(false)}>
+          <div className="card modal-content" onClick={(e) => e.stopPropagation()}>
+            <div className="card-title">Login — Mudar Base de Preços Geral</div>
+            <form onSubmit={handleLoginSubmit}>
               <div className="field-group">
                 <label>E-mail</label>
                 <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="voce@pgmais.com.br" required autoFocus />
@@ -301,13 +301,13 @@ export default function ConfigPage() {
                 <label>Senha</label>
                 <input type="password" value={loginSenha} onChange={(e) => setLoginSenha(e.target.value)} required />
               </div>
-            </div>
-            {erroLogin && <p style={{ color: '#c0392b', fontSize: 13, marginBottom: 8 }}>{erroLogin}</p>}
-            <div className="actions">
-              <button type="submit" className="btn" disabled={entrando}>{entrando ? 'Entrando...' : 'Entrar e Publicar'}</button>
-              <button type="button" className="btn btn-secondary btn-hover-gray" onClick={() => setMostrarLogin(false)}>Cancelar</button>
-            </div>
-          </form>
+              {erroLogin && <p style={{ color: '#c0392b', fontSize: 13, marginBottom: 8 }}>{erroLogin}</p>}
+              <div className="actions">
+                <button type="submit" className="btn" disabled={entrando}>{entrando ? 'Entrando...' : 'Entrar e Publicar'}</button>
+                <button type="button" className="btn btn-secondary btn-hover-gray" onClick={() => setMostrarLogin(false)}>Cancelar</button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
 
