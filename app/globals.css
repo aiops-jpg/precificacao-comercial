@@ -171,6 +171,15 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
   font-size: 12px; color: #33406b; line-height: 1.5;
 }
 
+.nota-readonly {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 8px;
+}
+
+.nota-edit-trigger {
+  flex-shrink: 0; color: #6b7cad; padding: 2px;
+}
+.nota-edit-trigger:hover { color: var(--color-navy); }
+
 .nota-editable label {
   display: block; font-size: 10px; font-weight: 700; color: #6b7cad;
   text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px;

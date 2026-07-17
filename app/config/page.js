@@ -16,11 +16,27 @@ const CONFIG_TABS = [
   { key: 'discovery', label: 'Formulário de Discovery' },
 ]
 
+function PencilIcon() {
+  return (
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z" />
+    </svg>
+  )
+}
+
 // Nota de contexto/regra de negócio por seção — só admin (logado) edita, e só como parte da
-// base geral (não existe versão "por sessão" pra nota). Quem não é admin só lê, se tiver algo.
-function NotaField({ value, onChange, isAdmin }) {
+// base geral (não existe versão "por sessão" pra nota, nem edição local sem login). Quem não
+// é admin lê a nota e vê um atalho pra editar, que pede a credencial (mesmo fluxo do publicar).
+function NotaField({ value, onChange, isAdmin, onRequestEdit }) {
   if (!isAdmin) {
-    return value ? <div className="nota-box">📝 {value}</div> : null
+    return (
+      <div className="nota-box nota-readonly">
+        <span>{value ? `📝 ${value}` : 'Sem nota ainda.'}</span>
+        <button type="button" className="btn-link btn-link-icon nota-edit-trigger" onClick={onRequestEdit} title="Editar nota (pede login)" aria-label="Editar nota">
+          <PencilIcon />
+        </button>
+      </div>
+    )
   }
   return (
     <div className="nota-box nota-editable">
@@ -116,7 +132,7 @@ function validarFaixas(tiers, mode = 'lookup') {
 // Editor genérico de faixas [{min, max, preco}] — max vazio = sem teto (Infinity).
 // excedenteLabel: quando informado, mostra uma coluna extra "preco por unidade excedente"
 // (usado no pacote mensal do E-mail Transacional, cobrado além do teto da última faixa).
-function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup', excedenteLabel, nota, onNotaChange, isAdmin }) {
+function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup', excedenteLabel, nota, onNotaChange, isAdmin, onRequestEditNota }) {
   const update = (i, field, val) => {
     const next = tiers.map((t, idx) => (idx === i ? { ...t, [field]: val } : t))
     onChange(next)
@@ -128,7 +144,7 @@ function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup', exced
   return (
     <div className="card card-full">
       <div className="card-title">{label}</div>
-      {onNotaChange && <NotaField value={nota} onChange={onNotaChange} isAdmin={isAdmin} />}
+      {onNotaChange && <NotaField value={nota} onChange={onNotaChange} isAdmin={isAdmin} onRequestEdit={onRequestEditNota} />}
       {avisos.map((msg, i) => (
         <div key={i} className="warning-banner">⚠ {msg}</div>
       ))}
@@ -182,6 +198,7 @@ export default function ConfigPage() {
   const [publicando, setPublicando] = useState(false)
   const [erroPublicar, setErroPublicar] = useState('')
   const [mostrarLogin, setMostrarLogin] = useState(false)
+  const [loginIntent, setLoginIntent] = useState('publish') // 'publish' | 'edit' — o que fazer após o login
   const [loginEmail, setLoginEmail] = useState('')
   const [loginSenha, setLoginSenha] = useState('')
   const [erroLogin, setErroLogin] = useState('')
@@ -232,10 +249,20 @@ export default function ConfigPage() {
   const handlePublicarBaseGeral = () => {
     if (!session?.user) {
       setErroLogin('')
+      setLoginIntent('publish')
       setMostrarLogin(true)
       return
     }
     confirmarEPublicar()
+  }
+
+  // Clique no lápis de uma nota (visível pra todo mundo) — quem não tem login cai no mesmo
+  // formulário de credencial do "Mudar Base de Preços Geral", só que aqui, após entrar, não
+  // publica nada: só libera o campo pra edição (a nota vira textarea porque isAdmin passa a ser true).
+  const handleRequestEditNota = () => {
+    setErroLogin('')
+    setLoginIntent('edit')
+    setMostrarLogin(true)
   }
 
   const handleLoginSubmit = async (e) => {
@@ -250,7 +277,7 @@ export default function ConfigPage() {
     }
     setMostrarLogin(false)
     setLoginSenha('')
-    confirmarEPublicar()
+    if (loginIntent === 'publish') confirmarEPublicar()
   }
 
   const desabilitados = new Set(draft.canaisDesabilitados || [])
@@ -315,7 +342,7 @@ export default function ConfigPage() {
       {mostrarLogin && (
         <div className="modal-overlay" onClick={() => setMostrarLogin(false)}>
           <div className="card modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="card-title">Login — Mudar Base de Preços Geral</div>
+            <div className="card-title">{loginIntent === 'edit' ? 'Login — Editar Nota' : 'Login — Mudar Base de Preços Geral'}</div>
             <form onSubmit={handleLoginSubmit}>
               <div className="field-group">
                 <label>E-mail</label>
@@ -327,7 +354,7 @@ export default function ConfigPage() {
               </div>
               {erroLogin && <p style={{ color: '#c0392b', fontSize: 13, marginBottom: 8 }}>{erroLogin}</p>}
               <div className="actions">
-                <button type="submit" className="btn" disabled={entrando}>{entrando ? 'Entrando...' : 'Entrar e Publicar'}</button>
+                <button type="submit" className="btn" disabled={entrando}>{entrando ? 'Entrando...' : loginIntent === 'edit' ? 'Entrar e Editar' : 'Entrar e Publicar'}</button>
                 <button type="button" className="btn btn-secondary btn-hover-gray" onClick={() => setMostrarLogin(false)}>Cancelar</button>
               </div>
             </form>
@@ -360,10 +387,11 @@ export default function ConfigPage() {
           nota={draft.notas?.sms}
           onNotaChange={(v) => set(['notas', 'sms'], v)}
           isAdmin={isAdmin}
+          onRequestEditNota={handleRequestEditNota}
         />
         <div className="card card-full">
           <div className="card-title">SMS — Demais Preços</div>
-          <NotaField value={draft.notas?.sms_extra} onChange={(v) => set(['notas', 'sms_extra'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.sms_extra} onChange={(v) => set(['notas', 'sms_extra'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="SMS FAST/OTP" value={draft.precos.sms_fast_otp} onChange={(v) => set(['precos', 'sms_fast_otp'], v)} />
             <NumberField label="SMS Rota Exclusiva" value={draft.precos.sms_rota_exclusiva} onChange={(v) => set(['precos', 'sms_rota_exclusiva'], v)} />
@@ -381,6 +409,7 @@ export default function ConfigPage() {
           nota={draft.notas?.email_simples}
           onNotaChange={(v) => set(['notas', 'email_simples'], v)}
           isAdmin={isAdmin}
+          onRequestEditNota={handleRequestEditNota}
         />
         <TierEditor
           label="Faixas — E-mail Registrado / AR Digital (R$/unidade)"
@@ -390,6 +419,7 @@ export default function ConfigPage() {
           nota={draft.notas?.email_registrado}
           onNotaChange={(v) => set(['notas', 'email_registrado'], v)}
           isAdmin={isAdmin}
+          onRequestEditNota={handleRequestEditNota}
         />
         <TierEditor
           label="Faixas — E-mail SMTP (pacote mensal fechado, R$)"
@@ -399,6 +429,7 @@ export default function ConfigPage() {
           nota={draft.notas?.email_smtp}
           onNotaChange={(v) => set(['notas', 'email_smtp'], v)}
           isAdmin={isAdmin}
+          onRequestEditNota={handleRequestEditNota}
         />
         <TierEditor
           label="Faixas — E-mail Transacional (pacote mensal fechado, R$)"
@@ -409,6 +440,7 @@ export default function ConfigPage() {
           nota={draft.notas?.email_extra}
           onNotaChange={(v) => set(['notas', 'email_extra'], v)}
           isAdmin={isAdmin}
+          onRequestEditNota={handleRequestEditNota}
         />
         <div className="card card-full">
           <div className="card-title">E-mail — Demais Preços</div>
@@ -426,7 +458,7 @@ export default function ConfigPage() {
         {/* RCS */}
         <div className="card card-full">
           <div className="card-title">RCS</div>
-          <NotaField value={draft.notas?.rcs} onChange={(v) => set(['notas', 'rcs'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.rcs} onChange={(v) => set(['notas', 'rcs'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="RCS Conversacional/Sessão" value={draft.precos.rcs_conversacional} onChange={(v) => set(['precos', 'rcs_conversacional'], v)} />
             <NumberField label="RCS Básico" value={draft.precos.rcs_basico} onChange={(v) => set(['precos', 'rcs_basico'], v)} />
@@ -438,7 +470,7 @@ export default function ConfigPage() {
         {/* WHATSAPP */}
         <div className="card card-full">
           <div className="card-title">WhatsApp</div>
-          <NotaField value={draft.notas?.whatsapp} onChange={(v) => set(['notas', 'whatsapp'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.whatsapp} onChange={(v) => set(['notas', 'whatsapp'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Ativo — por envio" value={draft.precos.whats_ativo_envio} onChange={(v) => set(['precos', 'whats_ativo_envio'], v)} />
             <NumberField label="Receptivo — por conversa" value={draft.precos.whats_receptivo_conversa} onChange={(v) => set(['precos', 'whats_receptivo_conversa'], v)} />
@@ -450,7 +482,7 @@ export default function ConfigPage() {
         <TierEditor label="Faixas — Enriquecimento (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.enriquecimento} onChange={(v) => set(['faixas', 'enriquecimento'], v)} />
         <div className="card card-full">
           <div className="card-title">Enriquecimento Premium</div>
-          <NotaField value={draft.notas?.enriquecimento_premium} onChange={(v) => set(['notas', 'enriquecimento_premium'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.enriquecimento_premium} onChange={(v) => set(['notas', 'enriquecimento_premium'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Por consulta" value={draft.precos.enriquecimento_premium} onChange={(v) => set(['precos', 'enriquecimento_premium'], v)} />
           </div>
@@ -468,7 +500,7 @@ export default function ConfigPage() {
         {/* VALIDA+ */}
         <div className="card card-full">
           <div className="card-title">Valida+</div>
-          <NotaField value={draft.notas?.valida_mais} onChange={(v) => set(['notas', 'valida_mais'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.valida_mais} onChange={(v) => set(['notas', 'valida_mais'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Por consulta" value={draft.precos.valida_mais} onChange={(v) => set(['precos', 'valida_mais'], v)} />
           </div>
@@ -477,7 +509,7 @@ export default function ConfigPage() {
         {/* OUTROS CANAIS */}
         <div className="card card-full">
           <div className="card-title">Outros Canais</div>
-          <NotaField value={draft.notas?.outros_canais} onChange={(v) => set(['notas', 'outros_canais'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.outros_canais} onChange={(v) => set(['notas', 'outros_canais'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Telegrama" value={draft.precos.telegrama} onChange={(v) => set(['precos', 'telegrama'], v)} />
             <NumberField label="Carnê" value={draft.precos.carne} onChange={(v) => set(['precos', 'carne'], v)} />
@@ -533,7 +565,7 @@ export default function ConfigPage() {
         {/* OMNI */}
         <div className="card card-full">
           <div className="card-title">Agentes Digitais — Plataforma OMNI</div>
-          <NotaField value={draft.notas?.omni} onChange={(v) => set(['notas', 'omni'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.omni} onChange={(v) => set(['notas', 'omni'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           {draft.omni.planos.map((p, i) => (
             <div key={p.nome} style={{ marginBottom: 10 }}>
               <div className="canal-grupo-label">{p.nome}</div>
@@ -566,7 +598,7 @@ export default function ConfigPage() {
         {/* CHATBOT */}
         <div className="card card-full">
           <div className="card-title">Agentes Digitais — Chatbot</div>
-          <NotaField value={draft.notas?.chatbot} onChange={(v) => set(['notas', 'chatbot'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.chatbot} onChange={(v) => set(['notas', 'chatbot'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Por atendimento" value={draft.precos.chatbot_unit} onChange={(v) => set(['precos', 'chatbot_unit'], v)} />
             <NumberField label="Franquia mínima" value={draft.precos.chatbot_franquia} onChange={(v) => set(['precos', 'chatbot_franquia'], v)} />
@@ -596,7 +628,7 @@ export default function ConfigPage() {
         {/* DESENVOLVIMENTO EXTRA */}
         <div className="card card-full">
           <div className="card-title">Desenvolvimento Extra (ONE, Agentes Digitais, WhatsApp, RCS)</div>
-          <NotaField value={draft.notas?.dev_extra} onChange={(v) => set(['notas', 'dev_extra'], v)} isAdmin={isAdmin} />
+          <NotaField value={draft.notas?.dev_extra} onChange={(v) => set(['notas', 'dev_extra'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Horas incluídas no setup padrão" value={draft.setup.horas_incluidas} onChange={(v) => set(['setup', 'horas_incluidas'], v)} />
             <NumberField label="Hora extra de desenvolvimento/customização" value={draft.precos.hora_desenvolvimento} onChange={(v) => set(['precos', 'hora_desenvolvimento'], v)} />
