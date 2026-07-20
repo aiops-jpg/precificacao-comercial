@@ -223,7 +223,7 @@ export default function ConfigPage() {
     router.push('/')
   }
 
-  const handleCancelar = () => {
+  const handleHome = () => {
     router.push('/')
   }
 
@@ -324,12 +324,11 @@ export default function ConfigPage() {
 
       <div className="card card-full actions" style={{ alignItems: 'center' }}>
         <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
-        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleCancelar}>Cancelar</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
-        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
           {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
         </button>
+        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
         {isCustom && <span style={{ color: '#c0392b', fontWeight: 700 }}>● Preços diferentes do padrão de fábrica</span>}
         {session?.user && (
           <span style={{ fontSize: 12, color: '#555' }}>
@@ -337,6 +336,7 @@ export default function ConfigPage() {
           </span>
         )}
         {erroPublicar && <span style={{ color: '#c0392b', fontSize: 13 }}>{erroPublicar}</span>}
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleHome} style={{ marginLeft: 'auto' }}>Home</button>
       </div>
 
       {mostrarLogin && (
@@ -727,12 +727,12 @@ export default function ConfigPage() {
 
       <div className="card card-full actions">
         <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
-        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleCancelar}>Cancelar</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
-        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
           {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
         </button>
+        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleHome} style={{ marginLeft: 'auto' }}>Home</button>
       </div>
     </div>
   )
