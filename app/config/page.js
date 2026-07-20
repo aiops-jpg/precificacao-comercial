@@ -320,15 +320,12 @@ export default function ConfigPage() {
             <span className="sub">Edição válida apenas para esta sessão — feche a aba para voltar ao padrão.</span>
           </div>
         </div>
-      </div>
-
-      {session?.user && (
-        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 6 }}>
+        {session?.user && (
           <span style={{ fontSize: 12, color: '#555' }}>
             Logado como {session.user.email} · <button type="button" className="btn-link" onClick={() => signOut({ callbackUrl: '/config' })}>Sair</button>
           </span>
-        </div>
-      )}
+        )}
+      </div>
 
       <div className="card card-full actions" style={{ alignItems: 'center' }}>
         <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
