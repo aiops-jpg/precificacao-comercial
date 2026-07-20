@@ -115,10 +115,9 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
    Von Restorff: só o que difere visualmente numa lista de itens iguais é lembrado). */
 .field-group-price label { color: var(--color-navy); }
 .field-group-price input {
-  background: #f3f7ff; border-color: rgba(1,32,235,0.35); font-weight: 700;
+  background: #f3f7ff; font-weight: 700;
   color: var(--color-navy);
 }
-.field-group-price input:focus { border-color: var(--color-blue); }
 
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
