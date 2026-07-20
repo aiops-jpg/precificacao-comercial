@@ -257,7 +257,7 @@ export default function ConfigPage() {
   }
 
   // Clique no lápis de uma nota (visível pra todo mundo) — quem não tem login cai no mesmo
-  // formulário de credencial do "Mudar Base de Preços Geral", só que aqui, após entrar, não
+  // formulário de credencial do "Salvar Base de Dados Global", só que aqui, após entrar, não
   // publica nada: só libera o campo pra edição (a nota vira textarea porque isAdmin passa a ser true).
   const handleRequestEditNota = () => {
     setErroLogin('')
@@ -328,7 +328,7 @@ export default function ConfigPage() {
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
         <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
-          {session?.user ? (publicando ? 'Publicando...' : '🌐 Mudar Base de Preços Geral') : '🔒 Mudar Base de Preços Geral'}
+          {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
         </button>
         {isCustom && <span style={{ color: '#c0392b', fontWeight: 700 }}>● Preços diferentes do padrão de fábrica</span>}
         {session?.user && (
@@ -342,7 +342,7 @@ export default function ConfigPage() {
       {mostrarLogin && (
         <div className="modal-overlay" onClick={() => setMostrarLogin(false)}>
           <div className="card modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="card-title">{loginIntent === 'edit' ? 'Login — Editar Nota' : 'Login — Mudar Base de Preços Geral'}</div>
+            <div className="card-title">{loginIntent === 'edit' ? 'Login — Editar Nota' : 'Login — Salvar Base de Dados Global'}</div>
             <form onSubmit={handleLoginSubmit}>
               <div className="field-group">
                 <label>E-mail</label>
@@ -731,7 +731,7 @@ export default function ConfigPage() {
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
         <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
-          {session?.user ? (publicando ? 'Publicando...' : '🌐 Mudar Base de Preços Geral') : '🔒 Mudar Base de Preços Geral'}
+          {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
         </button>
       </div>
     </div>
