@@ -478,6 +478,41 @@ export default function ConfigPage() {
           </div>
         </div>
 
+        {/* WHATSAPP MOBILE */}
+        <div className="card card-full">
+          <div className="card-title">WhatsApp Mobile (revenda)</div>
+          <NotaField value={draft.notas?.whatsapp_mobile} onChange={(v) => set(['notas', 'whatsapp_mobile'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
+          <div className="field-row cols-3">
+            <NumberField label="Ativação" value={draft.whatsapp_mobile.ativacao} onChange={(v) => set(['whatsapp_mobile', 'ativacao'], v)} />
+            <NumberField label="Fee mensal" value={draft.whatsapp_mobile.fee_mensal} onChange={(v) => set(['whatsapp_mobile', 'fee_mensal'], v)} />
+            <NumberField label="Franquia mínima mensal" value={draft.whatsapp_mobile.franquia_minima} onChange={(v) => set(['whatsapp_mobile', 'franquia_minima'], v)} />
+          </div>
+        </div>
+        <TierEditor
+          label="WhatsApp Mobile — Faixas MT, mensagem enviada pela empresa (R$/un)"
+          precoLabel="R$/un"
+          tiers={draft.faixas.whatsapp_mobile_mt}
+          onChange={(v) => set(['faixas', 'whatsapp_mobile_mt'], v)}
+        />
+        <TierEditor
+          label="WhatsApp Mobile — Faixas MO, sessão iniciada pelo cliente (R$/un)"
+          precoLabel="R$/un"
+          tiers={draft.faixas.whatsapp_mobile_mo}
+          onChange={(v) => set(['faixas', 'whatsapp_mobile_mo'], v)}
+        />
+
+        {/* SMART CONTACT */}
+        <div className="card card-full">
+          <div className="card-title">Smart Contact</div>
+          <NotaField value={draft.notas?.smart_contact} onChange={(v) => set(['notas', 'smart_contact'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
+          <div className="field-row cols-3">
+            <NumberField label="Phone — Score" value={draft.precos.smart_contact_phone_score} onChange={(v) => set(['precos', 'smart_contact_phone_score'], v)} />
+            <NumberField label="Phone — Enriquecimento + Score" value={draft.precos.smart_contact_phone_enriquecimento} onChange={(v) => set(['precos', 'smart_contact_phone_enriquecimento'], v)} />
+            <NumberField label="Email — Score" value={draft.precos.smart_contact_email_score} onChange={(v) => set(['precos', 'smart_contact_email_score'], v)} />
+            <NumberField label="Email — Enriquecimento + Score" value={draft.precos.smart_contact_email_enriquecimento} onChange={(v) => set(['precos', 'smart_contact_email_enriquecimento'], v)} />
+          </div>
+        </div>
+
         {/* ENRIQUECIMENTO */}
         <TierEditor label="Faixas — Enriquecimento (R$/unidade)" precoLabel="R$/un" tiers={draft.faixas.enriquecimento} onChange={(v) => set(['faixas', 'enriquecimento'], v)} />
         <div className="card card-full">
@@ -491,9 +526,11 @@ export default function ConfigPage() {
         {/* LANDING PAGE */}
         <div className="card card-full">
           <div className="card-title">Landing Page</div>
+          <NotaField value={draft.notas?.landing_page_link} onChange={(v) => set(['notas', 'landing_page_link'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Por link enviado" value={draft.precos.landing_page_link} onChange={(v) => set(['precos', 'landing_page_link'], v)} />
             <NumberField label="Setup" value={draft.setup.landing_page_link} onChange={(v) => set(['setup', 'landing_page_link'], v)} />
+            <NumberField label="Horas inclusas no setup" value={draft.setup.landing_page_link_horas_incluidas} onChange={(v) => set(['setup', 'landing_page_link_horas_incluidas'], v)} />
           </div>
         </div>
 
@@ -562,6 +599,18 @@ export default function ConfigPage() {
           mode="marginal"
         />
 
+        <TierEditor
+          label="ONE Pro — Faixas Marginais de Excedente (R$/CPF)"
+          precoLabel="R$/CPF"
+          tiers={draft.one.pro_faixas}
+          onChange={(v) => set(['one', 'pro_faixas'], v)}
+          mode="marginal"
+          nota={draft.notas?.one_pro}
+          onNotaChange={(v) => set(['notas', 'one_pro'], v)}
+          isAdmin={isAdmin}
+          onRequestEditNota={handleRequestEditNota}
+        />
+
         {/* OMNI */}
         <div className="card card-full">
           <div className="card-title">Agentes Digitais — Plataforma OMNI</div>
@@ -603,34 +652,56 @@ export default function ConfigPage() {
             <NumberField label="Por atendimento" value={draft.precos.chatbot_unit} onChange={(v) => set(['precos', 'chatbot_unit'], v)} />
             <NumberField label="Franquia mínima" value={draft.precos.chatbot_franquia} onChange={(v) => set(['precos', 'chatbot_franquia'], v)} />
             <NumberField label="Setup" value={draft.setup.chatbot} onChange={(v) => set(['setup', 'chatbot'], v)} />
+            <NumberField label="Horas inclusas no setup" value={draft.setup.chatbot_horas_incluidas} onChange={(v) => set(['setup', 'chatbot_horas_incluidas'], v)} />
           </div>
         </div>
+
+        {/* KAMI */}
+        <div className="card card-full">
+          <div className="card-title">Kami — Voz</div>
+          <NotaField value={draft.notas?.kami} onChange={(v) => set(['notas', 'kami'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
+          <div className="field-row cols-3">
+            <NumberField label="Setup (por carteira)" value={draft.kami.setup} onChange={(v) => set(['kami', 'setup'], v)} />
+            <NumberField label="Script de atendimento" value={draft.kami.script} onChange={(v) => set(['kami', 'script'], v)} />
+            <NumberField label="Robô — Localização (R$/mês)" value={draft.kami.robo_localizacao} onChange={(v) => set(['kami', 'robo_localizacao'], v)} />
+            <NumberField label="Robô — Negociação (R$/mês)" value={draft.kami.robo_negociacao} onChange={(v) => set(['kami', 'robo_negociacao'], v)} />
+          </div>
+        </div>
+        <TierEditor
+          label="Kami — Texto (pacote mensal fechado por franquia, R$)"
+          precoLabel="R$/pacote"
+          tiers={draft.faixas.kami_texto}
+          onChange={(v) => set(['faixas', 'kami_texto'], v)}
+        />
 
         {/* VOICEBOT */}
         <div className="card card-full">
           <div className="card-title">Agentes Digitais — Voicebot</div>
+          <NotaField value={draft.notas?.voicebot} onChange={(v) => set(['notas', 'voicebot'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Por robô" value={draft.precos.voicebot_unit} onChange={(v) => set(['precos', 'voicebot_unit'], v)} />
             <NumberField label="Mínimo de robôs" value={draft.precos.voicebot_min_robos} onChange={(v) => set(['precos', 'voicebot_min_robos'], v)} />
             <NumberField label="Setup" value={draft.setup.voicebot} onChange={(v) => set(['setup', 'voicebot'], v)} />
+            <NumberField label="Horas inclusas no setup" value={draft.setup.voicebot_horas_incluidas} onChange={(v) => set(['setup', 'voicebot_horas_incluidas'], v)} />
           </div>
         </div>
 
         {/* PORTAL */}
         <div className="card card-full">
           <div className="card-title">Portal de Negociação</div>
+          <NotaField value={draft.notas?.portal_negociacao} onChange={(v) => set(['notas', 'portal_negociacao'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
             <NumberField label="Mensal" value={draft.precos.portal_negociacao} onChange={(v) => set(['precos', 'portal_negociacao'], v)} />
             <NumberField label="Setup" value={draft.setup.portal_negociacao} onChange={(v) => set(['setup', 'portal_negociacao'], v)} />
+            <NumberField label="Horas inclusas no setup" value={draft.setup.portal_negociacao_horas_incluidas} onChange={(v) => set(['setup', 'portal_negociacao_horas_incluidas'], v)} />
           </div>
         </div>
 
         {/* DESENVOLVIMENTO EXTRA */}
         <div className="card card-full">
-          <div className="card-title">Desenvolvimento Extra (ONE, Agentes Digitais, WhatsApp, RCS)</div>
+          <div className="card-title">Desenvolvimento Extra (hora acima do inclusas no setup de cada produto)</div>
           <NotaField value={draft.notas?.dev_extra} onChange={(v) => set(['notas', 'dev_extra'], v)} isAdmin={isAdmin} onRequestEdit={handleRequestEditNota} />
           <div className="field-row cols-3">
-            <NumberField label="Horas incluídas no setup padrão" value={draft.setup.horas_incluidas} onChange={(v) => set(['setup', 'horas_incluidas'], v)} />
             <NumberField label="Hora extra de desenvolvimento/customização" value={draft.precos.hora_desenvolvimento} onChange={(v) => set(['precos', 'hora_desenvolvimento'], v)} />
           </div>
         </div>

@@ -30,7 +30,14 @@ const INITIAL = {
   google_meta_ads: 0, cartas_fisico: 0,
   omni_plano: '', omni_conversas: 0, telegrama: 0, carne: 0, cartorio_documento: 0, documento_digital: 0,
   landing_page_link: 0, portal_negociacao: 0,
+  one_modelo: 'Enterprise',
+  kami_robo_localizacao: 0, kami_robo_negociacao: 0, kami_texto: 0,
+  whats_mobile_mt: 0, whats_mobile_mo: 0,
+  smart_contact_phone_score: 0, smart_contact_phone_enriquecimento: 0,
+  smart_contact_email_score: 0, smart_contact_email_enriquecimento: 0,
 }
+
+const ONE_MODELOS = ['Enterprise', 'Pro']
 
 const OMNI_PLANOS = ['Starter', 'Pro', 'Business', 'Enterprise']
 
@@ -50,6 +57,9 @@ const FIELDS = [
   { section: 'Base', full: true, cols: 2, fields: [
     { key: 'cpfs', label: 'Volume total de CPFs/CNPJs ativos' },
     { key: 'faturas', label: 'Volume total de faturas/cartões mensais' },
+  ]},
+  { section: 'ONE Platform', fields: [
+    { key: 'one_modelo', gateKey: 'one_platform', label: 'Modelo (acima do limite do Plus)', type: 'select', options: ONE_MODELOS },
   ]},
   { section: 'SMS', cols: 2, fields: [
     { key: 'sms_texto', label: 'Texto Padrão (Simples)' },
@@ -80,6 +90,21 @@ const FIELDS = [
     { key: 'enriquecimento_premium', label: 'Enriquecimento Premium (consultas)' },
     { key: 'omni_plano', gateKey: 'omni_conversas', label: 'Plataforma OMNI — plano contratado', type: 'select', options: OMNI_PLANOS },
     { key: 'omni_conversas', label: 'Plataforma OMNI (conversas/mês)' },
+  ]},
+  { section: 'Kami', fields: [
+    { key: 'kami_robo_localizacao', label: 'Robô Localização (nº de robôs)' },
+    { key: 'kami_robo_negociacao', label: 'Robô Negociação (nº de robôs)' },
+    { key: 'kami_texto', label: 'Kami Texto (mensagens/mês)' },
+  ]},
+  { section: 'WhatsApp Mobile', fields: [
+    { key: 'whats_mobile_mt', gateKey: 'whats_mobile', label: 'MT — mensagens enviadas pela empresa' },
+    { key: 'whats_mobile_mo', gateKey: 'whats_mobile', label: 'MO — sessões iniciadas pelo cliente' },
+  ]},
+  { section: 'Smart Contact', fields: [
+    { key: 'smart_contact_phone_score', label: 'Phone — Score (consultas)' },
+    { key: 'smart_contact_phone_enriquecimento', label: 'Phone — Enriquecimento + Score (consultas)' },
+    { key: 'smart_contact_email_score', label: 'Email — Score (consultas)' },
+    { key: 'smart_contact_email_enriquecimento', label: 'Email — Enriquecimento + Score (consultas)' },
   ]},
   { section: 'Outros Canais', fields: [
     { key: 'google_meta_ads', label: 'Google / Meta Ads (campanha — CPF/Email)' },
@@ -113,6 +138,14 @@ const CANAL_LABEL = {
   telecobranca_voice_ai: 'Telecobrança - Voice AI',
   telecobranca_cross_channel: 'Telecobrança - Cross Channel AI',
   telecobranca_expert_human: 'Telecobrança - Expert Human',
+  kami_robo_localizacao: 'Kami Voz — Robô Localização',
+  kami_robo_negociacao: 'Kami Voz — Robô Negociação',
+  kami_texto: 'Kami Texto',
+  whats_mobile: 'WhatsApp Mobile',
+  smart_contact_phone_score: 'Smart Contact Phone — Score',
+  smart_contact_phone_enriquecimento: 'Smart Contact Phone — Enriquecimento + Score',
+  smart_contact_email_score: 'Smart Contact Email — Score',
+  smart_contact_email_enriquecimento: 'Smart Contact Email — Enriquecimento + Score',
 }
 
 const CANAL_ATIVO_LABEL = Object.fromEntries(CANAIS.map(({ key, label }) => [key, label]))
@@ -168,6 +201,7 @@ export default function Page() {
     ativo('telecobranca_voice_ai') && { prod: `TELECOBRANÇA VOICE AI (${result.plano_telecobranca.pa} PA)`, unit: result.entrada.cpfs > 0 ? result.plano_telecobranca.voice_ai / result.entrada.cpfs : 0, qtd: result.entrada.cpfs, tot: result.plano_telecobranca.voice_ai },
     ativo('telecobranca_cross_channel') && { prod: `TELECOBRANÇA CROSS CHANNEL AI (${result.plano_telecobranca.pa} PA)`, unit: result.entrada.cpfs > 0 ? result.plano_telecobranca.cross_channel / result.entrada.cpfs : 0, qtd: result.entrada.cpfs, tot: result.plano_telecobranca.cross_channel },
     ativo('telecobranca_expert_human') && { prod: 'TELECOBRANÇA EXPERT HUMAN (sob consulta)', unit: 0, qtd: result.entrada.cpfs, tot: 0 },
+    ativo('kami_texto') && { prod: 'KAMI TEXTO (pacote)', unit: result.precos.kami_texto, qtd: result.volumes.kami_texto, tot: result.orcamentos.kami_texto },
   ].filter(Boolean).filter(item => item.tot === null || item.tot > 0), [result, discovery.canais_ativos])
 
   const rowsPreventiva = useMemo(() => [
@@ -186,6 +220,13 @@ export default function Page() {
     ativo('enriquecimento_premium') && { prod: 'ENRIQUECIMENTO PREMIUM', unit: result.precos.enriquecimento_premium, qtd: result.volumes.enriquecimento_premium, tot: result.orcamentos.enriquecimento_premium },
     ativo('chatbot') && { prod: 'CHATBOT', unit: result.precos.chatbot, qtd: result.volumes.chatbot, tot: result.orcamentos.chatbot },
     ativo('voicebot') && { prod: 'VOICEBOT', unit: result.precos.voicebot, qtd: result.volumes.voicebot, tot: result.orcamentos.voicebot },
+    ativo('kami_robo_localizacao') && { prod: 'KAMI VOZ — ROBÔ LOCALIZAÇÃO', unit: result.precos.kami_robo_localizacao, qtd: result.volumes.kami_robo_localizacao, tot: result.orcamentos.kami_robo_localizacao },
+    ativo('kami_robo_negociacao') && { prod: 'KAMI VOZ — ROBÔ NEGOCIAÇÃO', unit: result.precos.kami_robo_negociacao, qtd: result.volumes.kami_robo_negociacao, tot: result.orcamentos.kami_robo_negociacao },
+    ativo('whats_mobile') && { prod: 'WHATSAPP MOBILE', unit: result.precos.whats_mobile, qtd: result.volumes.whats_mobile_mt + result.volumes.whats_mobile_mo, tot: result.orcamentos.whats_mobile },
+    ativo('smart_contact_phone_score') && { prod: 'SMART CONTACT PHONE — SCORE', unit: result.precos.smart_contact_phone_score, qtd: result.volumes.smart_contact_phone_score, tot: result.orcamentos.smart_contact_phone_score },
+    ativo('smart_contact_phone_enriquecimento') && { prod: 'SMART CONTACT PHONE — ENRIQUECIMENTO + SCORE', unit: result.precos.smart_contact_phone_enriquecimento, qtd: result.volumes.smart_contact_phone_enriquecimento, tot: result.orcamentos.smart_contact_phone_enriquecimento },
+    ativo('smart_contact_email_score') && { prod: 'SMART CONTACT EMAIL — SCORE', unit: result.precos.smart_contact_email_score, qtd: result.volumes.smart_contact_email_score, tot: result.orcamentos.smart_contact_email_score },
+    ativo('smart_contact_email_enriquecimento') && { prod: 'SMART CONTACT EMAIL — ENRIQUECIMENTO + SCORE', unit: result.precos.smart_contact_email_enriquecimento, qtd: result.volumes.smart_contact_email_enriquecimento, tot: result.orcamentos.smart_contact_email_enriquecimento },
     ativo('email_registrado') && { prod: 'EMAIL REGISTRADO (AR DIGITAL)', unit: result.precos.email_registrado, qtd: result.volumes.email_registrado, tot: result.orcamentos.email_registrado },
     ativo('email_smtp') && { prod: 'EMAIL SMTP', unit: result.precos.email_smtp, qtd: result.volumes.email_smtp, tot: result.orcamentos.email_smtp },
     ativo('email_pdf') && { prod: 'EMAIL PDF', unit: result.precos.email_pdf, qtd: result.volumes.email_pdf, tot: result.orcamentos.email_pdf },
