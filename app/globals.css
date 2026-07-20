@@ -109,6 +109,17 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 
 .field-group input:focus { border-color: var(--color-navy); }
 
+/* Destaca o campo de preço dentro de uma linha de faixa (De/Até/Preço) — sem isso,
+   numa tabela com 15+ linhas repetidas, o valor que realmente importa (o preço) tem
+   o mesmo peso visual do que só delimita a faixa (De/Até), e nada se destaca (efeito
+   Von Restorff: só o que difere visualmente numa lista de itens iguais é lembrado). */
+.field-group-price label { color: var(--color-navy); }
+.field-group-price input {
+  background: #f3f7ff; border-color: rgba(1,32,235,0.35); font-weight: 700;
+  color: var(--color-navy);
+}
+.field-group-price input:focus { border-color: var(--color-blue); }
+
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
 .btn {
@@ -152,23 +163,29 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 
 .btn-link-icon { display: inline-flex; align-items: center; gap: 4px; }
 
+/* Aviso de política de preço — precisa ler como mais urgente que a nota de contexto
+   acima, então usa moldura fechada + faixa lateral sólida (em vez da linha fina que
+   a nota usa) e o texto em negrito, não só a cor pra carregar o alerta. */
 .warning-banner {
   display: flex; align-items: flex-start; gap: 6px;
-  padding: 6px 10px; margin-bottom: 8px;
+  padding: 6px 10px 6px 8px; margin-bottom: 8px;
   background: #fff4e5; border-radius: var(--radius-sm);
-  border: 1px solid rgba(230,126,34,0.35);
-  font-size: 11px; color: #8a5a1c; line-height: 1.4;
+  border: 1px solid rgba(230,126,34,0.35); border-left: 4px solid #e67e22;
+  font-size: 11px; font-weight: 700; color: #8a5a1c; line-height: 1.4;
 }
 
 .actions { display: flex; gap: 10px; margin-top: 4px; flex-wrap: wrap; }
 
 /* ───── Nota de contexto (por seção do /config) ───── */
 
+/* Nota = anotação de contexto, sempre presente — tratamento discreto (sem moldura
+   fechada, só uma linha de apoio à esquerda) pra não competir com o aviso de política
+   de preço abaixo, que precisa continuar lendo como o mais urgente dos dois. */
 .nota-box {
-  padding: 8px 12px; margin-bottom: 10px;
-  background: #eef1fb; border-radius: var(--radius-sm);
-  border: 1px solid rgba(23,44,102,0.15);
-  font-size: 12px; color: #33406b; line-height: 1.5;
+  padding: 6px 12px; margin-bottom: 10px;
+  background: transparent; border-radius: 0;
+  border: none; border-left: 3px solid rgba(23,44,102,0.25);
+  font-size: 12px; font-style: italic; color: #5a6690; line-height: 1.5;
 }
 
 .nota-readonly {

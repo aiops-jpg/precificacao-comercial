@@ -163,12 +163,12 @@ function TierEditor({ label, precoLabel, tiers, onChange, mode = 'lookup', exced
               onChange={(e) => update(i, 'max', e.target.value === '' ? null : parseFloat(e.target.value))}
             />
           </div>
-          <div className="field-group">
+          <div className="field-group field-group-price">
             <label>{precoLabel}</label>
             <input type="number" step="any" value={t.preco} onChange={(e) => update(i, 'preco', parseFloat(e.target.value) || 0)} />
           </div>
           {excedenteLabel && (
-            <div className="field-group">
+            <div className="field-group field-group-price">
               <label>{excedenteLabel}</label>
               <input type="number" step="any" value={t.excedente || 0} onChange={(e) => update(i, 'excedente', parseFloat(e.target.value) || 0)} />
             </div>
@@ -328,7 +328,7 @@ export default function ConfigPage() {
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
           {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
         </button>
-        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
+        <button type="button" className="btn btn-danger" onClick={handleRestaurar} title="Restaura os preços de TODAS as abas (Mensageria, Sistemas/Plataformas, Services) para o padrão de fábrica — não só desta aba">Restaurar Padrão</button>
         {isCustom && <span style={{ color: '#c0392b', fontWeight: 700 }}>● Preços diferentes do padrão de fábrica</span>}
         {session?.user && (
           <span style={{ fontSize: 12, color: '#555' }}>
@@ -731,7 +731,7 @@ export default function ConfigPage() {
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
           {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
         </button>
-        <button type="button" className="btn btn-danger" onClick={handleRestaurar}>Restaurar Padrão</button>
+        <button type="button" className="btn btn-danger" onClick={handleRestaurar} title="Restaura os preços de TODAS as abas (Mensageria, Sistemas/Plataformas, Services) para o padrão de fábrica — não só desta aba">Restaurar Padrão</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleHome} style={{ marginLeft: 'auto' }}>Home</button>
       </div>
     </div>

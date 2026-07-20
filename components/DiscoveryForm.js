@@ -19,12 +19,17 @@ export default function DiscoveryForm({ data, onChange, onSubmit }) {
 
   // Todos os blocos do substep 1 devem ter a mesma altura da Régua de Recuperação
   // (o bloco mais alto) — medida em runtime porque o conteúdo/config pode mudar.
+  // Só faz sentido no grid 2x2 (desktop/laptop) — abaixo de 640px o CSS empilha os
+  // campos em 1 coluna (field-row.cols-2/cols-3 vira 1fr) e o conteúdo cresce bem
+  // além dessa altura, então travar a altura ali clipava o input fora da caixa do card.
   const reguaRef = useRef(null)
   const [perfilBlocoHeight, setPerfilBlocoHeight] = useState(null)
+  const [isMobile, setIsMobile] = useState(false)
 
   useLayoutEffect(() => {
     if (subStep !== 1) return
     const medir = () => {
+      setIsMobile(window.innerWidth <= 640)
       if (reguaRef.current) setPerfilBlocoHeight(reguaRef.current.offsetHeight)
     }
     medir()
@@ -90,7 +95,7 @@ export default function DiscoveryForm({ data, onChange, onSubmit }) {
         <div className="grid grid-equal-height">
           {/* DADOS DA PROPOSTA */}
           {bloco('dados_proposta') && (
-          <div className="card" style={{ maxHeight: 140 }}>
+          <div className="card" style={{ maxHeight: isMobile ? undefined : 140 }}>
             <div className="card-title">📄 Dados da Proposta</div>
             <div className="field-row cols-2">
               <div className="field-group">
@@ -107,7 +112,7 @@ export default function DiscoveryForm({ data, onChange, onSubmit }) {
 
           {/* PERFIL DA CARTEIRA */}
           {bloco('perfil_carteira') && (
-          <div className="card" style={{ maxHeight: 140 }}>
+          <div className="card" style={{ maxHeight: isMobile ? undefined : 140 }}>
             <div className="card-title">📋 Perfil da Carteira</div>
             <div className="field-row cols-3">
               <div className="field-group">
@@ -166,7 +171,7 @@ export default function DiscoveryForm({ data, onChange, onSubmit }) {
 
           {/* SEGMENTO & OBJETIVO */}
           {bloco('segmento_objetivo') && (
-          <div className="card" style={{ minHeight: perfilBlocoHeight || undefined }}>
+          <div className="card" style={{ minHeight: isMobile ? undefined : (perfilBlocoHeight || undefined) }}>
             <div className="card-title">🎯 Segmento &amp; Objetivo</div>
             <div className="field-row cols-2">
               <div className="field-group">
