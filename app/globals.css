@@ -507,9 +507,11 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 
 .cols-2 { grid-template-columns: 1fr 1fr; }
 .cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+.cols-4 { grid-template-columns: 1fr 1fr 1fr 1fr; }
 
 .field-row.cols-2,
-.field-row.cols-3 {
+.field-row.cols-3,
+.field-row.cols-4 {
   display: grid; gap: 12px;
 }
 
@@ -557,8 +559,9 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
   .grid { grid-template-columns: 1fr; }
   .field-row,
   .field-row.cols-2,
-  .field-row.cols-3 { grid-template-columns: 1fr; }
-  .cols-2, .cols-3 { grid-template-columns: 1fr; }
+  .field-row.cols-3,
+  .field-row.cols-4 { grid-template-columns: 1fr; }
+  .cols-2, .cols-3, .cols-4 { grid-template-columns: 1fr; }
   .checkbox-grid.cols-3 { grid-template-columns: 1fr; }
   .kpi-grid { grid-template-columns: 1fr 1fr; }
 

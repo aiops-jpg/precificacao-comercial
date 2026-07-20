@@ -386,7 +386,11 @@ export default function Page() {
                     {f.type === 'select' ? (
                       <select value={form[f.key]} onChange={e => update(f.key, e.target.value)}>
                         <option value="">— Selecione —</option>
-                        {f.options.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                        {f.options.map(opt => {
+                          const value = typeof opt === 'string' ? opt : opt.value
+                          const label = typeof opt === 'string' ? opt : opt.label
+                          return <option key={value} value={value}>{label}</option>
+                        })}
                       </select>
                     ) : (
                       <input

@@ -555,8 +555,30 @@ export default function ConfigPage() {
             <NumberField label="Ads — por campanha (CPF/Email)" value={draft.precos.ads_campanha} onChange={(v) => set(['precos', 'ads_campanha'], v)} />
             <NumberField label="Ads — franquia mínima" value={draft.precos.ads_franquia} onChange={(v) => set(['precos', 'ads_franquia'], v)} />
             <NumberField label="Google/Meta Ads (criativos)" value={draft.precos.google_meta_ads} onChange={(v) => set(['precos', 'google_meta_ads'], v)} />
-            <NumberField label="Carta Física" value={draft.precos.carta_fisica} onChange={(v) => set(['precos', 'carta_fisica'], v)} />
           </div>
+        </div>
+
+        {/* CARTAS/FÍSICO */}
+        <div className="card card-full">
+          <div className="card-title">Cartas/Físico — Matriz de Preço (R$/unidade)</div>
+          <div className="warning-banner">⚠ Não entra no cálculo da calculadora — o preço varia até 24x entre tipo/formato/impressão. A tabela completa (menos MDP-Básica) aparece como referência na proposta gerada quando o canal é selecionado.</div>
+          {Object.entries(draft.cartasFisico).map(([tipoKey, tipo]) => (
+            <div key={tipoKey} style={{ marginBottom: 12 }}>
+              <div className="canal-grupo-label">{tipo.nome}</div>
+              <div className="field-row cols-4">
+                {['A4', 'A3'].map((formato) => (
+                  ['1x1', '2x1', '4x1', '4x4'].map((combo) => (
+                    <NumberField
+                      key={`${formato}_${combo}`}
+                      label={`${formato} ${combo}`}
+                      value={tipo[formato][combo]}
+                      onChange={(v) => set(['cartasFisico', tipoKey, formato, combo], v)}
+                    />
+                  ))
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       )}
