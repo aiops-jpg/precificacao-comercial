@@ -80,6 +80,12 @@ export async function POST(req) {
         edits.forEach((e) => { (byShape[e.shape] ||= []).push(e) })
         pres = pres.addSlide('template', slideNum, (slide) => {
           Object.entries(byShape).forEach(([shapeName, shapeEdits]) => {
+            // 'remove' tira o card inteiro (produto não selecionado no Discovery) — não dá pra
+            // misturar com edição de texto no mesmo shape, então tem prioridade sobre os outros.
+            if (shapeEdits.some((e) => e.type === 'remove')) {
+              slide.removeElement(shapeName)
+              return
+            }
             slide.modifyElement(shapeName, (element) => {
               shapeEdits.forEach((e) => applyEdit(element, e))
             })
