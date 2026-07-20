@@ -322,6 +322,14 @@ export default function ConfigPage() {
         </div>
       </div>
 
+      {session?.user && (
+        <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: 6 }}>
+          <span style={{ fontSize: 12, color: '#555' }}>
+            Logado como {session.user.email} · <button type="button" className="btn-link" onClick={() => signOut({ callbackUrl: '/config' })}>Sair</button>
+          </span>
+        </div>
+      )}
+
       <div className="card card-full actions" style={{ alignItems: 'center' }}>
         <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
@@ -330,11 +338,6 @@ export default function ConfigPage() {
         </button>
         <button type="button" className="btn btn-danger" onClick={handleRestaurar} title="Restaura os preços de TODAS as abas (Mensageria, Sistemas/Plataformas, Services) para o padrão de fábrica — não só desta aba">Restaurar Padrão</button>
         {isCustom && <span style={{ color: '#c0392b', fontWeight: 700 }}>● Preços diferentes do padrão de fábrica</span>}
-        {session?.user && (
-          <span style={{ fontSize: 12, color: '#555' }}>
-            Logado como {session.user.email} · <button type="button" className="btn-link" onClick={() => signOut({ callbackUrl: '/config' })}>Sair</button>
-          </span>
-        )}
         {erroPublicar && <span style={{ color: '#c0392b', fontSize: 13 }}>{erroPublicar}</span>}
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleHome} style={{ marginLeft: 'auto' }}>Home</button>
       </div>
