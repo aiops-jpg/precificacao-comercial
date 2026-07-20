@@ -325,8 +325,8 @@ export default function ConfigPage() {
       <div className="card card-full actions" style={{ alignItems: 'center' }}>
         <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
-        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
-          {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: 'var(--color-navy)', color: 'var(--color-navy)' }}>
+          {session?.user ? (publicando ? 'Publicando...' : 'Salvar Base de Dados Global') : 'Salvar Base de Dados Global'}
         </button>
         <button type="button" className="btn btn-danger" onClick={handleRestaurar} title="Restaura os preços de TODAS as abas (Mensageria, Sistemas/Plataformas, Services) para o padrão de fábrica — não só desta aba">Restaurar Padrão</button>
         {isCustom && <span style={{ color: '#c0392b', fontWeight: 700 }}>● Preços diferentes do padrão de fábrica</span>}
@@ -728,8 +728,8 @@ export default function ConfigPage() {
       <div className="card card-full actions">
         <button type="button" className="btn" onClick={handleSalvar}>Salvar Alterações</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={undoLast} disabled={!canUndo}>↩ Desfazer Última Alteração</button>
-        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: '#0120eb', color: '#0120eb' }}>
-          {session?.user ? (publicando ? 'Publicando...' : '🌐 Salvar Base de Dados Global') : '🔒 Salvar Base de Dados Global'}
+        <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handlePublicarBaseGeral} disabled={publicando} style={{ borderColor: 'var(--color-navy)', color: 'var(--color-navy)' }}>
+          {session?.user ? (publicando ? 'Publicando...' : 'Salvar Base de Dados Global') : 'Salvar Base de Dados Global'}
         </button>
         <button type="button" className="btn btn-danger" onClick={handleRestaurar} title="Restaura os preços de TODAS as abas (Mensageria, Sistemas/Plataformas, Services) para o padrão de fábrica — não só desta aba">Restaurar Padrão</button>
         <button type="button" className="btn btn-secondary btn-hover-gray" onClick={handleHome} style={{ marginLeft: 'auto' }}>Home</button>
