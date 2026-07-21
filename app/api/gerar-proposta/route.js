@@ -43,7 +43,20 @@ function applyEdit(element, edit) {
 export async function POST(req) {
   try {
     const body = await req.json()
-    const { form, discovery, config, overrides = {} } = body
+    const { form, discovery, config, overrides = {}, confirmouRevisao = false } = body
+
+    // Trava também no servidor — o botão desabilitado no client é só UX, não uma garantia real.
+    if (!confirmouRevisao) {
+      return new Response('É necessário confirmar a revisão antes de gerar a proposta.', { status: 400 })
+    }
+
+    // Precisa de sessão válida pra saber QUEM gerou — sem isso, o log ficaria com usuario=null
+    // e ninguém saberia quem clicou. O client já pede login antes de chegar aqui; isso é a
+    // garantia real (o client é só UX).
+    const session = await auth()
+    if (!session?.user) {
+      return new Response('É necessário estar logado para gerar a proposta.', { status: 401 })
+    }
 
     const result = calcular(form, discovery.canais_ativos, config)
     const slides = getSlidesDaProposta(discovery.canais_ativos)
@@ -51,9 +64,9 @@ export async function POST(req) {
 
     // Log da geração — guarda o cálculo completo (não só metadados), útil pra auditoria de
     // quanto foi cobrado numa proposta específica, incluindo overrides manuais feitos na tela de
-    // revisão. Não deve derrubar a geração se falhar.
+    // revisão, quem gerou e a confirmação de que revisou o conteúdo antes de gerar. Não deve
+    // derrubar a geração se falhar.
     try {
-      const session = await auth()
       const pool = getPool()
       await pool.query(
         'INSERT INTO activity_log (tipo, usuario, detalhes) VALUES ($1, $2, $3)',
@@ -65,6 +78,7 @@ export async function POST(req) {
           discovery,
           result,
           overrides,
+          confirmouRevisao,
         })]
       )
     } catch (logErr) {

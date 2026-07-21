@@ -2,11 +2,36 @@
 
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
+import { useSession, signIn } from 'next-auth/react'
 import { calcular, formatMoney, formatMoneyPreciso, formatPct, getSetups } from '@/lib/precificacao'
-import { getCampos } from '@/lib/proposta'
+import { getCampos, getMascaras, getSlidesDaProposta } from '@/lib/proposta'
 import { CANAIS } from '@/lib/canais'
 import { useConfig } from '@/lib/ConfigContext'
 import DiscoveryForm from '@/components/DiscoveryForm'
+import slideGeometry from '@/lib/slideGeometry.json'
+
+const GEOMETRIA_POR_SHAPE = Object.fromEntries(slideGeometry.map((g) => [g.name, g]))
+
+// Alguns placeholders do template (ex. "R$ XXX") quebram em 2 linhas e vazam um pouco pra fora
+// da caixa nominal do shape (autofit desligado) — expande a área do input pra cobrir esse vazamento.
+function expandirGeom(geom, padPct = 1.2) {
+  return {
+    leftPct: geom.leftPct - padPct,
+    topPct: geom.topPct - padPct,
+    widthPct: geom.widthPct + padPct * 2,
+    heightPct: geom.heightPct + padPct * 2,
+  }
+}
+
+function bboxUniao(shapes) {
+  const geoms = shapes.map((s) => GEOMETRIA_POR_SHAPE[s]).filter(Boolean)
+  if (!geoms.length) return null
+  const left = Math.min(...geoms.map((g) => g.leftPct))
+  const top = Math.min(...geoms.map((g) => g.topPct))
+  const right = Math.max(...geoms.map((g) => g.leftPct + g.widthPct))
+  const bottom = Math.max(...geoms.map((g) => g.topPct + g.heightPct))
+  return { leftPct: left, topPct: top, widthPct: right - left, heightPct: bottom - top }
+}
 
 const DISCOVERY_INITIAL = {
   nomeCliente: '', numeroProposta: '',
@@ -153,6 +178,7 @@ const CANAL_ATIVO_LABEL = Object.fromEntries(CANAIS.map(({ key, label }) => [key
 
 export default function Page() {
   const { config } = useConfig()
+  const { data: session } = useSession()
   const [step, setStep] = useState('discovery')
   const [discovery, setDiscovery] = useState(DISCOVERY_INITIAL)
   const [form, setForm] = useState(INITIAL)
@@ -248,21 +274,81 @@ export default function Page() {
   const [erroGeracao, setErroGeracao] = useState('')
 
   const campos = useMemo(() => getCampos(result, discovery, config), [result, discovery, config])
-  const gruposCampos = useMemo(() => {
+  const identificacaoCampos = useMemo(() => campos.filter((c) => c.group === 'Identificação'), [campos])
+  const slidesProposta = useMemo(() => getSlidesDaProposta(discovery.canais_ativos), [discovery.canais_ativos])
+  const mascaras = useMemo(() => getMascaras(result, discovery, config), [result, discovery, config])
+
+  // Campos visuais (com shape conhecido) agrupados por slide — cada um vira um input sobreposto
+  // na imagem real daquele slide, na posição exata do shape no template.
+  const camposPorSlide = useMemo(() => {
     const map = new Map()
     campos.forEach((c) => {
-      if (!map.has(c.group)) map.set(c.group, [])
-      map.get(c.group).push(c)
+      if (!c.shape) return
+      const geom = GEOMETRIA_POR_SHAPE[c.shape]
+      if (!geom) return
+      if (!map.has(geom.slide)) map.set(geom.slide, [])
+      map.get(geom.slide).push({ ...c, geom })
     })
-    return [...map.entries()]
+    return map
   }, [campos])
+
+  // Máscaras (seções/cards fora do escopo da proposta) agrupadas por slide, já com o bounding
+  // box calculado a partir da geometria real dos shapes de cada grupo.
+  const mascarasPorSlide = useMemo(() => {
+    const map = new Map()
+    mascaras.forEach((m) => {
+      const box = bboxUniao(m.shapes)
+      if (!box) return
+      if (!map.has(m.slide)) map.set(m.slide, [])
+      map.get(m.slide).push(box)
+    })
+    return map
+  }, [mascaras])
+
   const [overrideValues, setOverrideValues] = useState({})
+  const [confirmouRevisao, setConfirmouRevisao] = useState(false)
+  const [mostrarLogin, setMostrarLogin] = useState(false)
+  const [loginEmail, setLoginEmail] = useState('')
+  const [loginSenha, setLoginSenha] = useState('')
+  const [erroLogin, setErroLogin] = useState('')
+  const [entrando, setEntrando] = useState(false)
 
   useEffect(() => {
     if (step === 'editor') {
       setOverrideValues(Object.fromEntries(campos.map((c) => [c.id, c.value])))
+      setConfirmouRevisao(false)
     }
   }, [step])
+
+  const restaurarTodosOsCampos = () => {
+    setOverrideValues(Object.fromEntries(campos.map((c) => [c.id, c.value])))
+  }
+
+  // Gerar a proposta precisa saber QUEM clicou (fica gravado em activity_log) — se ainda não tem
+  // sessão, pede login antes; com sessão já ativa, gera direto.
+  const handleCliqueGerar = () => {
+    if (session?.user) {
+      gerarProposta()
+    } else {
+      setErroLogin('')
+      setMostrarLogin(true)
+    }
+  }
+
+  const handleLoginSubmit = async (e) => {
+    e.preventDefault()
+    setErroLogin('')
+    setEntrando(true)
+    const res = await signIn('credentials', { email: loginEmail, password: loginSenha, redirect: false })
+    setEntrando(false)
+    if (res?.error) {
+      setErroLogin('E-mail ou senha incorretos.')
+      return
+    }
+    setMostrarLogin(false)
+    setLoginSenha('')
+    gerarProposta()
+  }
 
   const gerarProposta = async () => {
     setGerando(true)
@@ -271,7 +357,7 @@ export default function Page() {
       const resp = await fetch('/api/gerar-proposta', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ form, discovery, config, overrides: overrideValues }),
+        body: JSON.stringify({ form, discovery, config, overrides: overrideValues, confirmouRevisao }),
       })
       if (!resp.ok) throw new Error(await resp.text())
       const blob = await resp.blob()
@@ -392,49 +478,110 @@ export default function Page() {
 
         <div className="card card-full">
           <div className="card-title">Revisar Conteúdo da Proposta</div>
-          <p style={{ color: '#555' }}>
-            Os valores abaixo já vêm calculados a partir da Calculadora. Ajuste o que precisar antes de gerar o arquivo — o botão "↺" restaura o valor calculado.
+          <p style={{ color: '#555', marginBottom: 12 }}>
+            Role pelos slides como se fosse o PDF final. Clique em qualquer valor destacado pra editar —
+            as áreas hachuradas em cinza são seções/produtos que não entram nesta proposta.
           </p>
+          <div className="field-row" style={{ marginBottom: 4 }}>
+            {identificacaoCampos.map((c) => (
+              <div key={c.id} className="field-group">
+                <label>{c.label}</label>
+                <input
+                  type="text"
+                  value={overrideValues[c.id] ?? ''}
+                  onChange={(e) => setOverrideValues((p) => ({ ...p, [c.id]: e.target.value }))}
+                />
+              </div>
+            ))}
+          </div>
+          <button type="button" className="btn btn-secondary btn-sm" onClick={restaurarTodosOsCampos}>
+            ↺ Restaurar todos os valores calculados
+          </button>
         </div>
 
-        <div className="grid">
-          {gruposCampos.map(([grupo, camposDoGrupo]) => (
-            <div key={grupo} className="card">
-              <div className="card-title">{grupo}</div>
-              {camposDoGrupo.map((c) => (
-                <div key={c.id} className="field-group">
-                  <label>{c.label}</label>
-                  <div style={{ display: 'flex', gap: 8 }}>
-                    <input
-                      type="text"
-                      value={overrideValues[c.id] ?? ''}
-                      onChange={(e) => setOverrideValues((p) => ({ ...p, [c.id]: e.target.value }))}
-                    />
-                    <button
-                      type="button"
-                      className="btn btn-secondary btn-sm"
-                      title="Restaurar valor calculado"
-                      onClick={() => setOverrideValues((p) => ({ ...p, [c.id]: c.value }))}
-                    >
-                      ↺
-                    </button>
-                  </div>
-                </div>
+        {slidesProposta.map((slideNum) => (
+          <div key={slideNum}>
+            <div className="slide-page-label">Slide {slideNum}</div>
+            <div className="slide-page">
+              <img className="slide-page-img" src={`/proposta-slides/slide-${slideNum}.png`} alt={`Slide ${slideNum}`} />
+              {(mascarasPorSlide.get(slideNum) || []).map((box, i) => (
+                <div
+                  key={i}
+                  className="slide-mask"
+                  style={{ left: `${box.leftPct}%`, top: `${box.topPct}%`, width: `${box.widthPct}%`, height: `${box.heightPct}%` }}
+                />
               ))}
+              {(camposPorSlide.get(slideNum) || []).map((c) => {
+                const geom = expandirGeom(c.geom)
+                return (
+                  <input
+                    key={c.id}
+                    className="slide-overlay-input"
+                    title={c.label}
+                    value={overrideValues[c.id] ?? ''}
+                    onChange={(e) => setOverrideValues((p) => ({ ...p, [c.id]: e.target.value }))}
+                    style={{
+                      left: `${geom.leftPct}%`,
+                      top: `${geom.topPct}%`,
+                      width: `${geom.widthPct}%`,
+                      height: `${geom.heightPct}%`,
+                      fontSize: `${Math.max(c.geom.heightPct * 0.4, 1.6)}cqw`,
+                    }}
+                  />
+                )
+              })}
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
 
-        <p style={{ color: '#888', fontSize: 13, marginTop: 16 }}>
-          Não editável nesta versão: tabela de referência de Cartas/Físico (slide 33) e textos fixos do template.
+        <p style={{ color: '#888', fontSize: 13, marginTop: 4 }}>
+          As posições acima refletem o template — no slide de detalhamento de canais, o PPTX final reorganiza
+          automaticamente as seções restantes pra preencher o espaço das que não entraram. Não editável nesta
+          versão: tabela de referência de Cartas/Físico (slide 33) e textos fixos do template.
         </p>
 
-        <div className="card card-full actions">
-          <button className="btn" onClick={gerarProposta} disabled={gerando}>
+        <div className="card card-full actions" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: 12 }}>
+          <label style={{ display: 'flex', alignItems: 'flex-start', gap: 8, cursor: 'pointer' }}>
+            <input
+              type="checkbox"
+              checked={confirmouRevisao}
+              onChange={(e) => setConfirmouRevisao(e.target.checked)}
+              style={{ marginTop: 3 }}
+            />
+            <span>Visualizei e farei as mudanças necessárias antes de enviar para qualquer cliente.</span>
+          </label>
+          <button className="btn" onClick={handleCliqueGerar} disabled={gerando || !confirmouRevisao}>
             {gerando ? 'Gerando...' : 'Gerar Proposta (PPTX)'}
           </button>
+          {session?.user && <span style={{ fontSize: 12, color: '#555' }}>Gerando como {session.user.email}</span>}
           {erroGeracao && <p style={{ color: '#c0392b', marginTop: 12 }}>{erroGeracao}</p>}
         </div>
+
+        {mostrarLogin && (
+          <div className="modal-overlay" onClick={() => setMostrarLogin(false)}>
+            <div className="card modal-content" onClick={(e) => e.stopPropagation()}>
+              <div className="card-title">Login — Gerar Proposta</div>
+              <p style={{ color: '#555', fontSize: 13, marginBottom: 12 }}>
+                Pra registrar quem gerou cada proposta, entre com seu e-mail e senha.
+              </p>
+              <form onSubmit={handleLoginSubmit}>
+                <div className="field-group">
+                  <label>E-mail</label>
+                  <input type="email" value={loginEmail} onChange={(e) => setLoginEmail(e.target.value)} placeholder="voce@pgmais.com.br" required autoFocus />
+                </div>
+                <div className="field-group">
+                  <label>Senha</label>
+                  <input type="password" value={loginSenha} onChange={(e) => setLoginSenha(e.target.value)} required />
+                </div>
+                {erroLogin && <p style={{ color: '#c0392b', fontSize: 13, marginBottom: 8 }}>{erroLogin}</p>}
+                <div className="actions">
+                  <button type="submit" className="btn" disabled={entrando}>{entrando ? 'Entrando...' : 'Entrar e Gerar'}</button>
+                  <button type="button" className="btn btn-secondary btn-hover-gray" onClick={() => setMostrarLogin(false)}>Cancelar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
       </div>
     )
   }

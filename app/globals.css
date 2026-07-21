@@ -121,6 +121,55 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 
 .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 
+/* Visualizador "tipo PDF" do editor de proposta — cada slide é uma imagem real do template
+   (public/proposta-slides/) com inputs/máscaras sobrepostos nas coordenadas exatas dos shapes
+   (lib/slideGeometry.json), pra editar em cima do próprio layout em vez de um formulário solto. */
+.slide-page {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 20px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  container-type: inline-size;
+}
+
+.slide-page-img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+
+.slide-page-label {
+  font-size: 12px; color: #888; margin-bottom: 6px;
+}
+
+.slide-overlay-input {
+  position: absolute;
+  border: 1.5px solid rgba(23, 44, 102, 0.25);
+  background: #fff;
+  border-radius: 3px;
+  font-family: inherit;
+  color: var(--color-navy);
+  font-weight: 700;
+  line-height: 1;
+  padding: 0 2px;
+  outline: none;
+}
+
+.slide-overlay-input:hover { border-color: rgba(23, 44, 102, 0.6); }
+.slide-overlay-input:focus { border-color: var(--color-navy); box-shadow: 0 0 0 2px rgba(23, 44, 102, 0.15); }
+
+.slide-mask {
+  position: absolute;
+  background-color: rgba(230, 233, 238, 0.88);
+  background-image: repeating-linear-gradient(
+    45deg, rgba(90, 98, 115, 0.55), rgba(90, 98, 115, 0.55) 7px,
+    transparent 7px, transparent 14px
+  );
+  border: 1px solid rgba(90, 98, 115, 0.3);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
 .btn {
   background: var(--color-navy); color: #fff;
   border: none; border-radius: var(--radius-sm);

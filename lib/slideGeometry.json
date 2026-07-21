@@ -1,0 +1,6874 @@
+﻿[
+    {
+        "slide":  1,
+        "name":  "Google Shape;229;p42",
+        "leftPct":  38.4062,
+        "topPct":  11.1959,
+        "widthPct":  53.3072,
+        "heightPct":  80.8149
+    },
+    {
+        "slide":  1,
+        "name":  "Google Shape;230;p42",
+        "leftPct":  55.6954,
+        "topPct":  30.2407,
+        "widthPct":  24.033,
+        "heightPct":  42.7253
+    },
+    {
+        "slide":  1,
+        "name":  "Google Shape;231;p42",
+        "leftPct":  14.1158,
+        "topPct":  32.6471,
+        "widthPct":  71.7684,
+        "heightPct":  22.2456
+    },
+    {
+        "slide":  1,
+        "name":  "Google Shape;232;p42",
+        "leftPct":  14.1158,
+        "topPct":  54.8926,
+        "widthPct":  45.4888,
+        "heightPct":  5.4885
+    },
+    {
+        "slide":  1,
+        "name":  "Google Shape;233;p42",
+        "leftPct":  14.1158,
+        "topPct":  62.9071,
+        "widthPct":  45.4888,
+        "heightPct":  7.6524
+    },
+    {
+        "slide":  2,
+        "name":  "Google Shape;238;p43",
+        "leftPct":  56.3442,
+        "topPct":  29.1539,
+        "widthPct":  20.6608,
+        "heightPct":  11.282
+    },
+    {
+        "slide":  2,
+        "name":  "Google Shape;239;p43",
+        "leftPct":  55.5086,
+        "topPct":  40.4358,
+        "widthPct":  39.2257,
+        "heightPct":  30.4054
+    },
+    {
+        "slide":  2,
+        "name":  "Google Shape;240;p43",
+        "leftPct":  -22.5684,
+        "topPct":  5.2581,
+        "widthPct":  72.5673,
+        "heightPct":  89.478
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;245;p44",
+        "leftPct":  7.2505,
+        "topPct":  24.2785,
+        "widthPct":  13.7106,
+        "heightPct":  9.1922
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;246;p44",
+        "leftPct":  51.4613,
+        "topPct":  5.2639,
+        "widthPct":  43.271,
+        "heightPct":  89.478
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;247;p44",
+        "leftPct":  14.9011,
+        "topPct":  32.6981,
+        "widthPct":  19.3734,
+        "heightPct":  34.4415
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;248;p44",
+        "leftPct":  19.2735,
+        "topPct":  32.6981,
+        "widthPct":  14.9967,
+        "heightPct":  34.4415
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;250;p44",
+        "leftPct":  11.0156,
+        "topPct":  32.6986,
+        "widthPct":  8.7449,
+        "heightPct":  0
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;251;p44",
+        "leftPct":  19.7592,
+        "topPct":  32.6986,
+        "widthPct":  0.5092,
+        "heightPct":  1.4138
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;253;p44",
+        "leftPct":  29.8314,
+        "topPct":  32.6986,
+        "widthPct":  8.7449,
+        "heightPct":  0
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;254;p44",
+        "leftPct":  29.3234,
+        "topPct":  32.6986,
+        "widthPct":  0.5092,
+        "heightPct":  1.4138
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;255;p44",
+        "leftPct":  28.9491,
+        "topPct":  24.2785,
+        "widthPct":  13.7106,
+        "heightPct":  9.1922
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;257;p44",
+        "leftPct":  3.0325,
+        "topPct":  50.2467,
+        "widthPct":  10.6835,
+        "heightPct":  0
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;258;p44",
+        "leftPct":  13.7144,
+        "topPct":  50.2467,
+        "widthPct":  0.6221,
+        "heightPct":  1.4138
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;259;p44",
+        "leftPct":  0.6286,
+        "topPct":  41.0537,
+        "widthPct":  13.7106,
+        "heightPct":  9.1922
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;261;p44",
+        "leftPct":  34.8938,
+        "topPct":  50.2467,
+        "widthPct":  10.6835,
+        "heightPct":  0
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;262;p44",
+        "leftPct":  34.2733,
+        "topPct":  50.2467,
+        "widthPct":  0.6221,
+        "heightPct":  1.4138
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;263;p44",
+        "leftPct":  35.6189,
+        "topPct":  41.0537,
+        "widthPct":  13.7106,
+        "heightPct":  9.1922
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;264;p44",
+        "leftPct":  6.8825,
+        "topPct":  66.5293,
+        "widthPct":  13.7106,
+        "heightPct":  9.1922
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;266;p44",
+        "leftPct":  10.6485,
+        "topPct":  66.529,
+        "widthPct":  8.7449,
+        "heightPct":  0
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;267;p44",
+        "leftPct":  19.392,
+        "topPct":  65.1152,
+        "widthPct":  0.5092,
+        "heightPct":  1.4138
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;269;p44",
+        "leftPct":  29.4642,
+        "topPct":  66.529,
+        "widthPct":  8.7449,
+        "heightPct":  0
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;270;p44",
+        "leftPct":  28.9563,
+        "topPct":  65.1152,
+        "widthPct":  0.5092,
+        "heightPct":  1.4138
+    },
+    {
+        "slide":  3,
+        "name":  "Google Shape;271;p44",
+        "leftPct":  28.5821,
+        "topPct":  66.5293,
+        "widthPct":  13.7106,
+        "heightPct":  9.1922
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;277;p45",
+        "leftPct":  75.2159,
+        "topPct":  11.4481,
+        "widthPct":  14.6119,
+        "heightPct":  22.6489
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;279;p45",
+        "leftPct":  80.0167,
+        "topPct":  26.5586,
+        "widthPct":  5.0103,
+        "heightPct":  2.8838
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;281;p45",
+        "leftPct":  78.9445,
+        "topPct":  16.1027,
+        "widthPct":  9.2254,
+        "heightPct":  10.4531
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;282;p45",
+        "leftPct":  76.8739,
+        "topPct":  19.49,
+        "widthPct":  2.0707,
+        "heightPct":  3.6812
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;284;p45",
+        "leftPct":  75.2155,
+        "topPct":  38.6757,
+        "widthPct":  14.6119,
+        "heightPct":  22.6489
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;286;p45",
+        "leftPct":  77.1688,
+        "topPct":  47.5773,
+        "widthPct":  10.7052,
+        "heightPct":  7.7267
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;287;p45",
+        "leftPct":  77.1688,
+        "topPct":  44.6934,
+        "widthPct":  10.7052,
+        "heightPct":  2.8838
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;289;p45",
+        "leftPct":  3.9741,
+        "topPct":  81.2209,
+        "widthPct":  42.3042,
+        "heightPct":  0
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;290;p45",
+        "leftPct":  3.6144,
+        "topPct":  72.2303,
+        "widthPct":  42.5225,
+        "heightPct":  6.4148
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;291;p45",
+        "leftPct":  3.8647,
+        "topPct":  69.8353,
+        "widthPct":  42.5225,
+        "heightPct":  0
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;292;p45",
+        "leftPct":  3.6138,
+        "topPct":  30.2524,
+        "widthPct":  42.7657,
+        "heightPct":  36.7104
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;293;p45",
+        "leftPct":  0,
+        "topPct":  18.779,
+        "widthPct":  50,
+        "heightPct":  8.5506
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;295;p45",
+        "leftPct":  57.2679,
+        "topPct":  11.7616,
+        "widthPct":  14.6119,
+        "heightPct":  22.6489
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;297;p45",
+        "leftPct":  60.5589,
+        "topPct":  26.8722,
+        "widthPct":  8.0301,
+        "heightPct":  2.8838
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;299;p45",
+        "leftPct":  60.9966,
+        "topPct":  16.4162,
+        "widthPct":  9.2254,
+        "heightPct":  10.4531
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;300;p45",
+        "leftPct":  58.9259,
+        "topPct":  19.8021,
+        "widthPct":  2.0707,
+        "heightPct":  3.6812
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;302;p45",
+        "leftPct":  57.2677,
+        "topPct":  38.6757,
+        "widthPct":  14.6119,
+        "heightPct":  22.6489
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;304;p45",
+        "leftPct":  61.4052,
+        "topPct":  52.7041,
+        "widthPct":  6.3368,
+        "heightPct":  5.0453
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;306;p45",
+        "leftPct":  62.4666,
+        "topPct":  42.2481,
+        "widthPct":  6.2846,
+        "heightPct":  10.4531
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;307;p45",
+        "leftPct":  60.396,
+        "topPct":  45.6354,
+        "widthPct":  2.0707,
+        "heightPct":  3.6812
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;309;p45",
+        "leftPct":  66.2416,
+        "topPct":  65.9032,
+        "widthPct":  14.6119,
+        "heightPct":  22.6489
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;311;p45",
+        "leftPct":  71.874,
+        "topPct":  69.4756,
+        "widthPct":  3.3471,
+        "heightPct":  10.4531
+    },
+    {
+        "slide":  4,
+        "name":  "Google Shape;312;p45",
+        "leftPct":  70.1187,
+        "topPct":  79.9315,
+        "widthPct":  6.857,
+        "heightPct":  5.0453
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;317;p46",
+        "leftPct":  5.2657,
+        "topPct":  5.2639,
+        "widthPct":  89.4685,
+        "heightPct":  11.1344
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;318;p46",
+        "leftPct":  11.0007,
+        "topPct":  19.8886,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;319;p46",
+        "leftPct":  14.7828,
+        "topPct":  26.2293,
+        "widthPct":  6.4337,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;320;p46",
+        "leftPct":  11.0007,
+        "topPct":  33.7784,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;321;p46",
+        "leftPct":  27.0848,
+        "topPct":  19.8886,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;322;p46",
+        "leftPct":  31.1184,
+        "topPct":  26.373,
+        "widthPct":  6.0892,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;323;p46",
+        "leftPct":  27.1969,
+        "topPct":  33.7784,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;324;p46",
+        "leftPct":  42.9556,
+        "topPct":  19.8886,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;325;p46",
+        "leftPct":  45.0116,
+        "topPct":  26.3863,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;326;p46",
+        "leftPct":  42.9949,
+        "topPct":  33.7784,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;327;p46",
+        "leftPct":  58.7733,
+        "topPct":  19.8886,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;328;p46",
+        "leftPct":  61.1495,
+        "topPct":  26.2293,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;329;p46",
+        "leftPct":  59.1327,
+        "topPct":  32.3695,
+        "widthPct":  13.3366,
+        "heightPct":  6.6258
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;330;p46",
+        "leftPct":  74.9824,
+        "topPct":  19.8886,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;331;p46",
+        "leftPct":  77.0699,
+        "topPct":  26.2293,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;332;p46",
+        "leftPct":  75.0531,
+        "topPct":  33.7784,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;333;p46",
+        "leftPct":  27.0933,
+        "topPct":  45.594,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;334;p46",
+        "leftPct":  29.3842,
+        "topPct":  51.3369,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;335;p46",
+        "leftPct":  29.6355,
+        "topPct":  57.8982,
+        "widthPct":  8.8025,
+        "heightPct":  6.6258
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;336;p46",
+        "leftPct":  43.636,
+        "topPct":  46.2806,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;337;p46",
+        "leftPct":  45.6121,
+        "topPct":  53.2583,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;338;p46",
+        "leftPct":  43.5953,
+        "topPct":  59.5711,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;339;p46",
+        "leftPct":  59.4805,
+        "topPct":  46.2806,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;340;p46",
+        "leftPct":  61.6447,
+        "topPct":  53.1014,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;341;p46",
+        "leftPct":  59.6279,
+        "topPct":  59.5711,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;342;p46",
+        "leftPct":  35.061,
+        "topPct":  72.6723,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;343;p46",
+        "leftPct":  37.2563,
+        "topPct":  79.1083,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;344;p46",
+        "leftPct":  35.2395,
+        "topPct":  86.7497,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;345;p46",
+        "leftPct":  68.483,
+        "topPct":  72.6713,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;346;p46",
+        "leftPct":  70.5824,
+        "topPct":  79.2145,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;347;p46",
+        "leftPct":  68.5656,
+        "topPct":  86.7487,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;348;p46",
+        "leftPct":  18.7483,
+        "topPct":  72.6724,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;349;p46",
+        "leftPct":  20.9562,
+        "topPct":  79.0764,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;350;p46",
+        "leftPct":  18.9394,
+        "topPct":  86.7498,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;351;p46",
+        "leftPct":  75.6572,
+        "topPct":  46.2806,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;352;p46",
+        "leftPct":  78.0973,
+        "topPct":  53.1014,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;353;p46",
+        "leftPct":  76.0805,
+        "topPct":  58.1622,
+        "widthPct":  13.3366,
+        "heightPct":  6.6258
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;354;p46",
+        "leftPct":  10.5818,
+        "topPct":  46.2783,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;355;p46",
+        "leftPct":  12.8727,
+        "topPct":  52.0212,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;356;p46",
+        "leftPct":  13.1239,
+        "topPct":  58.5825,
+        "widthPct":  8.8025,
+        "heightPct":  6.6258
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;357;p46",
+        "leftPct":  51.3785,
+        "topPct":  72.6713,
+        "widthPct":  13.5696,
+        "heightPct":  22.0647
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;358;p46",
+        "leftPct":  53.4779,
+        "topPct":  79.2146,
+        "widthPct":  9.3045,
+        "heightPct":  5.681
+    },
+    {
+        "slide":  5,
+        "name":  "Google Shape;359;p46",
+        "leftPct":  51.4611,
+        "topPct":  86.7487,
+        "widthPct":  13.3366,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  6,
+        "name":  "Google Shape;364;p47",
+        "leftPct":  -1.0285,
+        "topPct":  20.262,
+        "widthPct":  102.0571,
+        "heightPct":  92.7384
+    },
+    {
+        "slide":  6,
+        "name":  "Google Shape;365;p47",
+        "leftPct":  5.2657,
+        "topPct":  5.2639,
+        "widthPct":  89.4685,
+        "heightPct":  11.1344
+    },
+    {
+        "slide":  6,
+        "name":  "Google Shape;366;p47",
+        "leftPct":  3.1753,
+        "topPct":  27.7481,
+        "widthPct":  93.6494,
+        "heightPct":  65.3597
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;371;p48",
+        "leftPct":  5.2657,
+        "topPct":  4.0294,
+        "widthPct":  89.4685,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;372;p48",
+        "leftPct":  41.7376,
+        "topPct":  14.0864,
+        "widthPct":  14.6787,
+        "heightPct":  63.987
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;373;p48",
+        "leftPct":  57.1126,
+        "topPct":  14.0864,
+        "widthPct":  14.6787,
+        "heightPct":  63.987
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;374;p48",
+        "leftPct":  72.4875,
+        "topPct":  14.0863,
+        "widthPct":  16.2794,
+        "heightPct":  63.987
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;375;p48",
+        "leftPct":  10.9877,
+        "topPct":  14.0864,
+        "widthPct":  14.6787,
+        "heightPct":  63.987
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;376;p48",
+        "leftPct":  26.3627,
+        "topPct":  14.0864,
+        "widthPct":  14.6787,
+        "heightPct":  63.987
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;377;p48",
+        "leftPct":  10.4792,
+        "topPct":  38.8579,
+        "widthPct":  15.1873,
+        "heightPct":  14.4438
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;378;p48",
+        "leftPct":  12.0719,
+        "topPct":  12.507,
+        "widthPct":  12.2278,
+        "heightPct":  14.9147
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;379;p48",
+        "leftPct":  12.3367,
+        "topPct":  57.5889,
+        "widthPct":  11.8418,
+        "heightPct":  14.4438
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;380;p48",
+        "leftPct":  30.8817,
+        "topPct":  51.5578,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;381;p48",
+        "leftPct":  31.114,
+        "topPct":  24.2557,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;382;p48",
+        "leftPct":  27.7863,
+        "topPct":  12.8221,
+        "widthPct":  11.963,
+        "heightPct":  14.5916
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;383;p48",
+        "leftPct":  24.9916,
+        "topPct":  37.7437,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;384;p48",
+        "leftPct":  25.1303,
+        "topPct":  25.0751,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;385;p48",
+        "leftPct":  24.5858,
+        "topPct":  50.6644,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;386;p48",
+        "leftPct":  31.2338,
+        "topPct":  37.7348,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;387;p48",
+        "leftPct":  43.2535,
+        "topPct":  25.5931,
+        "widthPct":  11.8418,
+        "heightPct":  14.4438
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;388;p48",
+        "leftPct":  43.5694,
+        "topPct":  42.0123,
+        "widthPct":  11.8418,
+        "heightPct":  14.4438
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;389;p48",
+        "leftPct":  43.4589,
+        "topPct":  58.4316,
+        "widthPct":  11.8418,
+        "heightPct":  14.4438
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;390;p48",
+        "leftPct":  42.8249,
+        "topPct":  12.1512,
+        "widthPct":  12.6216,
+        "heightPct":  15.395
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;391;p48",
+        "leftPct":  58.0607,
+        "topPct":  12.6866,
+        "widthPct":  12.6216,
+        "heightPct":  15.395
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;393;p48",
+        "leftPct":  27.9582,
+        "topPct":  80.405,
+        "widthPct":  43.7852,
+        "heightPct":  13.1805
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;394;p48",
+        "leftPct":  61.2767,
+        "topPct":  80.5048,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;395;p48",
+        "leftPct":  44.4762,
+        "topPct":  80.016,
+        "widthPct":  13.6618,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;396;p48",
+        "leftPct":  54.4237,
+        "topPct":  80.3458,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;397;p48",
+        "leftPct":  28.2864,
+        "topPct":  78.8731,
+        "widthPct":  13.026,
+        "heightPct":  15.8882
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;398;p48",
+        "leftPct":  38.4217,
+        "topPct":  80.2149,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;399;p48",
+        "leftPct":  60.5811,
+        "topPct":  25.9182,
+        "widthPct":  7.6197,
+        "heightPct":  4.448
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;400;p48",
+        "leftPct":  61.7897,
+        "topPct":  41.1018,
+        "widthPct":  5.3517,
+        "heightPct":  12.6532
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;401;p48",
+        "leftPct":  56.9816,
+        "topPct":  53.5714,
+        "widthPct":  14.8189,
+        "heightPct":  9.0113
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;402;p48",
+        "leftPct":  59.7246,
+        "topPct":  32.4065,
+        "widthPct":  9.3328,
+        "heightPct":  6.9318
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;403;p48",
+        "leftPct":  60.2811,
+        "topPct":  40.7725,
+        "widthPct":  7.9202,
+        "heightPct":  0
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;404;p48",
+        "leftPct":  73.7167,
+        "topPct":  12.9035,
+        "widthPct":  12.6118,
+        "heightPct":  15.383
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;405;p48",
+        "leftPct":  74.6025,
+        "topPct":  45.3959,
+        "widthPct":  10.9768,
+        "heightPct":  3.1882
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;406;p48",
+        "leftPct":  74.5344,
+        "topPct":  68.9069,
+        "widthPct":  10.9768,
+        "heightPct":  3.1882
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;407;p48",
+        "leftPct":  74.6025,
+        "topPct":  28.2671,
+        "widthPct":  10.9768,
+        "heightPct":  3.1882
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;408;p48",
+        "leftPct":  76.1308,
+        "topPct":  40.7725,
+        "widthPct":  7.9202,
+        "heightPct":  0
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;409;p48",
+        "leftPct":  76.1308,
+        "topPct":  64.3936,
+        "widthPct":  7.9202,
+        "heightPct":  0
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;410;p48",
+        "leftPct":  74.6025,
+        "topPct":  33.5804,
+        "widthPct":  10.9768,
+        "heightPct":  3.1882
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;411;p48",
+        "leftPct":  73.4313,
+        "topPct":  51.5002,
+        "widthPct":  4.8927,
+        "heightPct":  6.7969
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;412;p48",
+        "leftPct":  78.5442,
+        "topPct":  51.5002,
+        "widthPct":  10.9768,
+        "heightPct":  6.9318
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;413;p48",
+        "leftPct":  60.2811,
+        "topPct":  64.3301,
+        "widthPct":  7.9202,
+        "heightPct":  0
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;414;p48",
+        "leftPct":  60.6102,
+        "topPct":  65.7718,
+        "widthPct":  7.6601,
+        "heightPct":  11.0589
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;415;p48",
+        "leftPct":  27.9865,
+        "topPct":  63.2005,
+        "widthPct":  10.7653,
+        "heightPct":  13.1308
+    },
+    {
+        "slide":  7,
+        "name":  "Google Shape;416;p48",
+        "leftPct":  10.9877,
+        "topPct":  32.0133,
+        "widthPct":  14.8196,
+        "heightPct":  4.2636
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;421;p49",
+        "leftPct":  4.0857,
+        "topPct":  5.4304,
+        "widthPct":  91.8045,
+        "heightPct":  7.2441
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;423;p49",
+        "leftPct":  4.0857,
+        "topPct":  24.1328,
+        "widthPct":  22.3367,
+        "heightPct":  70.434
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;424;p49",
+        "leftPct":  4.0857,
+        "topPct":  26.1759,
+        "widthPct":  22.3395,
+        "heightPct":  68.3933
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;426;p49",
+        "leftPct":  27.6658,
+        "topPct":  24.1328,
+        "widthPct":  22.3367,
+        "heightPct":  70.434
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;427;p49",
+        "leftPct":  27.6658,
+        "topPct":  26.1759,
+        "widthPct":  22.3395,
+        "heightPct":  68.3933
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;430;p49",
+        "leftPct":  51.2637,
+        "topPct":  24.4915,
+        "widthPct":  44.6399,
+        "heightPct":  70.0715
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;431;p49",
+        "leftPct":  51.2636,
+        "topPct":  34.8777,
+        "widthPct":  44.6406,
+        "heightPct":  59.6921
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;433;p49",
+        "leftPct":  52.5314,
+        "topPct":  57.8956,
+        "widthPct":  20.4694,
+        "heightPct":  34.3831
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;434;p49",
+        "leftPct":  52.5315,
+        "topPct":  58.1243,
+        "widthPct":  20.4678,
+        "heightPct":  34.1572
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;436;p49",
+        "leftPct":  52.5314,
+        "topPct":  48.6163,
+        "widthPct":  20.4694,
+        "heightPct":  9.2793
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;437;p49",
+        "leftPct":  52.5313,
+        "topPct":  48.8499,
+        "widthPct":  20.4678,
+        "heightPct":  9.0407
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;439;p49",
+        "leftPct":  74.1577,
+        "topPct":  48.6163,
+        "widthPct":  20.4694,
+        "heightPct":  9.2793
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;440;p49",
+        "leftPct":  74.1577,
+        "topPct":  48.8519,
+        "widthPct":  20.4678,
+        "heightPct":  9.0407
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;442;p49",
+        "leftPct":  52.5314,
+        "topPct":  37.2091,
+        "widthPct":  20.4694,
+        "heightPct":  11.4072
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;443;p49",
+        "leftPct":  52.5313,
+        "topPct":  37.2046,
+        "widthPct":  20.4678,
+        "heightPct":  11.4108
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;445;p49",
+        "leftPct":  74.0882,
+        "topPct":  37.2091,
+        "widthPct":  20.4694,
+        "heightPct":  11.4072
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;446;p49",
+        "leftPct":  74.0882,
+        "topPct":  37.2044,
+        "widthPct":  20.4678,
+        "heightPct":  11.4108
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;448;p49",
+        "leftPct":  74.1577,
+        "topPct":  59.3479,
+        "widthPct":  20.4694,
+        "heightPct":  32.9308
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;449;p49",
+        "leftPct":  74.1576,
+        "topPct":  58.1175,
+        "widthPct":  20.4678,
+        "heightPct":  34.1573
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;450;p49",
+        "leftPct":  73.5332,
+        "topPct":  37.2108,
+        "widthPct":  0,
+        "heightPct":  55.0679
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;451;p49",
+        "leftPct":  53.6397,
+        "topPct":  34.8775,
+        "widthPct":  39.8879,
+        "heightPct":  0
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;453;p49",
+        "leftPct":  4.0857,
+        "topPct":  15.4047,
+        "widthPct":  91.8285,
+        "heightPct":  7.1743
+    },
+    {
+        "slide":  8,
+        "name":  "Google Shape;454;p49",
+        "leftPct":  4.0857,
+        "topPct":  15.4047,
+        "widthPct":  91.8286,
+        "heightPct":  7.175
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;459;p50",
+        "leftPct":  93.4392,
+        "topPct":  5.2241,
+        "widthPct":  4.0125,
+        "heightPct":  6.3342
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;460;p50",
+        "leftPct":  62.3657,
+        "topPct":  45.201,
+        "widthPct":  5.6726,
+        "heightPct":  0
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;461;p50",
+        "leftPct":  33.6877,
+        "topPct":  64.676,
+        "widthPct":  23.5728,
+        "heightPct":  0
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;462;p50",
+        "leftPct":  35.9022,
+        "topPct":  63.7743,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;463;p50",
+        "leftPct":  52.636,
+        "topPct":  63.7743,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;464;p50",
+        "leftPct":  3.5597,
+        "topPct":  6.5922,
+        "widthPct":  92.8806,
+        "heightPct":  82.893
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;465;p50",
+        "leftPct":  86.6132,
+        "topPct":  26.5882,
+        "widthPct":  0,
+        "heightPct":  43.4004
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;466;p50",
+        "leftPct":  18.6175,
+        "topPct":  42.4008,
+        "widthPct":  5.6726,
+        "heightPct":  0
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;467;p50",
+        "leftPct":  18.6175,
+        "topPct":  46.0075,
+        "widthPct":  5.6726,
+        "heightPct":  0
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;468;p50",
+        "leftPct":  33.6877,
+        "topPct":  33.3394,
+        "widthPct":  23.5728,
+        "heightPct":  0
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;469;p50",
+        "leftPct":  45.0029,
+        "topPct":  26.5882,
+        "widthPct":  0,
+        "heightPct":  43.4004
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;470;p50",
+        "leftPct":  73.3925,
+        "topPct":  12.6597,
+        "widthPct":  14.9622,
+        "heightPct":  66.7234
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;471;p50",
+        "leftPct":  30.0274,
+        "topPct":  12.6597,
+        "widthPct":  41.3353,
+        "heightPct":  66.725
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;472;p50",
+        "leftPct":  13.5643,
+        "topPct":  12.6597,
+        "widthPct":  14.4521,
+        "heightPct":  66.725
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;473;p50",
+        "leftPct":  54.7871,
+        "topPct":  15.9821,
+        "widthPct":  9.1482,
+        "heightPct":  60.4126
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;474;p50",
+        "leftPct":  9.2561,
+        "topPct":  14.9712,
+        "widthPct":  9.6424,
+        "heightPct":  60.4083
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;475;p50",
+        "leftPct":  1.9824,
+        "topPct":  44.6875,
+        "widthPct":  24.8196,
+        "heightPct":  3.937
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;476;p50",
+        "leftPct":  22.7186,
+        "topPct":  15.9821,
+        "widthPct":  12.4278,
+        "heightPct":  60.4083
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;477;p50",
+        "leftPct":  25.674,
+        "topPct":  38.7855,
+        "widthPct":  6.5157,
+        "heightPct":  2.8405
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;478;p50",
+        "leftPct":  28.1709,
+        "topPct":  36.1796,
+        "widthPct":  1.5216,
+        "heightPct":  2.705
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;479;p50",
+        "leftPct":  26.4173,
+        "topPct":  45.9989,
+        "widthPct":  5.0295,
+        "heightPct":  2.8405
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;480;p50",
+        "leftPct":  28.1709,
+        "topPct":  43.3931,
+        "widthPct":  1.5216,
+        "heightPct":  2.705
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;481;p50",
+        "leftPct":  24.8866,
+        "topPct":  53.2124,
+        "widthPct":  8.0906,
+        "heightPct":  2.8405
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;482;p50",
+        "leftPct":  28.1709,
+        "topPct":  50.6065,
+        "widthPct":  1.5216,
+        "heightPct":  2.705
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;483;p50",
+        "leftPct":  25.148,
+        "topPct":  60.4258,
+        "widthPct":  7.5689,
+        "heightPct":  2.8405
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;484;p50",
+        "leftPct":  28.1709,
+        "topPct":  57.8199,
+        "widthPct":  1.5216,
+        "heightPct":  2.705
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;485;p50",
+        "leftPct":  26.2121,
+        "topPct":  67.6392,
+        "widthPct":  5.4396,
+        "heightPct":  2.8405
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;486;p50",
+        "leftPct":  28.1709,
+        "topPct":  65.0334,
+        "widthPct":  1.5216,
+        "heightPct":  2.705
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;487;p50",
+        "leftPct":  25.0913,
+        "topPct":  20.8511,
+        "widthPct":  7.6808,
+        "heightPct":  4.914
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;488;p50",
+        "leftPct":  37.6761,
+        "topPct":  15.9821,
+        "widthPct":  14.1995,
+        "heightPct":  34.7098
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;489;p50",
+        "leftPct":  39.9978,
+        "topPct":  19.9494,
+        "widthPct":  9.5581,
+        "heightPct":  3.4892
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;490;p50",
+        "leftPct":  37.6761,
+        "topPct":  54.634,
+        "widthPct":  14.1995,
+        "heightPct":  21.7556
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;491;p50",
+        "leftPct":  41.7052,
+        "topPct":  58.0003,
+        "widthPct":  6.1433,
+        "heightPct":  3.4892
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;492;p50",
+        "leftPct":  39.8183,
+        "topPct":  24.9687,
+        "widthPct":  2.5309,
+        "heightPct":  7.2241
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;493;p50",
+        "leftPct":  43.678,
+        "topPct":  24.9687,
+        "widthPct":  2.7944,
+        "heightPct":  7.2241
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;494;p50",
+        "leftPct":  47.8486,
+        "topPct":  24.9734,
+        "widthPct":  2.3763,
+        "heightPct":  7.2241
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;495;p50",
+        "leftPct":  39.5018,
+        "topPct":  35.1591,
+        "widthPct":  3.164,
+        "heightPct":  7.2241
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;496;p50",
+        "leftPct":  43.9816,
+        "topPct":  34.5925,
+        "widthPct":  2.187,
+        "heightPct":  7.7974
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;497;p50",
+        "leftPct":  47.5182,
+        "topPct":  35.7283,
+        "widthPct":  3.037,
+        "heightPct":  6.6724
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;498;p50",
+        "leftPct":  39.195,
+        "topPct":  64.2903,
+        "widthPct":  3.279,
+        "heightPct":  7.8631
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;499;p50",
+        "leftPct":  43.1706,
+        "topPct":  64.2903,
+        "widthPct":  3.2124,
+        "heightPct":  7.8631
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;500;p50",
+        "leftPct":  47.2578,
+        "topPct":  64.2903,
+        "widthPct":  3.4023,
+        "heightPct":  7.8631
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;501;p50",
+        "leftPct":  82.142,
+        "topPct":  48.3523,
+        "widthPct":  12.4278,
+        "heightPct":  28.0432
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;502;p50",
+        "leftPct":  66.465,
+        "topPct":  15.9821,
+        "widthPct":  12.4278,
+        "heightPct":  60.4083
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;503;p50",
+        "leftPct":  25.8761,
+        "topPct":  26.2792,
+        "widthPct":  6.1122,
+        "heightPct":  6.5558
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;504;p50",
+        "leftPct":  67.9341,
+        "topPct":  19.2687,
+        "widthPct":  9.4915,
+        "heightPct":  8.0315
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;505;p50",
+        "leftPct":  69.8832,
+        "topPct":  50.7757,
+        "widthPct":  5.593,
+        "heightPct":  9.2188
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;506;p50",
+        "leftPct":  70.1715,
+        "topPct":  61.82,
+        "widthPct":  5.0167,
+        "heightPct":  9.0094
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;507;p50",
+        "leftPct":  70.359,
+        "topPct":  28.956,
+        "widthPct":  4.6414,
+        "heightPct":  9.1274
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;508;p50",
+        "leftPct":  70.1893,
+        "topPct":  39.3679,
+        "widthPct":  4.9808,
+        "heightPct":  9.6725
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;509;p50",
+        "leftPct":  9.2561,
+        "topPct":  2.9761,
+        "widthPct":  33.481,
+        "heightPct":  6.3634
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;510;p50",
+        "leftPct":  83.0741,
+        "topPct":  51.8329,
+        "widthPct":  9.6752,
+        "heightPct":  5.576
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;511;p50",
+        "leftPct":  85.2306,
+        "topPct":  3.3262,
+        "widthPct":  8.622,
+        "heightPct":  6.3342
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;512;p50",
+        "leftPct":  22.4597,
+        "topPct":  11.758,
+        "widthPct":  1.0144,
+        "heightPct":  1.8033
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;513;p50",
+        "leftPct":  52.2484,
+        "topPct":  11.758,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;514;p50",
+        "leftPct":  82.4264,
+        "topPct":  11.758,
+        "widthPct":  1.0144,
+        "heightPct":  1.8033
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;515;p50",
+        "leftPct":  20.3998,
+        "topPct":  78.4438,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;516;p50",
+        "leftPct":  50.1884,
+        "topPct":  78.4438,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;517;p50",
+        "leftPct":  80.3664,
+        "topPct":  78.4438,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;518;p50",
+        "leftPct":  20.9457,
+        "topPct":  41.4991,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;519;p50",
+        "leftPct":  35.9022,
+        "topPct":  32.4377,
+        "widthPct":  1.0144,
+        "heightPct":  1.8033
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;520;p50",
+        "leftPct":  52.636,
+        "topPct":  32.4377,
+        "widthPct":  1.0144,
+        "heightPct":  1.8033
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;521;p50",
+        "leftPct":  64.6939,
+        "topPct":  44.2993,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;522;p50",
+        "leftPct":  44.4957,
+        "topPct":  51.7637,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;523;p50",
+        "leftPct":  86.106,
+        "topPct":  45.2866,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;524;p50",
+        "leftPct":  88.1189,
+        "topPct":  45.2866,
+        "widthPct":  1.0144,
+        "heightPct":  1.8033
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;525;p50",
+        "leftPct":  20.9457,
+        "topPct":  45.1058,
+        "widthPct":  1.0144,
+        "heightPct":  1.8034
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;526;p50",
+        "leftPct":  82.3859,
+        "topPct":  59.6448,
+        "widthPct":  11.0534,
+        "heightPct":  13.4821
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;528;p50",
+        "leftPct":  24.8594,
+        "topPct":  82.3382,
+        "widthPct":  50.3632,
+        "heightPct":  13.526
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;529;p50",
+        "leftPct":  24.7775,
+        "topPct":  80.328,
+        "widthPct":  13.6882,
+        "heightPct":  16.6959
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;530;p50",
+        "leftPct":  66.6037,
+        "topPct":  82.4538,
+        "widthPct":  7.1071,
+        "heightPct":  13.7984
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;531;p50",
+        "leftPct":  47.1851,
+        "topPct":  82.4538,
+        "widthPct":  8.6215,
+        "heightPct":  13.7984
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;532;p50",
+        "leftPct":  57.6516,
+        "topPct":  82.4538,
+        "widthPct":  7.1071,
+        "heightPct":  13.7984
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;533;p50",
+        "leftPct":  40.3107,
+        "topPct":  82.4538,
+        "widthPct":  5.0294,
+        "heightPct":  13.7984
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;535;p50",
+        "leftPct":  81.421,
+        "topPct":  15.9813,
+        "widthPct":  12.4257,
+        "heightPct":  27.9479
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;536;p50",
+        "leftPct":  83.7949,
+        "topPct":  31.6283,
+        "widthPct":  3.3161,
+        "heightPct":  9.1066
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;537;p50",
+        "leftPct":  88.4293,
+        "topPct":  31.6283,
+        "widthPct":  2.8458,
+        "heightPct":  9.1066
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;538;p50",
+        "leftPct":  84.3831,
+        "topPct":  19.2678,
+        "widthPct":  6.5031,
+        "heightPct":  5.5735
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;539;p50",
+        "leftPct":  83.0708,
+        "topPct":  25.4203,
+        "widthPct":  9.4279,
+        "heightPct":  4.591
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;540;p50",
+        "leftPct":  42.341,
+        "topPct":  43.0821,
+        "widthPct":  5.593,
+        "heightPct":  6.8219
+    },
+    {
+        "slide":  9,
+        "name":  "Google Shape;541;p50",
+        "leftPct":  85.4967,
+        "topPct":  4.1243,
+        "widthPct":  8.0899,
+        "heightPct":  4.7343
+    },
+    {
+        "slide":  10,
+        "name":  "Google Shape;546;p51",
+        "leftPct":  -16.8714,
+        "topPct":  91.2948,
+        "widthPct":  51.1776,
+        "heightPct":  21.7145
+    },
+    {
+        "slide":  10,
+        "name":  "Google Shape;547;p51",
+        "leftPct":  76.4472,
+        "topPct":  -40.8075,
+        "widthPct":  51.1751,
+        "heightPct":  93.7686
+    },
+    {
+        "slide":  10,
+        "name":  "Google Shape;548;p51",
+        "leftPct":  90.5293,
+        "topPct":  48.551,
+        "widthPct":  51.1776,
+        "heightPct":  93.7594
+    },
+    {
+        "slide":  10,
+        "name":  "Google Shape;549;p51",
+        "leftPct":  7.1861,
+        "topPct":  45.5461,
+        "widthPct":  34.7011,
+        "heightPct":  8.908
+    },
+    {
+        "slide":  10,
+        "name":  "Google Shape;550;p51",
+        "leftPct":  30.1821,
+        "topPct":  84.5722,
+        "widthPct":  51.1751,
+        "heightPct":  21.7167
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;555;p52",
+        "leftPct":  39.4104,
+        "topPct":  22.5486,
+        "widthPct":  27.2343,
+        "heightPct":  48.4164
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;556;p52",
+        "leftPct":  5.2637,
+        "topPct":  40.5573,
+        "widthPct":  26.5551,
+        "heightPct":  13.6716
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;557;p52",
+        "leftPct":  33.379,
+        "topPct":  11.8258,
+        "widthPct":  39.2979,
+        "heightPct":  69.8629
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;559;p52",
+        "leftPct":  73.7931,
+        "topPct":  20.1959,
+        "widthPct":  20.9432,
+        "heightPct":  4.5295
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;560;p52",
+        "leftPct":  74.0238,
+        "topPct":  25.6494,
+        "widthPct":  19.2533,
+        "heightPct":  5.8029
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;562;p52",
+        "leftPct":  76.9096,
+        "topPct":  44.5488,
+        "widthPct":  17.1176,
+        "heightPct":  4.5295
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;563;p52",
+        "leftPct":  76.9095,
+        "topPct":  50.0023,
+        "widthPct":  15.5193,
+        "heightPct":  8.3516
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;564;p52",
+        "leftPct":  73.5113,
+        "topPct":  64.1282,
+        "widthPct":  13.1332,
+        "heightPct":  4.5319
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;565;p52",
+        "leftPct":  73.5548,
+        "topPct":  70.1739,
+        "widthPct":  14.6129,
+        "heightPct":  8.3523
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;567;p52",
+        "leftPct":  61.6769,
+        "topPct":  80.0464,
+        "widthPct":  10.766,
+        "heightPct":  4.5295
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;568;p52",
+        "leftPct":  61.6769,
+        "topPct":  86.746,
+        "widthPct":  29.4676,
+        "heightPct":  5.8029
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;570;p52",
+        "leftPct":  21.9883,
+        "topPct":  81.7283,
+        "widthPct":  19.418,
+        "heightPct":  4.5295
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;571;p52",
+        "leftPct":  23.898,
+        "topPct":  87.0909,
+        "widthPct":  17.3367,
+        "heightPct":  3.2561
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;572;p52",
+        "leftPct":  23.166,
+        "topPct":  68.9633,
+        "widthPct":  10.0525,
+        "heightPct":  4.5319
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;573;p52",
+        "leftPct":  35.215,
+        "topPct":  15.8145,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;574;p52",
+        "leftPct":  37.1102,
+        "topPct":  18.2955,
+        "widthPct":  2.7449,
+        "heightPct":  8.3919
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;575;p52",
+        "leftPct":  30.481,
+        "topPct":  31.2711,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;576;p52",
+        "leftPct":  32.109,
+        "topPct":  33.4015,
+        "widthPct":  3.0306,
+        "heightPct":  8.3919
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;577;p52",
+        "leftPct":  45.6752,
+        "topPct":  6.9626,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;578;p52",
+        "leftPct":  47.6673,
+        "topPct":  9.4607,
+        "widthPct":  2.5772,
+        "heightPct":  8.3919
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;579;p52",
+        "leftPct":  29.6862,
+        "topPct":  49.3476,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;580;p52",
+        "leftPct":  31.1988,
+        "topPct":  51.26,
+        "widthPct":  3.4315,
+        "heightPct":  8.3919
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;581;p52",
+        "leftPct":  34.368,
+        "topPct":  64.5039,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;582;p52",
+        "leftPct":  33.3881,
+        "topPct":  63.5888,
+        "widthPct":  7.825,
+        "heightPct":  14.188
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;583;p52",
+        "leftPct":  42.255,
+        "topPct":  76.5074,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;584;p52",
+        "leftPct":  40.0237,
+        "topPct":  72.407,
+        "widthPct":  10.939,
+        "heightPct":  19.8341
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;585;p52",
+        "leftPct":  53.8812,
+        "topPct":  77.1164,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;586;p52",
+        "leftPct":  52.7721,
+        "topPct":  74.6303,
+        "widthPct":  10.1519,
+        "heightPct":  18.407
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;587;p52",
+        "leftPct":  64.6712,
+        "topPct":  64.4248,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;588;p52",
+        "leftPct":  63.7061,
+        "topPct":  62.3614,
+        "widthPct":  8.6627,
+        "heightPct":  15.7069
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;589;p52",
+        "leftPct":  68.7814,
+        "topPct":  44.1385,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;590;p52",
+        "leftPct":  68.1705,
+        "topPct":  42.8664,
+        "widthPct":  8.198,
+        "heightPct":  14.8642
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;591;p52",
+        "leftPct":  66.2402,
+        "topPct":  21.1098,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;592;p52",
+        "leftPct":  65.6053,
+        "topPct":  19.6944,
+        "widthPct":  8.1112,
+        "heightPct":  14.7069
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;593;p52",
+        "leftPct":  57.143,
+        "topPct":  8.7955,
+        "widthPct":  6.6798,
+        "heightPct":  11.8752
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;594;p52",
+        "leftPct":  55.8332,
+        "topPct":  8.4137,
+        "widthPct":  9.7342,
+        "heightPct":  11.8731
+    },
+    {
+        "slide":  11,
+        "name":  "Google Shape;595;p52",
+        "leftPct":  43.2639,
+        "topPct":  39.9067,
+        "widthPct":  19.4143,
+        "heightPct":  17.3654
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;601;p53",
+        "leftPct":  63.6884,
+        "topPct":  10.7227,
+        "widthPct":  13.6674,
+        "heightPct":  21.7658
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;602;p53",
+        "leftPct":  73.7294,
+        "topPct":  12.6255,
+        "widthPct":  14.6814,
+        "heightPct":  26.5113
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;603;p53",
+        "leftPct":  78.9165,
+        "topPct":  50.0086,
+        "widthPct":  13.734,
+        "heightPct":  23.1124
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;604;p53",
+        "leftPct":  52.6653,
+        "topPct":  12.6563,
+        "widthPct":  14.6495,
+        "heightPct":  26.5396
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;605;p53",
+        "leftPct":  78.9165,
+        "topPct":  26.8691,
+        "widthPct":  13.734,
+        "heightPct":  23.1433
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;606;p53",
+        "leftPct":  73.7294,
+        "topPct":  60.8534,
+        "widthPct":  14.6814,
+        "heightPct":  26.5422
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;607;p53",
+        "leftPct":  48.4429,
+        "topPct":  26.9283,
+        "widthPct":  13.718,
+        "heightPct":  23.0841
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;608;p53",
+        "leftPct":  63.6884,
+        "topPct":  67.5015,
+        "widthPct":  13.6674,
+        "heightPct":  21.776
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;609;p53",
+        "leftPct":  52.6653,
+        "topPct":  60.7942,
+        "widthPct":  14.6495,
+        "heightPct":  26.5422
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;610;p53",
+        "leftPct":  48.4429,
+        "topPct":  50.0086,
+        "widthPct":  13.718,
+        "heightPct":  23.0533
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;611;p53",
+        "leftPct":  70.521,
+        "topPct":  50.0086,
+        "widthPct":  0.0014,
+        "heightPct":  0.0025
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;612;p53",
+        "leftPct":  70.521,
+        "topPct":  50.0086,
+        "widthPct":  0.0014,
+        "heightPct":  0.0025
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;613;p53",
+        "leftPct":  59.1659,
+        "topPct":  29.944,
+        "widthPct":  22.7625,
+        "heightPct":  40.105
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;614;p53",
+        "leftPct":  63.6888,
+        "topPct":  41.6055,
+        "widthPct":  13.3333,
+        "heightPct":  18.4135
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;615;p53",
+        "leftPct":  66.4738,
+        "topPct":  17.3168,
+        "widthPct":  7.6247,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;616;p53",
+        "leftPct":  76.5474,
+        "topPct":  23.5664,
+        "widthPct":  7.6247,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;617;p53",
+        "leftPct":  82.5346,
+        "topPct":  40.1773,
+        "widthPct":  7.6247,
+        "heightPct":  3.3654
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;618;p53",
+        "leftPct":  81.2619,
+        "topPct":  56.0328,
+        "widthPct":  9.6621,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;619;p53",
+        "leftPct":  66.7649,
+        "topPct":  75.0869,
+        "widthPct":  7.6247,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;620;p53",
+        "leftPct":  75.7253,
+        "topPct":  72.0387,
+        "widthPct":  10.2461,
+        "heightPct":  3.3596
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;621;p53",
+        "leftPct":  56.6312,
+        "topPct":  70.8001,
+        "widthPct":  7.6247,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;622;p53",
+        "leftPct":  49.4768,
+        "topPct":  38.0189,
+        "widthPct":  10.7907,
+        "heightPct":  6.0309
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;623;p53",
+        "leftPct":  49.7893,
+        "topPct":  55.7361,
+        "widthPct":  9.6621,
+        "heightPct":  3.3654
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;624;p53",
+        "leftPct":  56.9064,
+        "topPct":  23.5662,
+        "widthPct":  7.6247,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;625;p53",
+        "leftPct":  6.5603,
+        "topPct":  77.9045,
+        "widthPct":  1.5912,
+        "heightPct":  2.8288
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;626;p53",
+        "leftPct":  9.3815,
+        "topPct":  77.8478,
+        "widthPct":  10.1444,
+        "heightPct":  2.9688
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;627;p53",
+        "leftPct":  20.756,
+        "topPct":  77.9045,
+        "widthPct":  1.5912,
+        "heightPct":  2.8288
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;628;p53",
+        "leftPct":  23.2251,
+        "topPct":  77.8479,
+        "widthPct":  10.1444,
+        "heightPct":  2.9688
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;629;p53",
+        "leftPct":  6.5603,
+        "topPct":  83.4674,
+        "widthPct":  1.5912,
+        "heightPct":  2.8288
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;630;p53",
+        "leftPct":  9.3817,
+        "topPct":  83.4109,
+        "widthPct":  8.1332,
+        "heightPct":  2.9688
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;631;p53",
+        "leftPct":  6.5607,
+        "topPct":  77.9187,
+        "widthPct":  1.5903,
+        "heightPct":  2.8272
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;632;p53",
+        "leftPct":  66.7649,
+        "topPct":  77.9211,
+        "widthPct":  7.6247,
+        "heightPct":  3.3129
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;633;p53",
+        "leftPct":  7.0048,
+        "topPct":  13.6202,
+        "widthPct":  29.0933,
+        "heightPct":  7.4755
+    },
+    {
+        "slide":  12,
+        "name":  "Google Shape;634;p53",
+        "leftPct":  6.5606,
+        "topPct":  30.7755,
+        "widthPct":  35.4495,
+        "heightPct":  37.3928
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;639;p54",
+        "leftPct":  43.9175,
+        "topPct":  77.6062,
+        "widthPct":  15.5676,
+        "heightPct":  3.9137
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;640;p54",
+        "leftPct":  43.9175,
+        "topPct":  80.5234,
+        "widthPct":  46.6339,
+        "heightPct":  8.5389
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;641;p54",
+        "leftPct":  5.2655,
+        "topPct":  33.4791,
+        "widthPct":  22.9593,
+        "heightPct":  35.2698
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;642;p54",
+        "leftPct":  32.6152,
+        "topPct":  15.0586,
+        "widthPct":  62.1194,
+        "heightPct":  16.1097
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;643;p54",
+        "leftPct":  31.1528,
+        "topPct":  20.7526,
+        "widthPct":  9.2192,
+        "heightPct":  4.7419
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;644;p54",
+        "leftPct":  32.6023,
+        "topPct":  34.3973,
+        "widthPct":  62.1194,
+        "heightPct":  34.354
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;645;p54",
+        "leftPct":  28.0179,
+        "topPct":  49.4608,
+        "widthPct":  15.4888,
+        "heightPct":  4.7419
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;646;p54",
+        "leftPct":  43.2984,
+        "topPct":  10.9376,
+        "widthPct":  41.4304,
+        "heightPct":  60.9157
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;647;p54",
+        "leftPct":  42.7705,
+        "topPct":  13.122,
+        "widthPct":  39.9606,
+        "heightPct":  10.2596
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;648;p54",
+        "leftPct":  43.8582,
+        "topPct":  24.1757,
+        "widthPct":  40.2657,
+        "heightPct":  5.6926
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;649;p54",
+        "leftPct":  44.0058,
+        "topPct":  40.437,
+        "widthPct":  32.5459,
+        "heightPct":  3.9137
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;650;p54",
+        "leftPct":  44.4965,
+        "topPct":  44.6624,
+        "widthPct":  38.3629,
+        "heightPct":  6.1709
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;651;p54",
+        "leftPct":  44.8078,
+        "topPct":  58.9773,
+        "widthPct":  37.3688,
+        "heightPct":  3.9137
+    },
+    {
+        "slide":  13,
+        "name":  "Google Shape;652;p54",
+        "leftPct":  44.694,
+        "topPct":  51.8222,
+        "widthPct":  39.065,
+        "heightPct":  5.6926
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;657;p55",
+        "leftPct":  5.2657,
+        "topPct":  4.0294,
+        "widthPct":  89.4685,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;658;p55",
+        "leftPct":  51.5379,
+        "topPct":  37.6514,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;659;p55",
+        "leftPct":  53.151,
+        "topPct":  53.9259,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;660;p55",
+        "leftPct":  61.7596,
+        "topPct":  31.0625,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;661;p55",
+        "leftPct":  51.5386,
+        "topPct":  45.8288,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;662;p55",
+        "leftPct":  20.689,
+        "topPct":  37.6514,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;663;p55",
+        "leftPct":  22.3021,
+        "topPct":  53.9259,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;664;p55",
+        "leftPct":  30.9107,
+        "topPct":  31.0625,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;665;p55",
+        "leftPct":  20.6897,
+        "topPct":  45.8288,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;666;p55",
+        "leftPct":  31.0754,
+        "topPct":  35.5344,
+        "widthPct":  6.9999,
+        "heightPct":  4.0862
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;667;p55",
+        "leftPct":  63.7014,
+        "topPct":  34.2879,
+        "widthPct":  3.4456,
+        "heightPct":  6.5792
+    },
+    {
+        "slide":  14,
+        "name":  "Google Shape;668;p55",
+        "leftPct":  5.2657,
+        "topPct":  83.7319,
+        "widthPct":  89.4685,
+        "heightPct":  11.0061
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;673;p56",
+        "leftPct":  40.7468,
+        "topPct":  0,
+        "widthPct":  63.7499,
+        "heightPct":  100
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;674;p56",
+        "leftPct":  -10.1493,
+        "topPct":  0,
+        "widthPct":  61.2139,
+        "heightPct":  100
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;675;p56",
+        "leftPct":  22.4098,
+        "topPct":  81.1745,
+        "widthPct":  5.3876,
+        "heightPct":  9.0399
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;676;p56",
+        "leftPct":  15.9253,
+        "topPct":  82.7252,
+        "widthPct":  4.6526,
+        "heightPct":  8.6112
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;677;p56",
+        "leftPct":  16.0177,
+        "topPct":  28.7228,
+        "widthPct":  11.6116,
+        "heightPct":  7.8533
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;678;p56",
+        "leftPct":  9.6317,
+        "topPct":  42.7269,
+        "widthPct":  31.1155,
+        "heightPct":  22.1056
+    },
+    {
+        "slide":  15,
+        "name":  "Google Shape;679;p56",
+        "leftPct":  93.9152,
+        "topPct":  5.5489,
+        "widthPct":  2.9402,
+        "heightPct":  5.227
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;684;p57",
+        "leftPct":  22.2274,
+        "topPct":  2.8407,
+        "widthPct":  47.7592,
+        "heightPct":  9.8629
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;685;p57",
+        "leftPct":  1.4276,
+        "topPct":  17.8471,
+        "widthPct":  97.0308,
+        "heightPct":  9.8629
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;686;p57",
+        "leftPct":  1.4956,
+        "topPct":  33.1971,
+        "widthPct":  97.0768,
+        "heightPct":  25.0744
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;687;p57",
+        "leftPct":  3.3925,
+        "topPct":  37.443,
+        "widthPct":  41.857,
+        "heightPct":  11.1461
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;688;p57",
+        "leftPct":  46.3056,
+        "topPct":  42.6419,
+        "widthPct":  10.1542,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;689;p57",
+        "leftPct":  1.4954,
+        "topPct":  63.2503,
+        "widthPct":  97.0308,
+        "heightPct":  15.8705
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;690;p57",
+        "leftPct":  3.3925,
+        "topPct":  66.1686,
+        "widthPct":  48.6352,
+        "heightPct":  11.1461
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;691;p57",
+        "leftPct":  70.4421,
+        "topPct":  63.2531,
+        "widthPct":  13.002,
+        "heightPct":  15.8705
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;692;p57",
+        "leftPct":  64.1643,
+        "topPct":  52.5002,
+        "widthPct":  26.8635,
+        "heightPct":  3.6745
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;693;p57",
+        "leftPct":  3.3925,
+        "topPct":  50.2621,
+        "widthPct":  35.1181,
+        "heightPct":  5.3485
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;694;p57",
+        "leftPct":  3.3033,
+        "topPct":  80.3606,
+        "widthPct":  6.8176,
+        "heightPct":  3.3421
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;695;p57",
+        "leftPct":  3.3033,
+        "topPct":  82.8787,
+        "widthPct":  70.2657,
+        "heightPct":  3.1204
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;696;p57",
+        "leftPct":  3.3033,
+        "topPct":  85.8039,
+        "widthPct":  5.8891,
+        "heightPct":  3.3421
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;697;p57",
+        "leftPct":  3.3033,
+        "topPct":  88.2996,
+        "widthPct":  72.4574,
+        "heightPct":  3.1204
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;698;p57",
+        "leftPct":  3.3033,
+        "topPct":  91.5148,
+        "widthPct":  10.2789,
+        "heightPct":  3.3479
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;699;p57",
+        "leftPct":  3.3033,
+        "topPct":  94.0386,
+        "widthPct":  48.1594,
+        "heightPct":  3.1204
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;700;p57",
+        "leftPct":  3.5052,
+        "topPct":  14.3328,
+        "widthPct":  6.5387,
+        "heightPct":  4.8586
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;701;p57",
+        "leftPct":  3.3925,
+        "topPct":  20.0417,
+        "widthPct":  37.3589,
+        "heightPct":  6.2409
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;702;p57",
+        "leftPct":  67.9303,
+        "topPct":  17.8473,
+        "widthPct":  17.6181,
+        "heightPct":  9.8629
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;703;p57",
+        "leftPct":  44.7824,
+        "topPct":  19.59,
+        "widthPct":  0,
+        "heightPct":  6.2409
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;704;p57",
+        "leftPct":  44.7824,
+        "topPct":  35.3218,
+        "widthPct":  0,
+        "heightPct":  20.5308
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;705;p57",
+        "leftPct":  44.7824,
+        "topPct":  65.3413,
+        "widthPct":  0,
+        "heightPct":  11.3386
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;706;p57",
+        "leftPct":  57.7142,
+        "topPct":  19.59,
+        "widthPct":  0,
+        "heightPct":  6.2409
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;707;p57",
+        "leftPct":  57.7142,
+        "topPct":  35.3218,
+        "widthPct":  0,
+        "heightPct":  20.5308
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;708;p57",
+        "leftPct":  57.7142,
+        "topPct":  65.3413,
+        "widthPct":  0,
+        "heightPct":  11.3386
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;709;p57",
+        "leftPct":  3.5052,
+        "topPct":  29.9098,
+        "widthPct":  17.9495,
+        "heightPct":  4.8586
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;710;p57",
+        "leftPct":  3.5052,
+        "topPct":  60.1778,
+        "widthPct":  17.2999,
+        "heightPct":  4.8586
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;712;p57",
+        "leftPct":  56.8696,
+        "topPct":  5.4841,
+        "widthPct":  15.0568,
+        "heightPct":  5.5699
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;713;p57",
+        "leftPct":  52.4878,
+        "topPct":  4.3418,
+        "widthPct":  3.8122,
+        "heightPct":  6.3965
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;714;p57",
+        "leftPct":  23.8703,
+        "topPct":  3.6457,
+        "widthPct":  31.3714,
+        "heightPct":  8.4689
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;715;p57",
+        "leftPct":  48.4032,
+        "topPct":  68.6387,
+        "widthPct":  5.8366,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;716;p57",
+        "leftPct":  47.4275,
+        "topPct":  19.8697,
+        "widthPct":  7.7854,
+        "heightPct":  6.0192
+    },
+    {
+        "slide":  16,
+        "name":  "Google Shape;717;p57",
+        "leftPct":  70.4421,
+        "topPct":  33.1973,
+        "widthPct":  13.002,
+        "heightPct":  19.3059
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;722;p58",
+        "leftPct":  21.6916,
+        "topPct":  2.874,
+        "widthPct":  48.6319,
+        "heightPct":  10.0262
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;723;p58",
+        "leftPct":  0.6149,
+        "topPct":  15.5912,
+        "widthPct":  98.6549,
+        "heightPct":  10.0262
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;724;p58",
+        "leftPct":  0.6841,
+        "topPct":  31.1981,
+        "widthPct":  98.7008,
+        "heightPct":  25.4943
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;725;p58",
+        "leftPct":  2.6127,
+        "topPct":  35.5151,
+        "widthPct":  42.5591,
+        "heightPct":  11.3327
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;726;p58",
+        "leftPct":  44.9582,
+        "topPct":  40.8011,
+        "widthPct":  12.7723,
+        "heightPct":  8.4981
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;727;p58",
+        "leftPct":  0.6838,
+        "topPct":  61.7545,
+        "widthPct":  98.6549,
+        "heightPct":  16.1388
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;728;p58",
+        "leftPct":  2.6127,
+        "topPct":  64.7217,
+        "widthPct":  49.4488,
+        "heightPct":  11.3327
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;729;p58",
+        "leftPct":  48.3771,
+        "topPct":  67.2332,
+        "widthPct":  5.935,
+        "heightPct":  6.1184
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;730;p58",
+        "leftPct":  70.5774,
+        "topPct":  61.7546,
+        "widthPct":  13.2185,
+        "heightPct":  16.1388
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;731;p58",
+        "leftPct":  64.402,
+        "topPct":  50.8244,
+        "widthPct":  27.3163,
+        "heightPct":  3.7387
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;732;p58",
+        "leftPct":  2.6127,
+        "topPct":  48.5488,
+        "widthPct":  35.7054,
+        "heightPct":  5.436
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;733;p58",
+        "leftPct":  2.8226,
+        "topPct":  12.0186,
+        "widthPct":  6.6496,
+        "heightPct":  4.9389
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;734;p58",
+        "leftPct":  2.6127,
+        "topPct":  17.8225,
+        "widthPct":  37.9823,
+        "heightPct":  6.3459
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;735;p58",
+        "leftPct":  47.385,
+        "topPct":  17.6476,
+        "widthPct":  7.9167,
+        "heightPct":  6.1184
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;736;p58",
+        "leftPct":  68.2311,
+        "topPct":  15.591,
+        "widthPct":  17.9134,
+        "heightPct":  10.0262
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;737;p58",
+        "leftPct":  44.6956,
+        "topPct":  17.3633,
+        "widthPct":  0,
+        "heightPct":  6.3459
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;738;p58",
+        "leftPct":  44.6956,
+        "topPct":  33.3584,
+        "widthPct":  0,
+        "heightPct":  20.8749
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;739;p58",
+        "leftPct":  44.6956,
+        "topPct":  63.8805,
+        "widthPct":  0,
+        "heightPct":  11.5311
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;740;p58",
+        "leftPct":  57.8439,
+        "topPct":  17.3633,
+        "widthPct":  0,
+        "heightPct":  6.3459
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;741;p58",
+        "leftPct":  57.8439,
+        "topPct":  33.3584,
+        "widthPct":  0,
+        "heightPct":  20.8749
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;742;p58",
+        "leftPct":  57.8439,
+        "topPct":  63.8805,
+        "widthPct":  0,
+        "heightPct":  11.5311
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;743;p58",
+        "leftPct":  2.7274,
+        "topPct":  27.857,
+        "widthPct":  18.2492,
+        "heightPct":  4.9389
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;744;p58",
+        "leftPct":  2.8141,
+        "topPct":  58.0888,
+        "widthPct":  17.5907,
+        "heightPct":  4.9389
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;745;p58",
+        "leftPct":  56.9877,
+        "topPct":  5.435,
+        "widthPct":  15.3084,
+        "heightPct":  5.6635
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;746;p58",
+        "leftPct":  23.4334,
+        "topPct":  3.6925,
+        "widthPct":  31.8963,
+        "heightPct":  8.6089
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;747;p58",
+        "leftPct":  52.779,
+        "topPct":  5.4008,
+        "widthPct":  3.2371,
+        "heightPct":  5.9913
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;748;p58",
+        "leftPct":  1.3787,
+        "topPct":  84.1276,
+        "widthPct":  8.0938,
+        "heightPct":  2.7238
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;749;p58",
+        "leftPct":  9.3611,
+        "topPct":  81.4083,
+        "widthPct":  70.6693,
+        "heightPct":  7.839
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;750;p58",
+        "leftPct":  1.3787,
+        "topPct":  91.0308,
+        "widthPct":  5.2887,
+        "heightPct":  2.7238
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;751;p58",
+        "leftPct":  9.4727,
+        "topPct":  90.3778,
+        "widthPct":  73.6713,
+        "heightPct":  6.7483
+    },
+    {
+        "slide":  17,
+        "name":  "Google Shape;752;p58",
+        "leftPct":  70.7849,
+        "topPct":  31.1981,
+        "widthPct":  13.2185,
+        "heightPct":  19.6267
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;757;p59",
+        "leftPct":  5.2657,
+        "topPct":  4.0294,
+        "widthPct":  89.4685,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;758;p59",
+        "leftPct":  36.1134,
+        "topPct":  37.6514,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;759;p59",
+        "leftPct":  37.7265,
+        "topPct":  53.9259,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;760;p59",
+        "leftPct":  46.3351,
+        "topPct":  31.0625,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;761;p59",
+        "leftPct":  36.1142,
+        "topPct":  45.8288,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;762;p59",
+        "leftPct":  47.5079,
+        "topPct":  34.1791,
+        "widthPct":  4.8927,
+        "heightPct":  6.7969
+    },
+    {
+        "slide":  18,
+        "name":  "Google Shape;763;p59",
+        "leftPct":  5.2657,
+        "topPct":  83.7319,
+        "widthPct":  89.4685,
+        "heightPct":  11.0061
+    },
+    {
+        "slide":  19,
+        "name":  "Google Shape;768;p60",
+        "leftPct":  -6.8961,
+        "topPct":  0,
+        "widthPct":  63.75,
+        "heightPct":  100
+    },
+    {
+        "slide":  19,
+        "name":  "Google Shape;769;p60",
+        "leftPct":  45.6821,
+        "topPct":  0,
+        "widthPct":  61.2139,
+        "heightPct":  100
+    },
+    {
+        "slide":  19,
+        "name":  "Google Shape;770;p60",
+        "leftPct":  59.1931,
+        "topPct":  42.6268,
+        "widthPct":  28.5728,
+        "heightPct":  25.366
+    },
+    {
+        "slide":  19,
+        "name":  "Google Shape;771;p60",
+        "leftPct":  64.0358,
+        "topPct":  27.6421,
+        "widthPct":  17.6191,
+        "heightPct":  6.4978
+    },
+    {
+        "slide":  19,
+        "name":  "Google Shape;772;p60",
+        "leftPct":  93.9152,
+        "topPct":  5.5489,
+        "widthPct":  2.9402,
+        "heightPct":  5.227
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;777;p61",
+        "leftPct":  23.5207,
+        "topPct":  5.087,
+        "widthPct":  47.9528,
+        "heightPct":  9.9038
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;778;p61",
+        "leftPct":  54.7812,
+        "topPct":  8.347,
+        "widthPct":  13.3164,
+        "heightPct":  4.911
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;779;p61",
+        "leftPct":  25.1703,
+        "topPct":  5.8953,
+        "widthPct":  31.4993,
+        "heightPct":  8.5039
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;780;p61",
+        "leftPct":  1.6012,
+        "topPct":  64.5457,
+        "widthPct":  47.6444,
+        "heightPct":  24.4328
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;781;p61",
+        "leftPct":  1.6132,
+        "topPct":  27.2498,
+        "widthPct":  47.6444,
+        "heightPct":  34.0857
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;782;p61",
+        "leftPct":  3.1791,
+        "topPct":  53.8516,
+        "widthPct":  20.4659,
+        "heightPct":  3.3537
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;783;p61",
+        "leftPct":  3.1791,
+        "topPct":  42.829,
+        "widthPct":  17.5919,
+        "heightPct":  6.6025
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;784;p61",
+        "leftPct":  10.924,
+        "topPct":  38.4848,
+        "widthPct":  36.3255,
+        "heightPct":  0
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;785;p61",
+        "leftPct":  32.2595,
+        "topPct":  39.3081,
+        "widthPct":  13.3366,
+        "heightPct":  4.1645
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;786;p61",
+        "leftPct":  2.9675,
+        "topPct":  77.6649,
+        "widthPct":  17.5919,
+        "heightPct":  8.3931
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;787;p61",
+        "leftPct":  30.1228,
+        "topPct":  69.6628,
+        "widthPct":  3.8714,
+        "heightPct":  4.9869
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;788;p61",
+        "leftPct":  30.1228,
+        "topPct":  76.9107,
+        "widthPct":  4.9672,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;789;p61",
+        "leftPct":  37.3088,
+        "topPct":  69.6628,
+        "widthPct":  9.2159,
+        "heightPct":  4.9869
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;790;p61",
+        "leftPct":  37.3088,
+        "topPct":  76.9234,
+        "widthPct":  4.9672,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;791;p61",
+        "leftPct":  30.1228,
+        "topPct":  34.8462,
+        "widthPct":  9.0617,
+        "heightPct":  3.1846
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;792;p61",
+        "leftPct":  30.1228,
+        "topPct":  44.377,
+        "widthPct":  4.2979,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;793;p61",
+        "leftPct":  3.4641,
+        "topPct":  34.7056,
+        "widthPct":  5.9216,
+        "heightPct":  5.1251
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;794;p61",
+        "leftPct":  3.0143,
+        "topPct":  70.857,
+        "widthPct":  7.324,
+        "heightPct":  5.1251
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;795;p61",
+        "leftPct":  3.224,
+        "topPct":  52.4929,
+        "widthPct":  44.0289,
+        "heightPct":  0
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;796;p61",
+        "leftPct":  10.7124,
+        "topPct":  75.9821,
+        "widthPct":  35.351,
+        "heightPct":  0
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;797;p61",
+        "leftPct":  50.6793,
+        "topPct":  48.7095,
+        "widthPct":  47.6444,
+        "heightPct":  24.4328
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;798;p61",
+        "leftPct":  50.7546,
+        "topPct":  21.4922,
+        "widthPct":  47.6444,
+        "heightPct":  23.9545
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;799;p61",
+        "leftPct":  52.9608,
+        "topPct":  60.4742,
+        "widthPct":  20.5512,
+        "heightPct":  3.1321
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;800;p61",
+        "leftPct":  72.1263,
+        "topPct":  59.2152,
+        "widthPct":  23.9993,
+        "heightPct":  0
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;801;p61",
+        "leftPct":  77.5791,
+        "topPct":  55.9971,
+        "widthPct":  7.8773,
+        "heightPct":  5.2143
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;802;p61",
+        "leftPct":  77.5791,
+        "topPct":  60.2615,
+        "widthPct":  4.5407,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;803;p61",
+        "leftPct":  67.9751,
+        "topPct":  27.7512,
+        "widthPct":  27.4967,
+        "heightPct":  0
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;804;p61",
+        "leftPct":  53.2032,
+        "topPct":  29.2604,
+        "widthPct":  17.5919,
+        "heightPct":  6.7133
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;805;p61",
+        "leftPct":  53.2032,
+        "topPct":  36.883,
+        "widthPct":  20.5512,
+        "heightPct":  4.9227
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;806;p61",
+        "leftPct":  77.5791,
+        "topPct":  24.1246,
+        "widthPct":  8.6155,
+        "heightPct":  4.9869
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;807;p61",
+        "leftPct":  77.5791,
+        "topPct":  29.1189,
+        "widthPct":  4.9672,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;808;p61",
+        "leftPct":  77.5791,
+        "topPct":  37.3195,
+        "widthPct":  4.9672,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;809;p61",
+        "leftPct":  52.6552,
+        "topPct":  24.1063,
+        "widthPct":  14.2585,
+        "heightPct":  5.1251
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;810;p61",
+        "leftPct":  52.8587,
+        "topPct":  66.0248,
+        "widthPct":  20.5512,
+        "heightPct":  3.1321
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;811;p61",
+        "leftPct":  77.5791,
+        "topPct":  66.0248,
+        "widthPct":  4.5407,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;812;p61",
+        "leftPct":  50.6794,
+        "topPct":  76.4567,
+        "widthPct":  47.6444,
+        "heightPct":  18.2794
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;813;p61",
+        "leftPct":  52.0456,
+        "topPct":  85.0918,
+        "widthPct":  4.0486,
+        "heightPct":  2.6188
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;814;p61",
+        "leftPct":  77.5791,
+        "topPct":  81.255,
+        "widthPct":  7.8773,
+        "heightPct":  5.3602
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;815;p61",
+        "leftPct":  77.5791,
+        "topPct":  85.508,
+        "widthPct":  4.9672,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;816;p61",
+        "leftPct":  65.3406,
+        "topPct":  84.646,
+        "widthPct":  30.5249,
+        "heightPct":  0
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;817;p61",
+        "leftPct":  52.0456,
+        "topPct":  88.7359,
+        "widthPct":  15.9646,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;818;p61",
+        "leftPct":  77.5791,
+        "topPct":  88.9106,
+        "widthPct":  4.9672,
+        "heightPct":  3.5579
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;819;p61",
+        "leftPct":  52.6552,
+        "topPct":  78.6831,
+        "widthPct":  11.9592,
+        "heightPct":  5.3631
+    },
+    {
+        "slide":  20,
+        "name":  "Google Shape;820;p61",
+        "leftPct":  52.6973,
+        "topPct":  50.9178,
+        "widthPct":  16.2737,
+        "heightPct":  8.6532
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;825;p62",
+        "leftPct":  2.8799,
+        "topPct":  80.4402,
+        "widthPct":  84.8589,
+        "heightPct":  5.3602
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;826;p62",
+        "leftPct":  1.2298,
+        "topPct":  28.933,
+        "widthPct":  97.2671,
+        "heightPct":  9.8863
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;827;p62",
+        "leftPct":  1.2298,
+        "topPct":  44.7459,
+        "widthPct":  97.3032,
+        "heightPct":  25.1385
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;828;p62",
+        "leftPct":  3.1993,
+        "topPct":  49.5183,
+        "widthPct":  41.9554,
+        "heightPct":  16.0863
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;829;p62",
+        "leftPct":  45.3003,
+        "topPct":  54.2133,
+        "widthPct":  11.1483,
+        "heightPct":  8.3815
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;830;p62",
+        "leftPct":  64.1159,
+        "topPct":  64.0952,
+        "widthPct":  26.9259,
+        "heightPct":  3.692
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;831;p62",
+        "leftPct":  3.3127,
+        "topPct":  25.4128,
+        "widthPct":  6.5566,
+        "heightPct":  4.8698
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;832;p62",
+        "leftPct":  3.1993,
+        "topPct":  31.1328,
+        "widthPct":  37.4442,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;833;p62",
+        "leftPct":  67.8907,
+        "topPct":  29.4455,
+        "widthPct":  17.6575,
+        "heightPct":  8.7139
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;834;p62",
+        "leftPct":  43.8497,
+        "topPct":  30.6801,
+        "widthPct":  0,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;835;p62",
+        "leftPct":  43.8497,
+        "topPct":  46.8757,
+        "widthPct":  0,
+        "heightPct":  20.5716
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;836;p62",
+        "leftPct":  57.6504,
+        "topPct":  30.6801,
+        "widthPct":  0,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;837;p62",
+        "leftPct":  57.6504,
+        "topPct":  46.8757,
+        "widthPct":  0,
+        "heightPct":  20.5716
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;838;p62",
+        "leftPct":  3.3127,
+        "topPct":  41.4558,
+        "widthPct":  11.0966,
+        "heightPct":  4.8698
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;839;p62",
+        "leftPct":  44.9009,
+        "topPct":  30.9604,
+        "widthPct":  12.2014,
+        "heightPct":  6.0309
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;840;p62",
+        "leftPct":  63.0454,
+        "topPct":  49.3892,
+        "widthPct":  10.0984,
+        "heightPct":  4.9402
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;841;p62",
+        "leftPct":  72.1801,
+        "topPct":  49.3892,
+        "widthPct":  10.0984,
+        "heightPct":  4.9402
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;842;p62",
+        "leftPct":  81.4536,
+        "topPct":  49.3892,
+        "widthPct":  10.0984,
+        "heightPct":  4.9402
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;843;p62",
+        "leftPct":  61.0009,
+        "topPct":  54.5335,
+        "widthPct":  13.8451,
+        "heightPct":  7.2849
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;844;p62",
+        "leftPct":  70.065,
+        "topPct":  54.5969,
+        "widthPct":  13.8451,
+        "heightPct":  7.1508
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;845;p62",
+        "leftPct":  79.712,
+        "topPct":  54.5969,
+        "widthPct":  13.8451,
+        "heightPct":  7.1508
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;846;p62",
+        "leftPct":  1.2298,
+        "topPct":  74.5201,
+        "widthPct":  97.2671,
+        "heightPct":  12.6393
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;847;p62",
+        "leftPct":  3.3128,
+        "topPct":  71.6359,
+        "widthPct":  7.4802,
+        "heightPct":  4.8698
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;848;p62",
+        "leftPct":  3.4996,
+        "topPct":  77.0934,
+        "widthPct":  40.0951,
+        "heightPct":  8.7139
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;849;p62",
+        "leftPct":  57.6504,
+        "topPct":  77.1337,
+        "widthPct":  0,
+        "heightPct":  7.909
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;850;p62",
+        "leftPct":  44.2788,
+        "topPct":  76.3546,
+        "widthPct":  12.6804,
+        "heightPct":  3.692
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;851;p62",
+        "leftPct":  43.8497,
+        "topPct":  77.1337,
+        "widthPct":  0,
+        "heightPct":  7.909
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;852;p62",
+        "leftPct":  44.2998,
+        "topPct":  79.4281,
+        "widthPct":  12.6804,
+        "heightPct":  3.692
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;853;p62",
+        "leftPct":  44.2788,
+        "topPct":  82.5015,
+        "widthPct":  12.6804,
+        "heightPct":  3.692
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;854;p62",
+        "leftPct":  68.4115,
+        "topPct":  74.5201,
+        "widthPct":  32.8182,
+        "heightPct":  5.4127
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;855;p62",
+        "leftPct":  68.4115,
+        "topPct":  77.9944,
+        "widthPct":  32.8182,
+        "heightPct":  5.4127
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;856;p62",
+        "leftPct":  68.4115,
+        "topPct":  81.4687,
+        "widthPct":  32.8182,
+        "heightPct":  5.4127
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;857;p62",
+        "leftPct":  22.0791,
+        "topPct":  5.6824,
+        "widthPct":  47.874,
+        "heightPct":  9.8863
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;858;p62",
+        "leftPct":  53.2242,
+        "topPct":  8.4577,
+        "widthPct":  15.0886,
+        "heightPct":  5.5818
+    },
+    {
+        "slide":  21,
+        "name":  "Google Shape;859;p62",
+        "leftPct":  23.7259,
+        "topPct":  6.4894,
+        "widthPct":  31.4469,
+        "heightPct":  8.4864
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;864;p63",
+        "leftPct":  32.9338,
+        "topPct":  87.6558,
+        "widthPct":  33.8911,
+        "heightPct":  5.5235
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;865;p63",
+        "leftPct":  46.0157,
+        "topPct":  23.7041,
+        "widthPct":  42.6116,
+        "heightPct":  8.9181
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;866;p63",
+        "leftPct":  14.802,
+        "topPct":  23.8174,
+        "widthPct":  15.4954,
+        "heightPct":  5.0977
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;867;p63",
+        "leftPct":  13.5861,
+        "topPct":  76.2919,
+        "widthPct":  17.0702,
+        "heightPct":  7.2208
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;868;p63",
+        "leftPct":  55.2049,
+        "topPct":  76.3553,
+        "widthPct":  28.2218,
+        "heightPct":  7.2208
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;869;p63",
+        "leftPct":  21.5868,
+        "topPct":  6.8206,
+        "widthPct":  51.1484,
+        "heightPct":  9.3978
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;870;p63",
+        "leftPct":  51.1919,
+        "topPct":  9.4587,
+        "widthPct":  22.0858,
+        "heightPct":  5.3075
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;871;p63",
+        "leftPct":  23.1522,
+        "topPct":  7.5877,
+        "widthPct":  29.8917,
+        "heightPct":  8.0688
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;872;p63",
+        "leftPct":  6.5311,
+        "topPct":  20.1019,
+        "widthPct":  33.1627,
+        "heightPct":  65.0277
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;873;p63",
+        "leftPct":  42.3206,
+        "topPct":  20.1019,
+        "widthPct":  51.1483,
+        "heightPct":  65.0277
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;874;p63",
+        "leftPct":  9.6316,
+        "topPct":  44.5866,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;875;p63",
+        "leftPct":  9.6316,
+        "topPct":  51.873,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;876;p63",
+        "leftPct":  9.6316,
+        "topPct":  59.162,
+        "widthPct":  11.5715,
+        "heightPct":  7.2208
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;877;p63",
+        "leftPct":  27.6961,
+        "topPct":  37.3816,
+        "widthPct":  6.1877,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;878;p63",
+        "leftPct":  27.6961,
+        "topPct":  44.5866,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;879;p63",
+        "leftPct":  27.6961,
+        "topPct":  51.873,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;880;p63",
+        "leftPct":  27.6961,
+        "topPct":  59.078,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;881;p63",
+        "leftPct":  10.3093,
+        "topPct":  57.7396,
+        "widthPct":  25.397,
+        "heightPct":  0
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;882;p63",
+        "leftPct":  10.3093,
+        "topPct":  49.9005,
+        "widthPct":  25.397,
+        "heightPct":  0
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;883;p63",
+        "leftPct":  45.5456,
+        "topPct":  50.0676,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;884;p63",
+        "leftPct":  45.5456,
+        "topPct":  57.3541,
+        "widthPct":  11.4469,
+        "heightPct":  7.2208
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;885;p63",
+        "leftPct":  58.9208,
+        "topPct":  43.606,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;886;p63",
+        "leftPct":  58.9208,
+        "topPct":  57.3541,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;887;p63",
+        "leftPct":  46.2233,
+        "topPct":  55.3815,
+        "widthPct":  43.727,
+        "heightPct":  0
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;888;p63",
+        "leftPct":  58.9208,
+        "topPct":  38.4937,
+        "widthPct":  9.0912,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;889;p63",
+        "leftPct":  58.9208,
+        "topPct":  49.9966,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;890;p63",
+        "leftPct":  68.9375,
+        "topPct":  43.6844,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;891;p63",
+        "leftPct":  68.9375,
+        "topPct":  57.4324,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;892;p63",
+        "leftPct":  68.9375,
+        "topPct":  38.572,
+        "widthPct":  10.9055,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;893;p63",
+        "leftPct":  68.9375,
+        "topPct":  50.075,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;894;p63",
+        "leftPct":  79.9246,
+        "topPct":  43.606,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;895;p63",
+        "leftPct":  79.9246,
+        "topPct":  57.3541,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;896;p63",
+        "leftPct":  79.9246,
+        "topPct":  38.4937,
+        "widthPct":  10.9055,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;897;p63",
+        "leftPct":  79.9246,
+        "topPct":  49.9966,
+        "widthPct":  7.9035,
+        "heightPct":  4.252
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;898;p63",
+        "leftPct":  58.5028,
+        "topPct":  48.7068,
+        "widthPct":  31.4501,
+        "heightPct":  0
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;899;p63",
+        "leftPct":  67.8689,
+        "topPct":  38.6848,
+        "widthPct":  0,
+        "heightPct":  25.6985
+    },
+    {
+        "slide":  22,
+        "name":  "Google Shape;900;p63",
+        "leftPct":  78.8031,
+        "topPct":  38.6848,
+        "widthPct":  0,
+        "heightPct":  25.6985
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;905;p64",
+        "leftPct":  1.2326,
+        "topPct":  82.2281,
+        "widthPct":  97.5066,
+        "heightPct":  12.7209
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;906;p64",
+        "leftPct":  1.2326,
+        "topPct":  61.5775,
+        "widthPct":  97.5066,
+        "heightPct":  15.2406
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;908;p64",
+        "leftPct":  3.4147,
+        "topPct":  58.0472,
+        "widthPct":  6.9457,
+        "heightPct":  4.8815
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;909;p64",
+        "leftPct":  3.9091,
+        "topPct":  58.5512,
+        "widthPct":  7.3313,
+        "heightPct":  3.004
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;910;p64",
+        "leftPct":  43.1514,
+        "topPct":  63.5007,
+        "widthPct":  0,
+        "heightPct":  11.5719
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;911;p64",
+        "leftPct":  1.2608,
+        "topPct":  34.9843,
+        "widthPct":  97.5066,
+        "heightPct":  21.5281
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;913;p64",
+        "leftPct":  3.4429,
+        "topPct":  31.454,
+        "widthPct":  6.9457,
+        "heightPct":  4.8815
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;914;p64",
+        "leftPct":  3.9373,
+        "topPct":  31.958,
+        "widthPct":  6.0934,
+        "heightPct":  4.0301
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;915;p64",
+        "leftPct":  1.2326,
+        "topPct":  18.6736,
+        "widthPct":  97.5066,
+        "heightPct":  11.2686
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;916;p64",
+        "leftPct":  43.9822,
+        "topPct":  21.2887,
+        "widthPct":  13.6516,
+        "heightPct":  6.4917
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;918;p64",
+        "leftPct":  3.4147,
+        "topPct":  15.1433,
+        "widthPct":  6.0934,
+        "heightPct":  4.8815
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;919;p64",
+        "leftPct":  3.9091,
+        "topPct":  15.6473,
+        "widthPct":  6.0934,
+        "heightPct":  4.0301
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;920;p64",
+        "leftPct":  43.1514,
+        "topPct":  21.01,
+        "widthPct":  0,
+        "heightPct":  6.27
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;921;p64",
+        "leftPct":  58.7626,
+        "topPct":  21.01,
+        "widthPct":  0,
+        "heightPct":  6.27
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;922;p64",
+        "leftPct":  3.2585,
+        "topPct":  21.7031,
+        "widthPct":  27.3392,
+        "heightPct":  5.4885
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;923;p64",
+        "leftPct":  64.7717,
+        "topPct":  38.4401,
+        "widthPct":  26.8209,
+        "heightPct":  16.1272
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;924;p64",
+        "leftPct":  3.2585,
+        "topPct":  38.4401,
+        "widthPct":  37.3655,
+        "heightPct":  14.1091
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;925;p64",
+        "leftPct":  3.2585,
+        "topPct":  84.2172,
+        "widthPct":  37.3655,
+        "heightPct":  9.1805
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;926;p64",
+        "leftPct":  64.9436,
+        "topPct":  80.2792,
+        "widthPct":  26.647,
+        "heightPct":  16.1272
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;927;p64",
+        "leftPct":  43.9822,
+        "topPct":  42.1158,
+        "widthPct":  13.6516,
+        "heightPct":  8.8481
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;928;p64",
+        "leftPct":  43.9822,
+        "topPct":  84.7211,
+        "widthPct":  13.6516,
+        "heightPct":  8.8481
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;929;p64",
+        "leftPct":  64.8576,
+        "topPct":  15.7666,
+        "widthPct":  26.8209,
+        "heightPct":  16.1272
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;930;p64",
+        "leftPct":  64.5573,
+        "topPct":  61.0811,
+        "widthPct":  26.8209,
+        "heightPct":  16.1272
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;931;p64",
+        "leftPct":  3.2585,
+        "topPct":  66.0063,
+        "widthPct":  32.3786,
+        "heightPct":  6.7192
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;932;p64",
+        "leftPct":  43.9822,
+        "topPct":  65.6212,
+        "widthPct":  13.6516,
+        "heightPct":  8.8481
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;933;p64",
+        "leftPct":  43.1514,
+        "topPct":  36.2999,
+        "widthPct":  0,
+        "heightPct":  18.0752
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;934;p64",
+        "leftPct":  58.7626,
+        "topPct":  36.2999,
+        "widthPct":  0,
+        "heightPct":  18.0752
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;935;p64",
+        "leftPct":  58.7626,
+        "topPct":  63.5007,
+        "widthPct":  0,
+        "heightPct":  11.5719
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;937;p64",
+        "leftPct":  3.4147,
+        "topPct":  78.6978,
+        "widthPct":  17.234,
+        "heightPct":  4.8815
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;938;p64",
+        "leftPct":  3.9091,
+        "topPct":  79.2018,
+        "widthPct":  20.0658,
+        "heightPct":  2.9647
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;939;p64",
+        "leftPct":  43.1514,
+        "topPct":  85.599,
+        "widthPct":  0,
+        "heightPct":  6.27
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;940;p64",
+        "leftPct":  58.7626,
+        "topPct":  85.599,
+        "widthPct":  0,
+        "heightPct":  6.27
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;941;p64",
+        "leftPct":  22.1342,
+        "topPct":  3.5939,
+        "widthPct":  47.9921,
+        "heightPct":  9.9096
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;942;p64",
+        "leftPct":  57.8547,
+        "topPct":  6.5119,
+        "widthPct":  5.7841,
+        "heightPct":  5.5993
+    },
+    {
+        "slide":  23,
+        "name":  "Google Shape;943;p64",
+        "leftPct":  27.6808,
+        "topPct":  4.4028,
+        "widthPct":  31.5256,
+        "heightPct":  8.5098
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;948;p65",
+        "leftPct":  26.8594,
+        "topPct":  26.2938,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;949;p65",
+        "leftPct":  24.975,
+        "topPct":  34.0422,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;950;p65",
+        "leftPct":  37.9994,
+        "topPct":  34.0422,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;951;p65",
+        "leftPct":  25.6137,
+        "topPct":  32.0801,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;952;p65",
+        "leftPct":  37.3681,
+        "topPct":  13.9862,
+        "widthPct":  9.6654,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;953;p65",
+        "leftPct":  37.9994,
+        "topPct":  26.2184,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;954;p65",
+        "leftPct":  50.002,
+        "topPct":  34.1255,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;955;p65",
+        "leftPct":  51.4926,
+        "topPct":  14.0695,
+        "widthPct":  5.4232,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;956;p65",
+        "leftPct":  50.002,
+        "topPct":  26.3017,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;957;p65",
+        "leftPct":  64.6294,
+        "topPct":  34.0422,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;958;p65",
+        "leftPct":  61.0964,
+        "topPct":  13.6721,
+        "widthPct":  15.1181,
+        "heightPct":  7.6757
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;959;p65",
+        "leftPct":  64.6294,
+        "topPct":  26.2184,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;960;p65",
+        "leftPct":  59.8968,
+        "topPct":  14.1895,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;961;p65",
+        "leftPct":  28.4352,
+        "topPct":  13.9862,
+        "widthPct":  5.2493,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;962;p65",
+        "leftPct":  26.8594,
+        "topPct":  41.8331,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;963;p65",
+        "leftPct":  24.975,
+        "topPct":  49.5815,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;964;p65",
+        "leftPct":  37.9994,
+        "topPct":  49.5815,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;965;p65",
+        "leftPct":  37.9994,
+        "topPct":  41.7576,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;966;p65",
+        "leftPct":  50.002,
+        "topPct":  49.6648,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;967;p65",
+        "leftPct":  50.002,
+        "topPct":  41.8409,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;968;p65",
+        "leftPct":  24.975,
+        "topPct":  57.6148,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;969;p65",
+        "leftPct":  37.9994,
+        "topPct":  57.6148,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;970;p65",
+        "leftPct":  50.002,
+        "topPct":  57.6981,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;971;p65",
+        "leftPct":  26.8594,
+        "topPct":  65.4058,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;972;p65",
+        "leftPct":  24.975,
+        "topPct":  73.1541,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;973;p65",
+        "leftPct":  37.9994,
+        "topPct":  65.3302,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;974;p65",
+        "leftPct":  50.002,
+        "topPct":  73.2374,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;975;p65",
+        "leftPct":  50.002,
+        "topPct":  65.4136,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;976;p65",
+        "leftPct":  37.9994,
+        "topPct":  73.0786,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;977;p65",
+        "leftPct":  24.975,
+        "topPct":  80.9237,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;978;p65",
+        "leftPct":  50.002,
+        "topPct":  81.007,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;979;p65",
+        "leftPct":  37.9994,
+        "topPct":  80.8482,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;980;p65",
+        "leftPct":  48.3219,
+        "topPct":  13.9862,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;981;p65",
+        "leftPct":  35.7789,
+        "topPct":  13.3579,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;982;p65",
+        "leftPct":  64.6294,
+        "topPct":  41.8384,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;983;p65",
+        "leftPct":  64.6294,
+        "topPct":  49.6279,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;984;p65",
+        "leftPct":  64.6294,
+        "topPct":  57.7107,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;985;p65",
+        "leftPct":  64.6294,
+        "topPct":  65.4417,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;986;p65",
+        "leftPct":  64.6294,
+        "topPct":  72.8308,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;987;p65",
+        "leftPct":  64.6294,
+        "topPct":  80.7972,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;988;p65",
+        "leftPct":  6.2976,
+        "topPct":  37.4556,
+        "widthPct":  22.6706,
+        "heightPct":  15.8064
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;989;p65",
+        "leftPct":  7.4158,
+        "topPct":  53.2641,
+        "widthPct":  12.1738,
+        "heightPct":  7.4145
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;990;p65",
+        "leftPct":  82.8193,
+        "topPct":  33.4138,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;991;p65",
+        "leftPct":  78.5842,
+        "topPct":  13.6721,
+        "widthPct":  15.1181,
+        "heightPct":  7.6757
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;992;p65",
+        "leftPct":  82.8193,
+        "topPct":  25.59,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;993;p65",
+        "leftPct":  77.3846,
+        "topPct":  13.5612,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;994;p65",
+        "leftPct":  82.8193,
+        "topPct":  41.21,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;995;p65",
+        "leftPct":  82.8193,
+        "topPct":  48.9996,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;996;p65",
+        "leftPct":  82.8193,
+        "topPct":  57.0824,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;997;p65",
+        "leftPct":  82.8193,
+        "topPct":  64.8134,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;998;p65",
+        "leftPct":  82.8193,
+        "topPct":  72.2024,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;999;p65",
+        "leftPct":  82.8193,
+        "topPct":  80.1689,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;1000;p65",
+        "leftPct":  25.6137,
+        "topPct":  39.835,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;1001;p65",
+        "leftPct":  25.6137,
+        "topPct":  47.5899,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;1002;p65",
+        "leftPct":  25.6137,
+        "topPct":  55.3447,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;1003;p65",
+        "leftPct":  25.6137,
+        "topPct":  63.0996,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;1004;p65",
+        "leftPct":  25.6137,
+        "topPct":  70.8545,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  24,
+        "name":  "Google Shape;1005;p65",
+        "leftPct":  25.6137,
+        "topPct":  78.6094,
+        "widthPct":  67.2999,
+        "heightPct":  0
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1010;p66",
+        "leftPct":  5.2657,
+        "topPct":  4.0294,
+        "widthPct":  89.4685,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1011;p66",
+        "leftPct":  36.113,
+        "topPct":  22.1882,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1012;p66",
+        "leftPct":  37.7261,
+        "topPct":  38.4627,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1013;p66",
+        "leftPct":  46.3347,
+        "topPct":  15.5993,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1014;p66",
+        "leftPct":  36.1138,
+        "topPct":  30.3655,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1015;p66",
+        "leftPct":  66.9611,
+        "topPct":  22.1881,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1016;p66",
+        "leftPct":  68.5743,
+        "topPct":  38.4627,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1017;p66",
+        "leftPct":  77.1829,
+        "topPct":  15.5993,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1018;p66",
+        "leftPct":  66.9619,
+        "topPct":  30.3655,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1019;p66",
+        "leftPct":  48.0081,
+        "topPct":  18.5901,
+        "widthPct":  3.981,
+        "heightPct":  7.0498
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1020;p66",
+        "leftPct":  5.2641,
+        "topPct":  22.1882,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1021;p66",
+        "leftPct":  6.8772,
+        "topPct":  38.4627,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1022;p66",
+        "leftPct":  15.4858,
+        "topPct":  15.5993,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1023;p66",
+        "leftPct":  5.2649,
+        "topPct":  30.3655,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1024;p66",
+        "leftPct":  17.1602,
+        "topPct":  18.8252,
+        "widthPct":  3.981,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1025;p66",
+        "leftPct":  78.8572,
+        "topPct":  18.8253,
+        "widthPct":  3.981,
+        "heightPct":  6.9984
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1026;p66",
+        "leftPct":  36.1138,
+        "topPct":  63.45,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1027;p66",
+        "leftPct":  37.7269,
+        "topPct":  79.7244,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1028;p66",
+        "leftPct":  46.3355,
+        "topPct":  56.8611,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1029;p66",
+        "leftPct":  36.1146,
+        "topPct":  71.6273,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1030;p66",
+        "leftPct":  66.9619,
+        "topPct":  63.4499,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1031;p66",
+        "leftPct":  68.5751,
+        "topPct":  79.7244,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1032;p66",
+        "leftPct":  77.1837,
+        "topPct":  56.8611,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1033;p66",
+        "leftPct":  66.9628,
+        "topPct":  71.6273,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1034;p66",
+        "leftPct":  5.2649,
+        "topPct":  63.45,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1035;p66",
+        "leftPct":  6.878,
+        "topPct":  79.7244,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1036;p66",
+        "leftPct":  15.4866,
+        "topPct":  56.8611,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1037;p66",
+        "leftPct":  5.2657,
+        "topPct":  71.6273,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1038;p66",
+        "leftPct":  17.2352,
+        "topPct":  60.0863,
+        "widthPct":  3.8321,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1039;p66",
+        "leftPct":  47.9678,
+        "topPct":  61.0461,
+        "widthPct":  4.0648,
+        "heightPct":  4.6599
+    },
+    {
+        "slide":  25,
+        "name":  "Google Shape;1040;p66",
+        "leftPct":  78.8572,
+        "topPct":  60.5553,
+        "widthPct":  4.065,
+        "heightPct":  5.6416
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1045;p67",
+        "leftPct":  5.2657,
+        "topPct":  4.0294,
+        "widthPct":  89.4685,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1046;p67",
+        "leftPct":  36.1138,
+        "topPct":  37.6514,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1047;p67",
+        "leftPct":  37.7269,
+        "topPct":  53.9259,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1048;p67",
+        "leftPct":  46.3355,
+        "topPct":  31.0625,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1049;p67",
+        "leftPct":  36.1146,
+        "topPct":  45.8288,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1050;p67",
+        "leftPct":  66.9619,
+        "topPct":  37.6513,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1051;p67",
+        "leftPct":  68.5751,
+        "topPct":  53.9259,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1052;p67",
+        "leftPct":  77.1837,
+        "topPct":  31.0625,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1053;p67",
+        "leftPct":  66.9628,
+        "topPct":  45.8288,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1054;p67",
+        "leftPct":  5.2649,
+        "topPct":  37.6514,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1055;p67",
+        "leftPct":  6.878,
+        "topPct":  53.9259,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1056;p67",
+        "leftPct":  15.4866,
+        "topPct":  31.0625,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1057;p67",
+        "leftPct":  5.2657,
+        "topPct":  45.8288,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1058;p67",
+        "leftPct":  17.5789,
+        "topPct":  34.2885,
+        "widthPct":  3.1477,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1059;p67",
+        "leftPct":  47.9362,
+        "topPct":  34.2877,
+        "widthPct":  4.1281,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1060;p67",
+        "leftPct":  78.7387,
+        "topPct":  34.2885,
+        "widthPct":  4.1281,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  26,
+        "name":  "Google Shape;1061;p67",
+        "leftPct":  5.2657,
+        "topPct":  83.7319,
+        "widthPct":  89.4685,
+        "heightPct":  11.0061
+    },
+    {
+        "slide":  27,
+        "name":  "Google Shape;1066;p68",
+        "leftPct":  43.5731,
+        "topPct":  0,
+        "widthPct":  63.7499,
+        "heightPct":  100
+    },
+    {
+        "slide":  27,
+        "name":  "Google Shape;1067;p68",
+        "leftPct":  -7.323,
+        "topPct":  0,
+        "widthPct":  61.2139,
+        "heightPct":  99.1426
+    },
+    {
+        "slide":  27,
+        "name":  "Google Shape;1068;p68",
+        "leftPct":  4.5762,
+        "topPct":  45.0786,
+        "widthPct":  44.0551,
+        "heightPct":  25.366
+    },
+    {
+        "slide":  27,
+        "name":  "Google Shape;1069;p68",
+        "leftPct":  15.9727,
+        "topPct":  28.3202,
+        "widthPct":  16.8037,
+        "heightPct":  7.1476
+    },
+    {
+        "slide":  27,
+        "name":  "Google Shape;1070;p68",
+        "leftPct":  93.9152,
+        "topPct":  5.5489,
+        "widthPct":  2.9402,
+        "heightPct":  5.227
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1075;p69",
+        "leftPct":  5.2697,
+        "topPct":  44.4357,
+        "widthPct":  25.2789,
+        "heightPct":  15.6955
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1076;p69",
+        "leftPct":  36.0099,
+        "topPct":  25.1058,
+        "widthPct":  58.7205,
+        "heightPct":  15.2231
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1077;p69",
+        "leftPct":  34.6287,
+        "topPct":  30.4877,
+        "widthPct":  8.7139,
+        "heightPct":  4.4853
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1078;p69",
+        "leftPct":  35.9976,
+        "topPct":  43.3866,
+        "widthPct":  58.7205,
+        "heightPct":  32.4759
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1079;p69",
+        "leftPct":  30.7815,
+        "topPct":  57.624,
+        "widthPct":  14.6424,
+        "heightPct":  4.4853
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1080;p69",
+        "leftPct":  46.1086,
+        "topPct":  21.2102,
+        "widthPct":  39.1634,
+        "heightPct":  57.5795
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1081;p69",
+        "leftPct":  45.6096,
+        "topPct":  23.2751,
+        "widthPct":  37.7756,
+        "heightPct":  9.6996
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1082;p69",
+        "leftPct":  46.6378,
+        "topPct":  33.7242,
+        "widthPct":  38.061,
+        "heightPct":  11.4377
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1083;p69",
+        "leftPct":  48.4452,
+        "topPct":  63.9712,
+        "widthPct":  34.6752,
+        "heightPct":  4.4853
+    },
+    {
+        "slide":  28,
+        "name":  "Google Shape;1084;p69",
+        "leftPct":  57.8451,
+        "topPct":  49.6191,
+        "widthPct":  13.1102,
+        "heightPct":  9.6996
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1089;p70",
+        "leftPct":  36.0099,
+        "topPct":  25.1058,
+        "widthPct":  58.7205,
+        "heightPct":  15.2231
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1090;p70",
+        "leftPct":  34.6287,
+        "topPct":  30.4877,
+        "widthPct":  8.7139,
+        "heightPct":  4.4853
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1091;p70",
+        "leftPct":  35.9976,
+        "topPct":  43.3866,
+        "widthPct":  58.7205,
+        "heightPct":  32.4759
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1092;p70",
+        "leftPct":  30.7815,
+        "topPct":  57.624,
+        "widthPct":  14.6424,
+        "heightPct":  4.4853
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1093;p70",
+        "leftPct":  46.1086,
+        "topPct":  21.2102,
+        "widthPct":  39.1634,
+        "heightPct":  57.5795
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1094;p70",
+        "leftPct":  45.6096,
+        "topPct":  21.7946,
+        "widthPct":  37.7756,
+        "heightPct":  9.6996
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1095;p70",
+        "leftPct":  46.6378,
+        "topPct":  32.2437,
+        "widthPct":  38.061,
+        "heightPct":  11.4377
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1096;p70",
+        "leftPct":  51.0044,
+        "topPct":  59.7564,
+        "widthPct":  28.4613,
+        "heightPct":  7.6232
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1097;p70",
+        "leftPct":  58.6797,
+        "topPct":  47.3543,
+        "widthPct":  13.1102,
+        "heightPct":  9.6996
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1098;p70",
+        "leftPct":  55.4374,
+        "topPct":  69.756,
+        "widthPct":  19.5965,
+        "heightPct":  4.0362
+    },
+    {
+        "slide":  29,
+        "name":  "Google Shape;1099;p70",
+        "leftPct":  5.2697,
+        "topPct":  44.4357,
+        "widthPct":  25.2789,
+        "heightPct":  15.6955
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1104;p71",
+        "leftPct":  5.2657,
+        "topPct":  4.0294,
+        "widthPct":  89.4685,
+        "heightPct":  6.2526
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1105;p71",
+        "leftPct":  36.113,
+        "topPct":  22.1882,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1106;p71",
+        "leftPct":  37.7261,
+        "topPct":  38.4627,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1107;p71",
+        "leftPct":  46.3347,
+        "topPct":  15.5993,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1108;p71",
+        "leftPct":  36.1138,
+        "topPct":  30.3655,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1109;p71",
+        "leftPct":  66.9611,
+        "topPct":  22.1881,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1110;p71",
+        "leftPct":  68.5743,
+        "topPct":  38.4627,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1111;p71",
+        "leftPct":  77.1829,
+        "topPct":  15.5993,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1112;p71",
+        "leftPct":  66.9619,
+        "topPct":  30.3655,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1113;p71",
+        "leftPct":  5.2641,
+        "topPct":  22.1882,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1114;p71",
+        "leftPct":  6.8772,
+        "topPct":  38.4627,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1115;p71",
+        "leftPct":  15.4858,
+        "topPct":  15.5993,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1116;p71",
+        "leftPct":  5.2649,
+        "topPct":  30.3655,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1117;p71",
+        "leftPct":  36.1134,
+        "topPct":  63.45,
+        "widthPct":  27.7723,
+        "heightPct":  31.2861
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1118;p71",
+        "leftPct":  37.7265,
+        "topPct":  79.7244,
+        "widthPct":  24.4554,
+        "heightPct":  11.3969
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1119;p71",
+        "leftPct":  46.3351,
+        "topPct":  56.8611,
+        "widthPct":  7.3294,
+        "heightPct":  13.03
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1120;p71",
+        "leftPct":  36.1142,
+        "topPct":  71.6273,
+        "widthPct":  27.7723,
+        "heightPct":  8.1132
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1121;p71",
+        "leftPct":  16.8978,
+        "topPct":  18.658,
+        "widthPct":  4.5081,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1122;p71",
+        "leftPct":  47.9663,
+        "topPct":  18.197,
+        "widthPct":  4.065,
+        "heightPct":  7.8346
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1123;p71",
+        "leftPct":  78.6357,
+        "topPct":  18.8247,
+        "widthPct":  4.5081,
+        "heightPct":  6.5797
+    },
+    {
+        "slide":  30,
+        "name":  "Google Shape;1124;p71",
+        "leftPct":  48.0838,
+        "topPct":  59.9696,
+        "widthPct":  3.832,
+        "heightPct":  6.8125
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1129;p72",
+        "leftPct":  9.8521,
+        "topPct":  12.7822,
+        "widthPct":  41.8602,
+        "heightPct":  38.7577
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1130;p72",
+        "leftPct":  13.8282,
+        "topPct":  82.1696,
+        "widthPct":  2.8396,
+        "heightPct":  5.0482
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1131;p72",
+        "leftPct":  17.8037,
+        "topPct":  82.1696,
+        "widthPct":  2.8396,
+        "heightPct":  5.0482
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1132;p72",
+        "leftPct":  9.8528,
+        "topPct":  82.1696,
+        "widthPct":  2.8396,
+        "heightPct":  5.0482
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1133;p72",
+        "leftPct":  30.6783,
+        "topPct":  82.6744,
+        "widthPct":  0,
+        "heightPct":  4.0303
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1134;p72",
+        "leftPct":  22.2707,
+        "topPct":  82.2203,
+        "widthPct":  7.9593,
+        "heightPct":  4.3628
+    },
+    {
+        "slide":  31,
+        "name":  "Google Shape;1135;p72",
+        "leftPct":  32.1526,
+        "topPct":  82.2203,
+        "widthPct":  20.8432,
+        "heightPct":  4.3628
+    },
+    {
+        "slide":  32,
+        "name":  "Google Shape;1140;p73",
+        "leftPct":  50,
+        "topPct":  33.4009,
+        "widthPct":  44.7343,
+        "heightPct":  31.2803
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_barra",
+        "leftPct":  0,
+        "topPct":  0,
+        "widthPct":  100,
+        "heightPct":  1.4222
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_titulo",
+        "leftPct":  5,
+        "topPct":  3.5556,
+        "widthPct":  90,
+        "heightPct":  7.1111
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_subtitulo",
+        "leftPct":  5,
+        "topPct":  11.0222,
+        "widthPct":  90,
+        "heightPct":  5.3333
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_subtitulo_registrada_com_ar",
+        "leftPct":  5,
+        "topPct":  15.1111,
+        "widthPct":  39,
+        "heightPct":  4.2667
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_com_ar_0",
+        "leftPct":  5,
+        "topPct":  20.0889,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_com_ar_1",
+        "leftPct":  10.5,
+        "topPct":  20.0889,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_com_ar_2",
+        "leftPct":  26,
+        "topPct":  20.0889,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_com_ar_3",
+        "leftPct":  31.5,
+        "topPct":  20.0889,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A4_1x1",
+        "leftPct":  5,
+        "topPct":  23.6444,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_1x1",
+        "leftPct":  10.5,
+        "topPct":  23.6444,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A4_1x1",
+        "leftPct":  26,
+        "topPct":  23.6444,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_1x1",
+        "leftPct":  31.5,
+        "topPct":  23.6444,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A4_2x1",
+        "leftPct":  5,
+        "topPct":  27.2,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_2x1",
+        "leftPct":  10.5,
+        "topPct":  27.2,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A4_2x1",
+        "leftPct":  26,
+        "topPct":  27.2,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_2x1",
+        "leftPct":  31.5,
+        "topPct":  27.2,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A4_4x1",
+        "leftPct":  5,
+        "topPct":  30.7556,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_4x1",
+        "leftPct":  10.5,
+        "topPct":  30.7556,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A4_4x1",
+        "leftPct":  26,
+        "topPct":  30.7556,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_4x1",
+        "leftPct":  31.5,
+        "topPct":  30.7556,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A4_4x4",
+        "leftPct":  5,
+        "topPct":  34.3111,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_4x4",
+        "leftPct":  10.5,
+        "topPct":  34.3111,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A4_4x4",
+        "leftPct":  26,
+        "topPct":  34.3111,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_4x4",
+        "leftPct":  31.5,
+        "topPct":  34.3111,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A3_1x1",
+        "leftPct":  5,
+        "topPct":  37.8667,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_1x1",
+        "leftPct":  10.5,
+        "topPct":  37.8667,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A3_1x1",
+        "leftPct":  26,
+        "topPct":  37.8667,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_1x1",
+        "leftPct":  31.5,
+        "topPct":  37.8667,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A3_2x1",
+        "leftPct":  5,
+        "topPct":  41.4222,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_2x1",
+        "leftPct":  10.5,
+        "topPct":  41.4222,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A3_2x1",
+        "leftPct":  26,
+        "topPct":  41.4222,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_2x1",
+        "leftPct":  31.5,
+        "topPct":  41.4222,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A3_4x1",
+        "leftPct":  5,
+        "topPct":  44.9778,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_4x1",
+        "leftPct":  10.5,
+        "topPct":  44.9778,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A3_4x1",
+        "leftPct":  26,
+        "topPct":  44.9778,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_4x1",
+        "leftPct":  31.5,
+        "topPct":  44.9778,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_com_ar_A3_4x4",
+        "leftPct":  5,
+        "topPct":  48.5333,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_4x4",
+        "leftPct":  10.5,
+        "topPct":  48.5333,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_com_ar_A3_4x4",
+        "leftPct":  26,
+        "topPct":  48.5333,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_4x4",
+        "leftPct":  31.5,
+        "topPct":  48.5333,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_subtitulo_registrada_sem_ar",
+        "leftPct":  54,
+        "topPct":  15.1111,
+        "widthPct":  41,
+        "heightPct":  4.2667
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_sem_ar_0",
+        "leftPct":  54,
+        "topPct":  20.0889,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_sem_ar_1",
+        "leftPct":  59.5,
+        "topPct":  20.0889,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_sem_ar_2",
+        "leftPct":  75,
+        "topPct":  20.0889,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_registrada_sem_ar_3",
+        "leftPct":  80.5,
+        "topPct":  20.0889,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_1x1",
+        "leftPct":  54,
+        "topPct":  23.6444,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_1x1",
+        "leftPct":  59.5,
+        "topPct":  23.6444,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A4_1x1",
+        "leftPct":  75,
+        "topPct":  23.6444,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_1x1",
+        "leftPct":  80.5,
+        "topPct":  23.6444,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_2x1",
+        "leftPct":  54,
+        "topPct":  27.2,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_2x1",
+        "leftPct":  59.5,
+        "topPct":  27.2,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A4_2x1",
+        "leftPct":  75,
+        "topPct":  27.2,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_2x1",
+        "leftPct":  80.5,
+        "topPct":  27.2,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_4x1",
+        "leftPct":  54,
+        "topPct":  30.7556,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_4x1",
+        "leftPct":  59.5,
+        "topPct":  30.7556,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A4_4x1",
+        "leftPct":  75,
+        "topPct":  30.7556,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_4x1",
+        "leftPct":  80.5,
+        "topPct":  30.7556,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_4x4",
+        "leftPct":  54,
+        "topPct":  34.3111,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_4x4",
+        "leftPct":  59.5,
+        "topPct":  34.3111,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A4_4x4",
+        "leftPct":  75,
+        "topPct":  34.3111,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_4x4",
+        "leftPct":  80.5,
+        "topPct":  34.3111,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_1x1",
+        "leftPct":  54,
+        "topPct":  37.8667,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_1x1",
+        "leftPct":  59.5,
+        "topPct":  37.8667,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A3_1x1",
+        "leftPct":  75,
+        "topPct":  37.8667,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_1x1",
+        "leftPct":  80.5,
+        "topPct":  37.8667,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_2x1",
+        "leftPct":  54,
+        "topPct":  41.4222,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_2x1",
+        "leftPct":  59.5,
+        "topPct":  41.4222,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A3_2x1",
+        "leftPct":  75,
+        "topPct":  41.4222,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_2x1",
+        "leftPct":  80.5,
+        "topPct":  41.4222,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_4x1",
+        "leftPct":  54,
+        "topPct":  44.9778,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_4x1",
+        "leftPct":  59.5,
+        "topPct":  44.9778,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A3_4x1",
+        "leftPct":  75,
+        "topPct":  44.9778,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_4x1",
+        "leftPct":  80.5,
+        "topPct":  44.9778,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_4x4",
+        "leftPct":  54,
+        "topPct":  48.5333,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_4x4",
+        "leftPct":  59.5,
+        "topPct":  48.5333,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_registrada_sem_ar_A3_4x4",
+        "leftPct":  75,
+        "topPct":  48.5333,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_4x4",
+        "leftPct":  80.5,
+        "topPct":  48.5333,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_subtitulo_fac_simples",
+        "leftPct":  5,
+        "topPct":  52.4444,
+        "widthPct":  90,
+        "heightPct":  4.2667
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_fac_simples_0",
+        "leftPct":  5,
+        "topPct":  57.4222,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_fac_simples_1",
+        "leftPct":  10.5,
+        "topPct":  57.4222,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_fac_simples_2",
+        "leftPct":  26,
+        "topPct":  57.4222,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_col_fac_simples_3",
+        "leftPct":  31.5,
+        "topPct":  57.4222,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A4_1x1",
+        "leftPct":  5,
+        "topPct":  60.9778,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A4_1x1",
+        "leftPct":  10.5,
+        "topPct":  60.9778,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A4_1x1",
+        "leftPct":  26,
+        "topPct":  60.9778,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A4_1x1",
+        "leftPct":  31.5,
+        "topPct":  60.9778,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A4_2x1",
+        "leftPct":  5,
+        "topPct":  64.5333,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A4_2x1",
+        "leftPct":  10.5,
+        "topPct":  64.5333,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A4_2x1",
+        "leftPct":  26,
+        "topPct":  64.5333,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A4_2x1",
+        "leftPct":  31.5,
+        "topPct":  64.5333,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A4_4x1",
+        "leftPct":  5,
+        "topPct":  68.0889,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A4_4x1",
+        "leftPct":  10.5,
+        "topPct":  68.0889,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A4_4x1",
+        "leftPct":  26,
+        "topPct":  68.0889,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A4_4x1",
+        "leftPct":  31.5,
+        "topPct":  68.0889,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A4_4x4",
+        "leftPct":  5,
+        "topPct":  71.6444,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A4_4x4",
+        "leftPct":  10.5,
+        "topPct":  71.6444,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A4_4x4",
+        "leftPct":  26,
+        "topPct":  71.6444,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A4_4x4",
+        "leftPct":  31.5,
+        "topPct":  71.6444,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A3_1x1",
+        "leftPct":  5,
+        "topPct":  75.2,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A3_1x1",
+        "leftPct":  10.5,
+        "topPct":  75.2,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A3_1x1",
+        "leftPct":  26,
+        "topPct":  75.2,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A3_1x1",
+        "leftPct":  31.5,
+        "topPct":  75.2,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A3_2x1",
+        "leftPct":  5,
+        "topPct":  78.7556,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A3_2x1",
+        "leftPct":  10.5,
+        "topPct":  78.7556,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A3_2x1",
+        "leftPct":  26,
+        "topPct":  78.7556,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A3_2x1",
+        "leftPct":  31.5,
+        "topPct":  78.7556,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A3_4x1",
+        "leftPct":  5,
+        "topPct":  82.3111,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A3_4x1",
+        "leftPct":  10.5,
+        "topPct":  82.3111,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A3_4x1",
+        "leftPct":  26,
+        "topPct":  82.3111,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A3_4x1",
+        "leftPct":  31.5,
+        "topPct":  82.3111,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_tipo_fac_simples_A3_4x4",
+        "leftPct":  5,
+        "topPct":  85.8667,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_modalidade_fac_simples_A3_4x4",
+        "leftPct":  10.5,
+        "topPct":  85.8667,
+        "widthPct":  15.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_cor_fac_simples_A3_4x4",
+        "leftPct":  26,
+        "topPct":  85.8667,
+        "widthPct":  5.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_preco_fac_simples_A3_4x4",
+        "leftPct":  31.5,
+        "topPct":  85.8667,
+        "widthPct":  10.5,
+        "heightPct":  3.5556
+    },
+    {
+        "slide":  33,
+        "name":  "CartaFisico_nota",
+        "leftPct":  5,
+        "topPct":  91.5556,
+        "widthPct":  90,
+        "heightPct":  8.8889
+    }
+]
