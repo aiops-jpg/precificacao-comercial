@@ -31,6 +31,12 @@ function applyEdit(element, edit) {
       if (edit.cx) ext.setAttribute('cx', String(edit.cx))
       if (edit.cy) ext.setAttribute('cy', String(edit.cy))
     }
+  } else if (edit.type === 'move') {
+    const off = element.getElementsByTagName('a:off').item(0)
+    if (off) {
+      if (edit.x != null) off.setAttribute('x', String(edit.x))
+      if (edit.y != null) off.setAttribute('y', String(edit.y))
+    }
   }
 }
 
