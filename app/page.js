@@ -3,6 +3,7 @@
 import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { calcular, formatMoney, formatMoneyPreciso, formatPct, getSetups } from '@/lib/precificacao'
+import { getCampos } from '@/lib/proposta'
 import { CANAIS } from '@/lib/canais'
 import { useConfig } from '@/lib/ConfigContext'
 import DiscoveryForm from '@/components/DiscoveryForm'
@@ -246,6 +247,23 @@ export default function Page() {
   const [gerando, setGerando] = useState(false)
   const [erroGeracao, setErroGeracao] = useState('')
 
+  const campos = useMemo(() => getCampos(result, discovery, config), [result, discovery, config])
+  const gruposCampos = useMemo(() => {
+    const map = new Map()
+    campos.forEach((c) => {
+      if (!map.has(c.group)) map.set(c.group, [])
+      map.get(c.group).push(c)
+    })
+    return [...map.entries()]
+  }, [campos])
+  const [overrideValues, setOverrideValues] = useState({})
+
+  useEffect(() => {
+    if (step === 'editor') {
+      setOverrideValues(Object.fromEntries(campos.map((c) => [c.id, c.value])))
+    }
+  }, [step])
+
   const gerarProposta = async () => {
     setGerando(true)
     setErroGeracao('')
@@ -253,7 +271,7 @@ export default function Page() {
       const resp = await fetch('/api/gerar-proposta', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ form, discovery, config }),
+        body: JSON.stringify({ form, discovery, config, overrides: overrideValues }),
       })
       if (!resp.ok) throw new Error(await resp.text())
       const blob = await resp.blob()
@@ -279,12 +297,12 @@ export default function Page() {
         <div className="step-label">Discovery</div>
       </div>
       <div className="step-line" />
-      <div className={`step-item ${step === 'calculator' ? 'active' : step === 'proposta' ? 'done' : ''}`} onClick={() => setStep('calculator')}>
-        <div className="step-number">{step === 'proposta' ? '✓' : '2'}</div>
+      <div className={`step-item ${step === 'calculator' ? 'active' : (step === 'proposta' || step === 'editor') ? 'done' : ''}`} onClick={() => setStep('calculator')}>
+        <div className="step-number">{(step === 'proposta' || step === 'editor') ? '✓' : '2'}</div>
         <div className="step-label">Calculadora</div>
       </div>
       <div className="step-line" />
-      <div className={`step-item ${step === 'proposta' ? 'active' : ''}`}>
+      <div className={`step-item ${(step === 'proposta' || step === 'editor') ? 'active' : ''}`}>
         <div className="step-number">3</div>
         <div className="step-label">Proposta</div>
       </div>
@@ -345,6 +363,73 @@ export default function Page() {
               </div>
             ))}
           </div>
+          <button className="btn" onClick={() => setStep('editor')}>
+            Revisar e Editar →
+          </button>
+        </div>
+      </div>
+    )
+  }
+
+  if (step === 'editor') {
+    return (
+      <div className="container">
+        <div className="header">
+          <div className="header-main">
+            <div className="header-icon">P</div>
+            <div>
+              <h1>Precificação Comercial</h1>
+              <span className="sub">Revisão do Conteúdo da Proposta</span>
+            </div>
+          </div>
+          <ConfigLink />
+        </div>
+        <StepIndicator />
+
+        <button className="btn btn-secondary btn-sm" onClick={() => setStep('proposta')} style={{ marginBottom: 16 }}>
+          ← Voltar
+        </button>
+
+        <div className="card card-full">
+          <div className="card-title">Revisar Conteúdo da Proposta</div>
+          <p style={{ color: '#555' }}>
+            Os valores abaixo já vêm calculados a partir da Calculadora. Ajuste o que precisar antes de gerar o arquivo — o botão "↺" restaura o valor calculado.
+          </p>
+        </div>
+
+        <div className="grid">
+          {gruposCampos.map(([grupo, camposDoGrupo]) => (
+            <div key={grupo} className="card">
+              <div className="card-title">{grupo}</div>
+              {camposDoGrupo.map((c) => (
+                <div key={c.id} className="field-group">
+                  <label>{c.label}</label>
+                  <div style={{ display: 'flex', gap: 8 }}>
+                    <input
+                      type="text"
+                      value={overrideValues[c.id] ?? ''}
+                      onChange={(e) => setOverrideValues((p) => ({ ...p, [c.id]: e.target.value }))}
+                    />
+                    <button
+                      type="button"
+                      className="btn btn-secondary btn-sm"
+                      title="Restaurar valor calculado"
+                      onClick={() => setOverrideValues((p) => ({ ...p, [c.id]: c.value }))}
+                    >
+                      ↺
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        <p style={{ color: '#888', fontSize: 13, marginTop: 16 }}>
+          Não editável nesta versão: tabela de referência de Cartas/Físico (slide 33) e textos fixos do template.
+        </p>
+
+        <div className="card card-full actions">
           <button className="btn" onClick={gerarProposta} disabled={gerando}>
             {gerando ? 'Gerando...' : 'Gerar Proposta (PPTX)'}
           </button>

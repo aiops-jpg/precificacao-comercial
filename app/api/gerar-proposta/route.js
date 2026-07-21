@@ -43,14 +43,15 @@ function applyEdit(element, edit) {
 export async function POST(req) {
   try {
     const body = await req.json()
-    const { form, discovery, config } = body
+    const { form, discovery, config, overrides = {} } = body
 
     const result = calcular(form, discovery.canais_ativos, config)
     const slides = getSlidesDaProposta(discovery.canais_ativos)
-    const edicoes = getEdicoesPorSlide(result, discovery, config)
+    const edicoes = getEdicoesPorSlide(result, discovery, config, overrides)
 
     // Log da geração — guarda o cálculo completo (não só metadados), útil pra auditoria de
-    // quanto foi cobrado numa proposta específica. Não deve derrubar a geração se falhar.
+    // quanto foi cobrado numa proposta específica, incluindo overrides manuais feitos na tela de
+    // revisão. Não deve derrubar a geração se falhar.
     try {
       const session = await auth()
       const pool = getPool()
@@ -63,6 +64,7 @@ export async function POST(req) {
           form,
           discovery,
           result,
+          overrides,
         })]
       )
     } catch (logErr) {
