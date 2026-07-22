@@ -69,6 +69,15 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 
 .grid-equal-height { align-items: stretch; }
 
+/* Empacotamento tipo masonry pra grades com cards de altura bem desigual (ex: a Calculadora,
+   onde "ONE Platform" tem 1 campo e "SMS" tem 5) — com display:grid comum, a linha toda fica
+   travada na altura do card mais alto, deixando um vão enorme embaixo dos cards curtos da mesma
+   linha antes da próxima linha poder começar. column-count preenche por coluna, sem travar
+   linhas, então cada card ocupa só a altura que precisa. */
+.grid-pack { column-count: 2; column-gap: 8px; }
+.grid-pack > .card { break-inside: avoid; margin-bottom: 8px; display: inline-block; width: 100%; }
+.grid-pack > .card-full { column-span: all; }
+
 .card {
   background: var(--color-white);
   border-radius: var(--radius);
@@ -185,7 +194,11 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
   border: 2px solid #e1e1e3;
 }
 
-.btn-secondary:hover { border-color: var(--color-navy); }
+/* .btn-secondary herda a classe base .btn — sem resetar o background aqui, o hover ficava com
+   o fundo azul-escuro de ".btn:hover" (empatado em especificidade, mas .btn-secondary nunca
+   sobrescrevia essa propriedade) por baixo do texto azul-marinho do próprio .btn-secondary,
+   virando texto azul em cima de fundo azul. */
+.btn-secondary:hover { background: var(--color-gray-light); border-color: var(--color-navy); }
 
 .btn-config, .btn-hover-gray { transition: background-color 0.15s ease, border-color 0.15s ease; }
 .btn-config:hover, .btn-hover-gray:hover { background: var(--color-gray-light); border-color: var(--color-navy); }
@@ -312,16 +325,6 @@ table .num { text-align: right; font-variant-numeric: tabular-nums; }
   margin-bottom: 12px; margin-top: 24px;
 }
 
-.cat-bar {
-  display: flex; height: 32px;
-  border-radius: var(--radius-sm); overflow: hidden;
-  margin: 12px 0;
-}
-
-.cat-bar-segment {
-  display: flex; align-items: center; justify-content: center;
-  font-size: 11px; font-weight: 700; color: #fff;
-}
 
 .percent-list {
   display: grid;
@@ -349,6 +352,14 @@ table .num { text-align: right; font-variant-numeric: tabular-nums; }
   margin-bottom: 8px; padding: 7px 16px;
   background: var(--color-white); border-radius: var(--radius);
   box-shadow: var(--shadow); border: 2px solid rgba(23,44,102,0.08);
+}
+
+/* Na tela de revisão (rolagem longa pelos slides), o indicador de step fica grudado no topo
+   ao rolar — sem isso, some da tela e some a referência de onde se está no fluxo. */
+.step-indicator-sticky {
+  position: sticky;
+  top: 8px;
+  z-index: 20;
 }
 
 .step-item {
@@ -606,6 +617,7 @@ select:focus, textarea:focus { border-color: var(--color-navy); }
 @media (max-width: 640px) {
   body { padding: 10px; }
   .grid { grid-template-columns: 1fr; }
+  .grid-pack { column-count: 1; }
   .field-row,
   .field-row.cols-2,
   .field-row.cols-3,

@@ -269,6 +269,8 @@ export default function Page() {
   const setups = useMemo(() => getSetups(discovery.canais_ativos, result.plano_one, config), [result, discovery.canais_ativos, config])
 
   const total = result.categorias.total
+  // Sem isso, com total=0 (nenhum volume preenchido ainda) as % do total viravam 0/0 = NaN.
+  const pctDoTotal = (valor) => (total > 0 ? valor / total * 100 : 0)
 
   const [gerando, setGerando] = useState(false)
   const [erroGeracao, setErroGeracao] = useState('')
@@ -283,11 +285,12 @@ export default function Page() {
   const camposPorSlide = useMemo(() => {
     const map = new Map()
     campos.forEach((c) => {
-      if (!c.shape) return
-      const geom = GEOMETRIA_POR_SHAPE[c.shape]
-      if (!geom) return
-      if (!map.has(geom.slide)) map.set(geom.slide, [])
-      map.get(geom.slide).push({ ...c, geom })
+      c.shapes.forEach((shape) => {
+        const geom = GEOMETRIA_POR_SHAPE[shape]
+        if (!geom) return
+        if (!map.has(geom.slide)) map.set(geom.slide, [])
+        map.get(geom.slide).push({ ...c, geom, overlayKey: `${c.id}-${shape}` })
+      })
     })
     return map
   }, [campos])
@@ -376,8 +379,8 @@ export default function Page() {
     }
   }
 
-  const StepIndicator = () => (
-    <div className="step-indicator">
+  const StepIndicator = ({ sticky }) => (
+    <div className={`step-indicator${sticky ? ' step-indicator-sticky' : ''}`}>
       <div className={`step-item ${step === 'discovery' ? 'active' : 'done'}`} onClick={() => setStep('discovery')}>
         <div className="step-number">{step !== 'discovery' ? '✓' : '1'}</div>
         <div className="step-label">Discovery</div>
@@ -470,7 +473,7 @@ export default function Page() {
           </div>
           <ConfigLink />
         </div>
-        <StepIndicator />
+        <StepIndicator sticky />
 
         <button className="btn btn-secondary btn-sm" onClick={() => setStep('proposta')} style={{ marginBottom: 16 }}>
           ← Voltar
@@ -515,7 +518,7 @@ export default function Page() {
                 const geom = expandirGeom(c.geom)
                 return (
                   <input
-                    key={c.id}
+                    key={c.overlayKey}
                     className="slide-overlay-input"
                     title={c.label}
                     value={overrideValues[c.id] ?? ''}
@@ -604,7 +607,7 @@ export default function Page() {
         ← Voltar ao Discovery
       </button>
 
-      <div className="grid">
+      <div className="grid-pack">
         {FIELDS.map(g => {
           const visibleFields = g.section === 'Base' ? g.fields : g.fields.filter(f => ativo(f.gateKey || f.key))
           if (visibleFields.length === 0) return null
@@ -650,29 +653,17 @@ export default function Page() {
           <div className="kpi-card">
             <div className="kpi-label">Categoria ONE</div>
             <div className="kpi-value">{formatMoney(result.categorias.one)}</div>
-            <div className="kpi-sub">{formatPct(result.categorias.one / total * 100)} do total</div>
+            <div className="kpi-sub">{formatPct(pctDoTotal(result.categorias.one))} do total</div>
           </div>
           <div className="kpi-card">
             <div className="kpi-label">Categoria SMS</div>
             <div className="kpi-value">{formatMoney(result.categorias.sms)}</div>
-            <div className="kpi-sub">{formatPct(result.categorias.sms / total * 100)} do total</div>
+            <div className="kpi-sub">{formatPct(pctDoTotal(result.categorias.sms))} do total</div>
           </div>
           <div className="kpi-card">
             <div className="kpi-label">Categoria Digital</div>
             <div className="kpi-value">{formatMoney(result.categorias.digital)}</div>
-            <div className="kpi-sub">{formatPct(result.categorias.digital / total * 100)} do total</div>
-          </div>
-        </div>
-
-        <div className="cat-bar">
-          <div className="cat-bar-segment" style={{ width: `${result.categorias.one / total * 100}%`, background: '#1E4620' }}>
-            {result.categorias.one > 0 && formatPct(result.categorias.one / total * 100)}
-          </div>
-          <div className="cat-bar-segment" style={{ width: `${result.categorias.sms / total * 100}%`, background: '#172c66' }}>
-            {result.categorias.sms > 0 && formatPct(result.categorias.sms / total * 100)}
-          </div>
-          <div className="cat-bar-segment" style={{ width: `${result.categorias.digital / total * 100}%`, background: '#0120eb' }}>
-            {result.categorias.digital > 0 && formatPct(result.categorias.digital / total * 100)}
+            <div className="kpi-sub">{formatPct(pctDoTotal(result.categorias.digital))} do total</div>
           </div>
         </div>
 
@@ -687,7 +678,7 @@ export default function Page() {
                   <td className="num">{item.unit !== null ? formatMoneyPreciso(item.unit) : '-'}</td>
                   <td className="num">{item.qtd.toLocaleString('pt-BR')}</td>
                   <td className="num">{item.tot !== null ? formatMoney(item.tot) : '-'}</td>
-                  <td className="num">{item.tot ? formatPct(item.tot / total * 100) : '-'}</td>
+                  <td className="num">{item.tot ? formatPct(pctDoTotal(item.tot)) : '-'}</td>
                 </tr>
               ))}
             </tbody>
@@ -705,7 +696,7 @@ export default function Page() {
                   <td className="num">{formatMoneyPreciso(item.unit)}</td>
                   <td className="num">{item.qtd.toLocaleString('pt-BR')}</td>
                   <td className="num">{formatMoney(item.tot)}</td>
-                  <td className="num">{formatPct(item.tot / total * 100)}</td>
+                  <td className="num">{formatPct(pctDoTotal(item.tot))}</td>
                 </tr>
               ))}
             </tbody>

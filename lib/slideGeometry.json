@@ -5953,922 +5953,1154 @@
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_barra",
-        "leftPct":  0,
-        "topPct":  0,
-        "widthPct":  100,
-        "heightPct":  1.4222
+        "name":  "Google Shape;1043;p65",
+        "leftPct":  35.4624,
+        "topPct":  27.0171,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_titulo",
-        "leftPct":  5,
-        "topPct":  3.5556,
-        "widthPct":  90,
-        "heightPct":  7.1111
+        "name":  "Google Shape;1044;p65",
+        "leftPct":  33.578,
+        "topPct":  34.7654,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_subtitulo",
-        "leftPct":  5,
-        "topPct":  11.0222,
-        "widthPct":  90,
-        "heightPct":  5.3333
+        "name":  "Google Shape;1046;p65",
+        "leftPct":  34.2166,
+        "topPct":  32.8033,
+        "widthPct":  51.7709,
+        "heightPct":  0
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_subtitulo_registrada_com_ar",
-        "leftPct":  5,
-        "topPct":  15.1111,
-        "widthPct":  39,
-        "heightPct":  4.2667
+        "name":  "Google Shape;1047;p65",
+        "leftPct":  45.1764,
+        "topPct":  14.7095,
+        "widthPct":  10.9538,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_col_registrada_com_ar_0",
-        "leftPct":  5,
-        "topPct":  20.0889,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8991,
+        "topPct":  26.9416,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_col_registrada_com_ar_1",
-        "leftPct":  10.5,
-        "topPct":  20.0889,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
+        "name":  "Google Shape;1049;p65",
+        "leftPct":  58.6049,
+        "topPct":  34.8487,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_col_registrada_com_ar_2",
-        "leftPct":  26,
-        "topPct":  20.0889,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "name":  "Google Shape;1050;p65",
+        "leftPct":  60.0955,
+        "topPct":  14.7928,
+        "widthPct":  5.4232,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_col_registrada_com_ar_3",
-        "leftPct":  31.5,
-        "topPct":  20.0889,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A4_1x1",
-        "leftPct":  5,
-        "topPct":  23.6444,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_1x1",
-        "leftPct":  10.5,
-        "topPct":  23.6444,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A4_1x1",
-        "leftPct":  26,
-        "topPct":  23.6444,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A4_1x1",
-        "leftPct":  31.5,
-        "topPct":  23.6444,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A4_2x1",
-        "leftPct":  5,
-        "topPct":  27.2,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_2x1",
-        "leftPct":  10.5,
-        "topPct":  27.2,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A4_2x1",
-        "leftPct":  26,
-        "topPct":  27.2,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A4_2x1",
-        "leftPct":  31.5,
-        "topPct":  27.2,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A4_4x1",
-        "leftPct":  5,
-        "topPct":  30.7556,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_4x1",
-        "leftPct":  10.5,
-        "topPct":  30.7556,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A4_4x1",
-        "leftPct":  26,
-        "topPct":  30.7556,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A4_4x1",
-        "leftPct":  31.5,
-        "topPct":  30.7556,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A4_4x4",
-        "leftPct":  5,
-        "topPct":  34.3111,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A4_4x4",
-        "leftPct":  10.5,
-        "topPct":  34.3111,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A4_4x4",
-        "leftPct":  26,
-        "topPct":  34.3111,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A4_4x4",
-        "leftPct":  31.5,
-        "topPct":  34.3111,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A3_1x1",
-        "leftPct":  5,
-        "topPct":  37.8667,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_1x1",
-        "leftPct":  10.5,
-        "topPct":  37.8667,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A3_1x1",
-        "leftPct":  26,
-        "topPct":  37.8667,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A3_1x1",
-        "leftPct":  31.5,
-        "topPct":  37.8667,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A3_2x1",
-        "leftPct":  5,
-        "topPct":  41.4222,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_2x1",
-        "leftPct":  10.5,
-        "topPct":  41.4222,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A3_2x1",
-        "leftPct":  26,
-        "topPct":  41.4222,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A3_2x1",
-        "leftPct":  31.5,
-        "topPct":  41.4222,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A3_4x1",
-        "leftPct":  5,
-        "topPct":  44.9778,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_4x1",
-        "leftPct":  10.5,
-        "topPct":  44.9778,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A3_4x1",
-        "leftPct":  26,
-        "topPct":  44.9778,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A3_4x1",
-        "leftPct":  31.5,
-        "topPct":  44.9778,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_com_ar_A3_4x4",
-        "leftPct":  5,
-        "topPct":  48.5333,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_com_ar_A3_4x4",
-        "leftPct":  10.5,
-        "topPct":  48.5333,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_com_ar_A3_4x4",
-        "leftPct":  26,
-        "topPct":  48.5333,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_com_ar_A3_4x4",
-        "leftPct":  31.5,
-        "topPct":  48.5333,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_subtitulo_registrada_sem_ar",
-        "leftPct":  54,
-        "topPct":  15.1111,
-        "widthPct":  41,
-        "heightPct":  4.2667
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_registrada_sem_ar_0",
-        "leftPct":  54,
-        "topPct":  20.0889,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_registrada_sem_ar_1",
-        "leftPct":  59.5,
-        "topPct":  20.0889,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_registrada_sem_ar_2",
-        "leftPct":  75,
-        "topPct":  20.0889,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_registrada_sem_ar_3",
-        "leftPct":  80.5,
-        "topPct":  20.0889,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_1x1",
-        "leftPct":  54,
-        "topPct":  23.6444,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_1x1",
-        "leftPct":  59.5,
-        "topPct":  23.6444,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A4_1x1",
-        "leftPct":  75,
-        "topPct":  23.6444,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A4_1x1",
-        "leftPct":  80.5,
-        "topPct":  23.6444,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_2x1",
-        "leftPct":  54,
-        "topPct":  27.2,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_2x1",
-        "leftPct":  59.5,
-        "topPct":  27.2,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A4_2x1",
-        "leftPct":  75,
-        "topPct":  27.2,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A4_2x1",
-        "leftPct":  80.5,
-        "topPct":  27.2,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_4x1",
-        "leftPct":  54,
-        "topPct":  30.7556,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_4x1",
-        "leftPct":  59.5,
-        "topPct":  30.7556,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A4_4x1",
-        "leftPct":  75,
-        "topPct":  30.7556,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A4_4x1",
-        "leftPct":  80.5,
-        "topPct":  30.7556,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A4_4x4",
-        "leftPct":  54,
-        "topPct":  34.3111,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A4_4x4",
-        "leftPct":  59.5,
-        "topPct":  34.3111,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A4_4x4",
-        "leftPct":  75,
-        "topPct":  34.3111,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A4_4x4",
-        "leftPct":  80.5,
-        "topPct":  34.3111,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_1x1",
-        "leftPct":  54,
-        "topPct":  37.8667,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_1x1",
-        "leftPct":  59.5,
-        "topPct":  37.8667,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A3_1x1",
-        "leftPct":  75,
-        "topPct":  37.8667,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A3_1x1",
-        "leftPct":  80.5,
-        "topPct":  37.8667,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_2x1",
-        "leftPct":  54,
-        "topPct":  41.4222,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_2x1",
-        "leftPct":  59.5,
-        "topPct":  41.4222,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A3_2x1",
-        "leftPct":  75,
-        "topPct":  41.4222,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A3_2x1",
-        "leftPct":  80.5,
-        "topPct":  41.4222,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_4x1",
-        "leftPct":  54,
-        "topPct":  44.9778,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_4x1",
-        "leftPct":  59.5,
-        "topPct":  44.9778,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A3_4x1",
-        "leftPct":  75,
-        "topPct":  44.9778,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A3_4x1",
-        "leftPct":  80.5,
-        "topPct":  44.9778,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_registrada_sem_ar_A3_4x4",
-        "leftPct":  54,
-        "topPct":  48.5333,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_registrada_sem_ar_A3_4x4",
-        "leftPct":  59.5,
-        "topPct":  48.5333,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_registrada_sem_ar_A3_4x4",
-        "leftPct":  75,
-        "topPct":  48.5333,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_registrada_sem_ar_A3_4x4",
-        "leftPct":  80.5,
-        "topPct":  48.5333,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_subtitulo_fac_simples",
-        "leftPct":  5,
-        "topPct":  52.4444,
-        "widthPct":  90,
-        "heightPct":  4.2667
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_fac_simples_0",
-        "leftPct":  5,
-        "topPct":  57.4222,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_fac_simples_1",
-        "leftPct":  10.5,
-        "topPct":  57.4222,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_fac_simples_2",
-        "leftPct":  26,
-        "topPct":  57.4222,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_col_fac_simples_3",
-        "leftPct":  31.5,
-        "topPct":  57.4222,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A4_1x1",
-        "leftPct":  5,
-        "topPct":  60.9778,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A4_1x1",
-        "leftPct":  10.5,
-        "topPct":  60.9778,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A4_1x1",
-        "leftPct":  26,
-        "topPct":  60.9778,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_preco_fac_simples_A4_1x1",
-        "leftPct":  31.5,
-        "topPct":  60.9778,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A4_2x1",
-        "leftPct":  5,
-        "topPct":  64.5333,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A4_2x1",
-        "leftPct":  10.5,
-        "topPct":  64.5333,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A4_2x1",
-        "leftPct":  26,
-        "topPct":  64.5333,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "name":  "Google Shape;1051;p65",
+        "leftPct":  58.6049,
+        "topPct":  27.0249,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A4_2x1",
-        "leftPct":  31.5,
-        "topPct":  64.5333,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  34.7654,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A4_4x1",
-        "leftPct":  5,
-        "topPct":  68.0889,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "name":  "Google Shape;1053;p65",
+        "leftPct":  69.6994,
+        "topPct":  14.3953,
+        "widthPct":  14.9997,
+        "heightPct":  7.6757
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A4_4x1",
-        "leftPct":  10.5,
-        "topPct":  68.0889,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
+        "name":  "CartaFisico_preco_fac_simples_A4_1x1",
+        "leftPct":  73.2323,
+        "topPct":  26.9416,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A4_4x1",
-        "leftPct":  26,
-        "topPct":  68.0889,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "name":  "Google Shape;1055;p65",
+        "leftPct":  68.4998,
+        "topPct":  14.9128,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1056;p65",
+        "leftPct":  37.0382,
+        "topPct":  14.7095,
+        "widthPct":  5.2493,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1057;p65",
+        "leftPct":  35.4624,
+        "topPct":  42.556399999999996,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1058;p65",
+        "leftPct":  33.578,
+        "topPct":  50.3047,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1061;p65",
+        "leftPct":  58.6049,
+        "topPct":  50.388,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1062;p65",
+        "leftPct":  58.6049,
+        "topPct":  42.5642,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1063;p65",
+        "leftPct":  33.578,
+        "topPct":  58.338,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1065;p65",
+        "leftPct":  58.6049,
+        "topPct":  58.4213,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1066;p65",
+        "leftPct":  35.4624,
+        "topPct":  66.129,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1067;p65",
+        "leftPct":  33.578,
+        "topPct":  73.8773,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1069;p65",
+        "leftPct":  58.6049,
+        "topPct":  73.9606,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1070;p65",
+        "leftPct":  58.6049,
+        "topPct":  66.1368,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1072;p65",
+        "leftPct":  33.578,
+        "topPct":  81.6469,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1073;p65",
+        "leftPct":  58.6049,
+        "topPct":  81.7303,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1075;p65",
+        "leftPct":  56.9248,
+        "topPct":  14.7095,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1076;p65",
+        "leftPct":  44.3818,
+        "topPct":  14.0811,
+        "widthPct":  0,
+        "heightPct":  72.4526
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A4_4x1",
-        "leftPct":  31.5,
-        "topPct":  68.0889,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A4_4x4",
-        "leftPct":  5,
-        "topPct":  71.6444,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A4_4x4",
-        "leftPct":  10.5,
-        "topPct":  71.6444,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A4_4x4",
-        "leftPct":  26,
-        "topPct":  71.6444,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  42.5616,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A4_4x4",
-        "leftPct":  31.5,
-        "topPct":  71.6444,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A3_1x1",
-        "leftPct":  5,
-        "topPct":  75.2,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A3_1x1",
-        "leftPct":  10.5,
-        "topPct":  75.2,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A3_1x1",
-        "leftPct":  26,
-        "topPct":  75.2,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  50.3512,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A3_1x1",
-        "leftPct":  31.5,
-        "topPct":  75.2,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A3_2x1",
-        "leftPct":  5,
-        "topPct":  78.7556,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A3_2x1",
-        "leftPct":  10.5,
-        "topPct":  78.7556,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A3_2x1",
-        "leftPct":  26,
-        "topPct":  78.7556,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  58.4339,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A3_2x1",
-        "leftPct":  31.5,
-        "topPct":  78.7556,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A3_4x1",
-        "leftPct":  5,
-        "topPct":  82.3111,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A3_4x1",
-        "leftPct":  10.5,
-        "topPct":  82.3111,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A3_4x1",
-        "leftPct":  26,
-        "topPct":  82.3111,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  66.165,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A3_4x1",
-        "leftPct":  31.5,
-        "topPct":  82.3111,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_tipo_fac_simples_A3_4x4",
-        "leftPct":  5,
-        "topPct":  85.8667,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_modalidade_fac_simples_A3_4x4",
-        "leftPct":  10.5,
-        "topPct":  85.8667,
-        "widthPct":  15.5,
-        "heightPct":  3.5556
-    },
-    {
-        "slide":  33,
-        "name":  "CartaFisico_cor_fac_simples_A3_4x4",
-        "leftPct":  26,
-        "topPct":  85.8667,
-        "widthPct":  5.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  73.554,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
         "name":  "CartaFisico_preco_fac_simples_A3_4x4",
-        "leftPct":  31.5,
-        "topPct":  85.8667,
-        "widthPct":  10.5,
-        "heightPct":  3.5556
+        "leftPct":  73.2323,
+        "topPct":  81.5204,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
     },
     {
         "slide":  33,
-        "name":  "CartaFisico_nota",
-        "leftPct":  5,
-        "topPct":  91.5556,
-        "widthPct":  90,
-        "heightPct":  8.8889
+        "name":  "Google Shape;1083;p65",
+        "leftPct":  6.2976,
+        "topPct":  37.4556,
+        "widthPct":  22.6706,
+        "heightPct":  15.8064
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1084;p65",
+        "leftPct":  7.4158,
+        "topPct":  53.2641,
+        "widthPct":  12.1738,
+        "heightPct":  7.4145
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1095;p65",
+        "leftPct":  34.2166,
+        "topPct":  40.5582,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1096;p65",
+        "leftPct":  34.2166,
+        "topPct":  48.3131,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1097;p65",
+        "leftPct":  34.2166,
+        "topPct":  56.068,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1098;p65",
+        "leftPct":  34.2166,
+        "topPct":  63.8228,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1099;p65",
+        "leftPct":  34.2166,
+        "topPct":  71.5777,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1100;p65",
+        "leftPct":  34.2166,
+        "topPct":  79.3326,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8991,
+        "topPct":  34.0802,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8991,
+        "topPct":  41.9054,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8991,
+        "topPct":  49.6399,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8991,
+        "topPct":  57.7404,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.9071,
+        "topPct":  65.7489,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8503,
+        "topPct":  73.1906,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  33,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  44.8608,
+        "topPct":  80.901,
+        "widthPct":  11.4859,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1043;p65",
+        "leftPct":  35.4624,
+        "topPct":  27.0171,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1044;p65",
+        "leftPct":  33.578,
+        "topPct":  34.7654,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1046;p65",
+        "leftPct":  34.2166,
+        "topPct":  32.8033,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1047;p65",
+        "leftPct":  45.1764,
+        "topPct":  14.7095,
+        "widthPct":  10.9538,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  26.3735,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1049;p65",
+        "leftPct":  58.6049,
+        "topPct":  34.8487,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1050;p65",
+        "leftPct":  60.0955,
+        "topPct":  14.7928,
+        "widthPct":  5.4232,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1051;p65",
+        "leftPct":  58.6049,
+        "topPct":  27.0249,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_2x1",
+        "leftPct":  73.2323,
+        "topPct":  34.7654,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1053;p65",
+        "leftPct":  69.6994,
+        "topPct":  14.3953,
+        "widthPct":  14.9997,
+        "heightPct":  7.6757
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_1x1",
+        "leftPct":  73.2323,
+        "topPct":  26.9416,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1055;p65",
+        "leftPct":  68.4998,
+        "topPct":  14.9128,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1056;p65",
+        "leftPct":  37.0382,
+        "topPct":  14.7095,
+        "widthPct":  5.2493,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1057;p65",
+        "leftPct":  35.4624,
+        "topPct":  42.556399999999996,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1058;p65",
+        "leftPct":  33.578,
+        "topPct":  50.3047,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1061;p65",
+        "leftPct":  58.6049,
+        "topPct":  50.388,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1062;p65",
+        "leftPct":  58.6049,
+        "topPct":  42.5642,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1063;p65",
+        "leftPct":  33.578,
+        "topPct":  58.338,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1065;p65",
+        "leftPct":  58.6049,
+        "topPct":  58.4213,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1066;p65",
+        "leftPct":  35.4624,
+        "topPct":  66.129,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1067;p65",
+        "leftPct":  33.578,
+        "topPct":  73.8773,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1069;p65",
+        "leftPct":  58.6049,
+        "topPct":  73.9606,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1070;p65",
+        "leftPct":  58.6049,
+        "topPct":  66.1368,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1072;p65",
+        "leftPct":  33.578,
+        "topPct":  81.6469,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1073;p65",
+        "leftPct":  58.6049,
+        "topPct":  81.7303,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1075;p65",
+        "leftPct":  56.9248,
+        "topPct":  14.7095,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1076;p65",
+        "leftPct":  44.3818,
+        "topPct":  14.0811,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_4x1",
+        "leftPct":  73.2323,
+        "topPct":  42.5616,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A4_4x4",
+        "leftPct":  73.2323,
+        "topPct":  50.3512,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_1x1",
+        "leftPct":  73.2323,
+        "topPct":  58.4339,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_2x1",
+        "leftPct":  73.2323,
+        "topPct":  66.165,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_4x1",
+        "leftPct":  73.2323,
+        "topPct":  73.554,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "CartaFisico_preco_registrada_sem_ar_A3_4x4",
+        "leftPct":  73.2323,
+        "topPct":  81.5204,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1083;p65",
+        "leftPct":  6.2976,
+        "topPct":  37.4556,
+        "widthPct":  22.6706,
+        "heightPct":  15.8064
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1084;p65",
+        "leftPct":  7.4158,
+        "topPct":  53.2641,
+        "widthPct":  12.1738,
+        "heightPct":  7.4145
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1095;p65",
+        "leftPct":  34.2166,
+        "topPct":  40.5582,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1096;p65",
+        "leftPct":  34.2166,
+        "topPct":  48.3131,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1097;p65",
+        "leftPct":  34.2166,
+        "topPct":  56.068,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1098;p65",
+        "leftPct":  34.2166,
+        "topPct":  63.8228,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1099;p65",
+        "leftPct":  34.2166,
+        "topPct":  71.5777,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1100;p65",
+        "leftPct":  34.2166,
+        "topPct":  79.3326,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  33.9504,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  41.8647,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  49.4416,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  57.0186,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  64.5955,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  72.5098,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  34,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  80.0867,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1043;p65",
+        "leftPct":  35.4624,
+        "topPct":  27.0171,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1044;p65",
+        "leftPct":  33.578,
+        "topPct":  34.7654,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1046;p65",
+        "leftPct":  34.2166,
+        "topPct":  32.8033,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1047;p65",
+        "leftPct":  45.1764,
+        "topPct":  14.7095,
+        "widthPct":  10.9538,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  26.3735,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1049;p65",
+        "leftPct":  58.6049,
+        "topPct":  34.8487,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1050;p65",
+        "leftPct":  60.0955,
+        "topPct":  14.7928,
+        "widthPct":  5.4232,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1051;p65",
+        "leftPct":  58.6049,
+        "topPct":  27.0249,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_2x1",
+        "leftPct":  73.2323,
+        "topPct":  34.7654,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1053;p65",
+        "leftPct":  69.6994,
+        "topPct":  14.3953,
+        "widthPct":  14.9997,
+        "heightPct":  7.6757
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_1x1",
+        "leftPct":  73.2323,
+        "topPct":  26.9416,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1055;p65",
+        "leftPct":  68.4998,
+        "topPct":  14.9128,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1056;p65",
+        "leftPct":  37.0382,
+        "topPct":  14.7095,
+        "widthPct":  5.2493,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1057;p65",
+        "leftPct":  35.4624,
+        "topPct":  42.556399999999996,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1058;p65",
+        "leftPct":  33.578,
+        "topPct":  50.3047,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1061;p65",
+        "leftPct":  58.6049,
+        "topPct":  50.388,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1062;p65",
+        "leftPct":  58.6049,
+        "topPct":  42.5642,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1063;p65",
+        "leftPct":  33.578,
+        "topPct":  58.338,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1065;p65",
+        "leftPct":  58.6049,
+        "topPct":  58.4213,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1066;p65",
+        "leftPct":  35.4624,
+        "topPct":  66.129,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1067;p65",
+        "leftPct":  33.578,
+        "topPct":  73.8773,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1069;p65",
+        "leftPct":  58.6049,
+        "topPct":  73.9606,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1070;p65",
+        "leftPct":  58.6049,
+        "topPct":  66.1368,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1072;p65",
+        "leftPct":  33.578,
+        "topPct":  81.6469,
+        "widthPct":  12.1752,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1073;p65",
+        "leftPct":  58.6049,
+        "topPct":  81.7303,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1075;p65",
+        "leftPct":  56.9248,
+        "topPct":  14.7095,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1076;p65",
+        "leftPct":  44.3818,
+        "topPct":  14.0811,
+        "widthPct":  0,
+        "heightPct":  72.4526
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_4x1",
+        "leftPct":  73.2323,
+        "topPct":  42.5616,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A4_4x4",
+        "leftPct":  73.2323,
+        "topPct":  50.3512,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_1x1",
+        "leftPct":  73.2323,
+        "topPct":  58.4339,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_2x1",
+        "leftPct":  73.2323,
+        "topPct":  66.165,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_4x1",
+        "leftPct":  73.2323,
+        "topPct":  73.554,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "CartaFisico_preco_registrada_com_ar_A3_4x4",
+        "leftPct":  73.2323,
+        "topPct":  81.5204,
+        "widthPct":  8.4022,
+        "heightPct":  4.5144
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1083;p65",
+        "leftPct":  6.2976,
+        "topPct":  37.4556,
+        "widthPct":  22.6706,
+        "heightPct":  15.8064
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1084;p65",
+        "leftPct":  7.4158,
+        "topPct":  53.2641,
+        "widthPct":  12.1738,
+        "heightPct":  7.4145
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1095;p65",
+        "leftPct":  34.2166,
+        "topPct":  40.5582,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1096;p65",
+        "leftPct":  34.2166,
+        "topPct":  48.3131,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1097;p65",
+        "leftPct":  34.2166,
+        "topPct":  56.068,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1098;p65",
+        "leftPct":  34.2166,
+        "topPct":  63.8228,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1099;p65",
+        "leftPct":  34.2166,
+        "topPct":  71.5777,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1100;p65",
+        "leftPct":  34.2166,
+        "topPct":  79.3326,
+        "widthPct":  51.7709,
+        "heightPct":  0
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  33.9504,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  41.8647,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9988,
+        "topPct":  49.4416,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  57.0186,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  64.5955,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  72.5098,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
+    },
+    {
+        "slide":  35,
+        "name":  "Google Shape;1048;p65",
+        "leftPct":  43.9216,
+        "topPct":  80.0867,
+        "widthPct":  13.4065,
+        "heightPct":  6.9607
     }
 ]
