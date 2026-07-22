@@ -32,13 +32,42 @@ function Add-ShapeGeometry {
         return
     }
 
+    # Tamanho de fonte real (pt) do PRIMEIRO e do ÚLTIMO caractere do texto — vários shapes de
+    # preço/valor do template têm 2 blocos de texto com tamanhos diferentes no mesmo shape (ex:
+    # "R$ XX,XX" grande + "ONE COLLECT" pequeno colado depois, ou o oposto: "R$ " pequeno + "5.000"
+    # grande). getEdicoesPorSlide edita um RUN específico (0 ou 1) por campo — guardando os dois
+    # extremos aqui, o editor visual (app/page.js) escolhe o certo por campo, em vez de "chutar"
+    # sempre o último (que às vezes é só um rótulo, não o valor).
+    #
+    # Alinhamento do parágrafo — sem isso, ao encolher a caixa pro tamanho real do texto (ver
+    # ajustarCaixaInput em app/page.js), um valor centralizado no template (ex: "R$ 0,15" no RCS)
+    # ficava com metade do texto original vazando pra fora da caixa encolhida à esquerda.
+    $fontSizeFirst = 0
+    $fontSizeLast = 0
+    $align = 'left'
+    if ($Shape.HasTextFrame -and $Shape.TextFrame.HasText) {
+        $len = $Shape.TextFrame.TextRange.Text.Length
+        try { $fontSizeFirst = [math]::Round($Shape.TextFrame.TextRange.Characters(1, 1).Font.Size, 2) } catch {}
+        try { $fontSizeLast = [math]::Round($Shape.TextFrame.TextRange.Characters($len, 1).Font.Size, 2) } catch {}
+        try {
+            switch ($Shape.TextFrame.TextRange.ParagraphFormat.Alignment) {
+                2 { $align = 'center' }
+                3 { $align = 'right' }
+                default { $align = 'left' }
+            }
+        } catch {}
+    }
+
     $Results.Add([PSCustomObject]@{
-        slide     = $SlideNum
-        name      = $Shape.Name
-        leftPct   = [math]::Round(($Shape.Left / $SlideWidth) * 100, 4)
-        topPct    = [math]::Round(($Shape.Top / $SlideHeight) * 100, 4)
-        widthPct  = [math]::Round(($Shape.Width / $SlideWidth) * 100, 4)
-        heightPct = [math]::Round(($Shape.Height / $SlideHeight) * 100, 4)
+        slide         = $SlideNum
+        name          = $Shape.Name
+        leftPct       = [math]::Round(($Shape.Left / $SlideWidth) * 100, 4)
+        topPct        = [math]::Round(($Shape.Top / $SlideHeight) * 100, 4)
+        widthPct      = [math]::Round(($Shape.Width / $SlideWidth) * 100, 4)
+        heightPct     = [math]::Round(($Shape.Height / $SlideHeight) * 100, 4)
+        fontSizeFirst = $fontSizeFirst
+        fontSizeLast  = $fontSizeLast
+        align         = $align
     })
 }
 

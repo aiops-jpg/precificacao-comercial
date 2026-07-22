@@ -167,6 +167,18 @@ h1, h2, h3 { font-weight: 900; color: var(--color-navy); }
 .slide-overlay-input:hover { border-color: rgba(23, 44, 102, 0.6); }
 .slide-overlay-input:focus { border-color: var(--color-navy); box-shadow: 0 0 0 2px rgba(23, 44, 102, 0.15); }
 
+/* Texto dinâmico (vem do /config) mas não editável aqui — sem borda, sem fundo destacado,
+   só cobre o texto estático da imagem por baixo com o valor atual. */
+.slide-overlay-text {
+  position: absolute;
+  background: var(--color-gray-light);
+  font-family: inherit;
+  color: #55595f;
+  line-height: 1.15;
+  overflow: hidden;
+  pointer-events: none;
+}
+
 .slide-mask {
   position: absolute;
   background-color: rgba(230, 233, 238, 0.88);

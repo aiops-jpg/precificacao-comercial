@@ -608,8 +608,10 @@ export default function ConfigPage() {
               </div>
             </div>
           </div>
-          <div className="field-group" style={{ marginTop: 12 }}>
+          <div className="field-row cols-3" style={{ marginTop: 12 }}>
             <NumberField label="ONE Enterprise — Setup por portfólio" value={draft.one.enterprise_setup} onChange={(v) => set(['one', 'enterprise_setup'], v)} />
+            <NumberField label="Horas inclusas no setup" value={draft.setup.one_horas_incluidas} onChange={(v) => set(['setup', 'one_horas_incluidas'], v)} />
+            <NumberField label="Franquia Mínima de Mensageria" value={draft.setup.one_franquia_minima} onChange={(v) => set(['setup', 'one_franquia_minima'], v)} suffix="R$" />
           </div>
         </div>
 

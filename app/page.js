@@ -4,7 +4,7 @@ import { useState, useMemo, useEffect } from 'react'
 import Link from 'next/link'
 import { useSession, signIn } from 'next-auth/react'
 import { calcular, formatMoney, formatMoneyPreciso, formatPct, getSetups } from '@/lib/precificacao'
-import { getCampos, getMascaras, getSlidesDaProposta } from '@/lib/proposta'
+import { getCampos, getMascaras, getSlidesDaProposta, getTextosFixos } from '@/lib/proposta'
 import { CANAIS } from '@/lib/canais'
 import { useConfig } from '@/lib/ConfigContext'
 import DiscoveryForm from '@/components/DiscoveryForm'
@@ -21,6 +21,116 @@ function expandirGeom(geom, padPct = 1.2) {
     widthPct: geom.widthPct + padPct * 2,
     heightPct: geom.heightPct + padPct * 2,
   }
+}
+
+// Largura do slide em pontos (10" = 720pt — igual ao emu()/EMU_POR_POL de lib/proposta.js) — usada
+// pra converter o tamanho de fonte REAL do template (extraído via COM, em pt) pra `cqw` (% da
+// largura do container), em vez de "chutar" o tamanho pela altura da caixa — isso ficava enorme em
+// caixas altas com texto pequeno (ex: o setup do ONE Platform, caixa alta mas fonte de 22pt só).
+const SLIDE_LARGURA_PT = 720
+const SLIDE_ALTURA_PT = 405
+function fontSizeCqw(geom, fallbackPt = 10) {
+  return `${((geom.fontSize || fallbackPt) / SLIDE_LARGURA_PT * 100).toFixed(3)}cqw`
+}
+
+// Alguns shapes do template têm caixa MUITO maior (altura E largura) que o texto do campo
+// precisa (ex: o "limite de conversas" do Voicebot é uma caixa de ~19% da altura do slide pra um
+// número de 3 dígitos) — sem isso, o input estica pra caber a caixa inteira e o texto fica pequeno
+// e colado no canto. Encolhe pro tamanho que o texto ATUAL realmente ocupa (com uma folga de
+// leitura), centraliza verticalmente, e na largura respeita o alinhamento REAL do texto no
+// template (`geom.align`) — um valor centralizado (ex: "R$ 0,15" no RCS) precisa encolher a
+// largura mantendo o centro no mesmo lugar, senão metade do texto original vaza pra fora da
+// caixa encolhida.
+const FATOR_ALTURA_LINHA = 1.35
+const FATOR_LARGURA_CARACTERE = 0.62 // largura média de 1 caractere, em múltiplos do font-size
+
+// Placeholders "R$ XXX" (preços unitários do slide 20) quebram em 2 linhas no template (caixa
+// estreita, autofit desligado) e a 2ª linha desenha ABAIXO do limite nominal do shape — a caixa
+// real (altura de 1 linha) não cobre. Não encolhe a altura pra essas caixas: mantém a altura
+// original (que já dá conta das 2 linhas do template) por cima da qual o valor final (1 linha) fica
+// centralizado.
+const SEM_ENCOLHER_ALTURA = new Set([
+  'preco_sms', 'preco_email', 'preco_email_registrado', 'preco_documento_digital',
+  'preco_cartorio_documento', 'preco_enriquecimento_ativo', 'preco_valida_mais',
+])
+
+function ajustarCaixaInput(geom, valorTexto, campoId) {
+  let novaGeom = geom
+
+  const alturaNatural = ((geom.fontSize || 10) / SLIDE_ALTURA_PT) * 100 * FATOR_ALTURA_LINHA
+  if (alturaNatural < geom.heightPct && !SEM_ENCOLHER_ALTURA.has(campoId)) {
+    novaGeom = { ...novaGeom, topPct: novaGeom.topPct + (geom.heightPct - alturaNatural) / 2, heightPct: alturaNatural }
+  }
+
+  const nCaracteres = Math.max((valorTexto || '').length, 4)
+  const larguraNatural = ((geom.fontSize || 10) / SLIDE_LARGURA_PT) * 100 * nCaracteres * FATOR_LARGURA_CARACTERE
+  if (larguraNatural < geom.widthPct) {
+    const folga = geom.widthPct - larguraNatural
+    const novoLeft = geom.align === 'center' ? novaGeom.leftPct + folga / 2
+      : geom.align === 'right' ? novaGeom.leftPct + folga
+      : novaGeom.leftPct
+    novaGeom = { ...novaGeom, leftPct: novoLeft, widthPct: larguraNatural }
+  }
+
+  return novaGeom
+}
+
+// Alguns campos editam só uma PALAVRA no meio de uma frase bem maior do mesmo shape (ex: chatbot_
+// franquia troca só o "5.000" dentro de "Franquia mínima: R$ 5.000 por fluxo de diálogo") — a
+// geometria do shape inteiro não serve pra posicionar o overlay, então esses poucos casos têm um
+// recorte manual (fração aproximada de onde o valor cai dentro do texto original).
+const AJUSTE_MANUAL_CAMPO = {
+  chatbot_franquia: (geom) => ({
+    ...geom,
+    leftPct: geom.leftPct + geom.widthPct * 0.430,
+    widthPct: geom.widthPct * 0.085,
+  }),
+  // "R$ XX.XXX" — prefixo pequeno + valor grande no mesmo shape, centralizados juntos. Medido por
+  // análise de pixels do PNG exportado (contorno de tinta em shape647_crop_v2.png, já sem o "3 x "):
+  // o bloco "XX.XXX" (fonte grande) ocupa de ~37.5% a ~67% da largura da caixa original do shape.
+  one_setup: (geom) => ({
+    ...geom,
+    leftPct: geom.leftPct + geom.widthPct * 0.375,
+    widthPct: geom.widthPct * 0.295,
+  }),
+  // "R$ 20.000" — mesmo padrão do one_setup (prefixo pequeno + valor grande, centralizados juntos).
+  // Medido por análise de pixels (shape1097_crop.png): o bloco do valor ocupa de ~22% a ~92,4% da
+  // largura da caixa original do shape.
+  landing_valor_por_link: (geom) => ({
+    ...geom,
+    leftPct: geom.leftPct + geom.widthPct * 0.22,
+    widthPct: geom.widthPct * 0.704,
+  }),
+}
+function aplicarAjusteManual(campoId, geom) {
+  const ajuste = AJUSTE_MANUAL_CAMPO[campoId]
+  return ajuste ? ajuste(geom) : geom
+}
+
+// Ajustes finos pedidos na revisão de design, por cima do ajuste automático (ajustarCaixaInput):
+// `altura`/`largura` são multiplicadores (0.84 = 16% menor, 1.02 = 2% maior); `centralizarH`
+// recentraliza horizontalmente depois de mudar a largura.
+const AJUSTE_FINO_CAMPO = {
+  one_setup: { altura: 0.84 },
+  voicebot_setup: { altura: 0.985, centralizarH: true },
+  chatbot_setup: { altura: 0.985, centralizarH: true },
+  chatbot_franquia: { largura: 0.99, centralizarH: true },
+  landing_valor_por_link: { largura: 1.02, centralizarH: true },
+}
+function aplicarAjusteFino(campoId, geom) {
+  const ajuste = AJUSTE_FINO_CAMPO[campoId]
+  if (!ajuste) return geom
+  let novaGeom = geom
+  if (ajuste.altura) {
+    const novaAltura = geom.heightPct * ajuste.altura
+    novaGeom = { ...novaGeom, topPct: novaGeom.topPct + (geom.heightPct - novaAltura) / 2, heightPct: novaAltura }
+  }
+  if (ajuste.largura) {
+    const novaLargura = geom.widthPct * ajuste.largura
+    const novoLeft = ajuste.centralizarH ? novaGeom.leftPct + (geom.widthPct - novaLargura) / 2 : novaGeom.leftPct
+    novaGeom = { ...novaGeom, leftPct: novoLeft, widthPct: novaLargura }
+  }
+  return novaGeom
 }
 
 function bboxUniao(shapes) {
@@ -286,14 +396,32 @@ export default function Page() {
     const map = new Map()
     campos.forEach((c) => {
       c.shapes.forEach((shape) => {
-        const geom = GEOMETRIA_POR_SHAPE[shape]
-        if (!geom) return
+        const geomBruto = GEOMETRIA_POR_SHAPE[shape]
+        if (!geomBruto) return
+        // O shape pode ter 2 blocos de texto com tamanhos diferentes colados (ex: "R$ XX,XX" +
+        // "ONE COLLECT" no mesmo shape) — usa o tamanho do lado (primeiro/último caractere) que
+        // corresponde ao RUN que esse campo de fato edita, não sempre o último.
+        const geom = { ...geomBruto, fontSize: c.run === 0 ? geomBruto.fontSizeFirst : geomBruto.fontSizeLast }
         if (!map.has(geom.slide)) map.set(geom.slide, [])
         map.get(geom.slide).push({ ...c, geom, overlayKey: `${c.id}-${shape}` })
       })
     })
     return map
   }, [campos])
+
+  // Textos dinâmicos (config), mas NÃO editáveis na revisão — só mostram o valor atual por cima
+  // da imagem estática, sem input.
+  const textosFixosPorSlide = useMemo(() => {
+    const map = new Map()
+    getTextosFixos(config).forEach((t) => {
+      const geomBruto = GEOMETRIA_POR_SHAPE[t.shape]
+      if (!geomBruto) return
+      const geom = { ...geomBruto, fontSize: geomBruto.fontSizeLast }
+      if (!map.has(geom.slide)) map.set(geom.slide, [])
+      map.get(geom.slide).push({ ...t, geom })
+    })
+    return map
+  }, [config])
 
   // Máscaras (seções/cards fora do escopo da proposta) agrupadas por slide, já com o bounding
   // box calculado a partir da geometria real dos shapes de cada grupo.
@@ -515,7 +643,7 @@ export default function Page() {
                 />
               ))}
               {(camposPorSlide.get(slideNum) || []).map((c) => {
-                const geom = expandirGeom(c.geom)
+                const geom = expandirGeom(aplicarAjusteFino(c.id, ajustarCaixaInput(aplicarAjusteManual(c.id, c.geom), overrideValues[c.id], c.id)))
                 return (
                   <input
                     key={c.overlayKey}
@@ -528,11 +656,27 @@ export default function Page() {
                       top: `${geom.topPct}%`,
                       width: `${geom.widthPct}%`,
                       height: `${geom.heightPct}%`,
-                      fontSize: `${Math.max(c.geom.heightPct * 0.4, 1.6)}cqw`,
+                      fontSize: fontSizeCqw(c.geom),
+                      textAlign: c.geom.align || 'left',
                     }}
                   />
                 )
               })}
+              {(textosFixosPorSlide.get(slideNum) || []).map((t) => (
+                <div
+                  key={t.shape}
+                  className="slide-overlay-text"
+                  style={{
+                    left: `${t.geom.leftPct}%`,
+                    top: `${t.geom.topPct}%`,
+                    width: `${t.geom.widthPct}%`,
+                    height: `${t.geom.heightPct}%`,
+                    fontSize: fontSizeCqw(t.geom, 7),
+                  }}
+                >
+                  {t.text}
+                </div>
+              ))}
             </div>
           </div>
         ))}
