@@ -48,17 +48,24 @@ const FATOR_LARGURA_CARACTERE = 0.62 // largura média de 1 caractere, em múlti
 // estreita, autofit desligado) e a 2ª linha desenha ABAIXO do limite nominal do shape — a caixa
 // real (altura de 1 linha) não cobre. Não encolhe a altura pra essas caixas: mantém a altura
 // original (que já dá conta das 2 linhas do template) por cima da qual o valor final (1 linha) fica
-// centralizado.
+// centralizado. É por SHAPE (não por campo) porque alguns desses campos (preco_valida_mais,
+// preco_enriquecimento_ativo) reaparecem no slide 30 num card diferente, de 1 linha só — lá a caixa
+// deve encolher normal, senão fica maior que os cards vizinhos (ex: Smart Contact).
 const SEM_ENCOLHER_ALTURA = new Set([
-  'preco_sms', 'preco_email', 'preco_email_registrado', 'preco_documento_digital',
-  'preco_cartorio_documento', 'preco_enriquecimento_ativo', 'preco_valida_mais',
+  'Google Shape;792;p61', // preco_sms
+  'Google Shape;788;p61', // preco_email
+  'Google Shape;790;p61', // preco_email_registrado
+  'Google Shape;807;p61', // preco_documento_digital
+  'Google Shape;808;p61', // preco_cartorio_documento
+  'Google Shape;802;p61', // preco_enriquecimento_ativo (slide 20)
+  'Google Shape;811;p61', // preco_valida_mais (slide 20)
 ])
 
-function ajustarCaixaInput(geom, valorTexto, campoId) {
+function ajustarCaixaInput(geom, valorTexto, shape) {
   let novaGeom = geom
 
   const alturaNatural = ((geom.fontSize || 10) / SLIDE_ALTURA_PT) * 100 * FATOR_ALTURA_LINHA
-  if (alturaNatural < geom.heightPct && !SEM_ENCOLHER_ALTURA.has(campoId)) {
+  if (alturaNatural < geom.heightPct && !SEM_ENCOLHER_ALTURA.has(shape)) {
     novaGeom = { ...novaGeom, topPct: novaGeom.topPct + (geom.heightPct - alturaNatural) / 2, heightPct: alturaNatural }
   }
 
@@ -403,7 +410,7 @@ export default function Page() {
         // corresponde ao RUN que esse campo de fato edita, não sempre o último.
         const geom = { ...geomBruto, fontSize: c.run === 0 ? geomBruto.fontSizeFirst : geomBruto.fontSizeLast }
         if (!map.has(geom.slide)) map.set(geom.slide, [])
-        map.get(geom.slide).push({ ...c, geom, overlayKey: `${c.id}-${shape}` })
+        map.get(geom.slide).push({ ...c, geom, shape, overlayKey: `${c.id}-${shape}` })
       })
     })
     return map
@@ -643,7 +650,7 @@ export default function Page() {
                 />
               ))}
               {(camposPorSlide.get(slideNum) || []).map((c) => {
-                const geom = expandirGeom(aplicarAjusteFino(c.id, ajustarCaixaInput(aplicarAjusteManual(c.id, c.geom), overrideValues[c.id], c.id)))
+                const geom = expandirGeom(aplicarAjusteFino(c.id, ajustarCaixaInput(aplicarAjusteManual(c.id, c.geom), overrideValues[c.id], c.shape)))
                 return (
                   <input
                     key={c.overlayKey}
